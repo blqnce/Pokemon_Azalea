@@ -1,3 +1,0 @@
-q.player.data.gt_rock_defeated = 0;
-q.player.save_data();
-return 1;

@@ -1,4 +1,0 @@
-((q.entity.in_battle() == false) && (q.entity.data.has_battled <= 0)) ? {
-    q.run_command('execute at ' + q.entity.uuid + ' if entity @a[distance=..' + q.entity.config.challenge_distance + ',limit=1] run runmolangscript cobblemon:npc_battle @a[distance=..' + q.entity.config.challenge_distance + ',limit=1] ' + q.entity.uuid);
-};
-return 1;
