@@ -1,3 +1,6 @@
 {
-  "parent": "pokemonazalea:block/white_ultra_crystal_bud"
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "pokemonazalea:block/white_ultra_crystal_bud"
+  }
 }

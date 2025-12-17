@@ -3,6 +3,7 @@ package net.falconidos.pokemonazalea;
 import net.fabricmc.api.ModInitializer;
 
 import net.falconidos.pokemonazalea.block.ModBlocks;
+import net.falconidos.pokemonazalea.item.ModItemGroups;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -12,6 +13,8 @@ public class PokemonAzalea implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+
+		ModItemGroups.registerItemGroups();
 
 		ModBlocks.registerModBlocks();
 

@@ -22,9 +22,9 @@ public class ModBlocks {
                     AbstractBlock.Settings.create()
                     .mapColor(MapColor.BLUE)
                     .ticksRandomly()
-                    .strength(1.5F)
+                            .strength(-1.0F, 3600000.0F)
+                            .dropsNothing()
                     .sounds(BlockSoundGroup.AMETHYST_BLOCK)
-                    .requiresTool()
                     .pistonBehavior(PistonBehavior.DESTROY)
                     ));
 
@@ -41,6 +41,7 @@ public class ModBlocks {
                             .strength(1.5F)
                             .luminance(state -> 5)
                             .pistonBehavior(PistonBehavior.DESTROY)
+                            .requiresTool()
             )
     );
 
@@ -49,9 +50,9 @@ public class ModBlocks {
                     AbstractBlock.Settings.create()
                             .mapColor(MapColor.GREEN)
                             .ticksRandomly()
-                            .strength(1.5F)
+                            .strength(-1.0F, 3600000.0F)
+                            .dropsNothing()
                             .sounds(BlockSoundGroup.AMETHYST_BLOCK)
-                            .requiresTool()
                             .pistonBehavior(PistonBehavior.DESTROY)
             ));
 
@@ -68,6 +69,7 @@ public class ModBlocks {
                             .strength(1.5F)
                             .luminance(state -> 5)
                             .pistonBehavior(PistonBehavior.DESTROY)
+                            .requiresTool()
             )
     );
 
@@ -76,9 +78,9 @@ public class ModBlocks {
                     AbstractBlock.Settings.create()
                             .mapColor(MapColor.ORANGE)
                             .ticksRandomly()
-                            .strength(1.5F)
+                            .strength(-1.0F, 3600000.0F)
+                            .dropsNothing()
                             .sounds(BlockSoundGroup.AMETHYST_BLOCK)
-                            .requiresTool()
                             .pistonBehavior(PistonBehavior.DESTROY)
             ));
 
@@ -95,6 +97,7 @@ public class ModBlocks {
                             .strength(1.5F)
                             .luminance(state -> 5)
                             .pistonBehavior(PistonBehavior.DESTROY)
+                            .requiresTool()
             )
     );
 
@@ -103,9 +106,9 @@ public class ModBlocks {
                     AbstractBlock.Settings.create()
                             .mapColor(MapColor.PINK)
                             .ticksRandomly()
-                            .strength(1.5F)
+                            .strength(-1.0F, 3600000.0F)
+                            .dropsNothing()
                             .sounds(BlockSoundGroup.AMETHYST_BLOCK)
-                            .requiresTool()
                             .pistonBehavior(PistonBehavior.DESTROY)
             ));
 
@@ -122,6 +125,7 @@ public class ModBlocks {
                             .strength(1.5F)
                             .luminance(state -> 5)
                             .pistonBehavior(PistonBehavior.DESTROY)
+                            .requiresTool()
             )
     );
 
@@ -130,9 +134,9 @@ public class ModBlocks {
                     AbstractBlock.Settings.create()
                             .mapColor(MapColor.RED)
                             .ticksRandomly()
-                            .strength(1.5F)
+                            .strength(-1.0F, 3600000.0F)
+                            .dropsNothing()
                             .sounds(BlockSoundGroup.AMETHYST_BLOCK)
-                            .requiresTool()
                             .pistonBehavior(PistonBehavior.DESTROY)
             ));
 
@@ -149,6 +153,7 @@ public class ModBlocks {
                             .strength(1.5F)
                             .luminance(state -> 5)
                             .pistonBehavior(PistonBehavior.DESTROY)
+                            .requiresTool()
             )
     );
 
@@ -157,9 +162,9 @@ public class ModBlocks {
                     AbstractBlock.Settings.create()
                             .mapColor(MapColor.WHITE)
                             .ticksRandomly()
-                            .strength(1.5F)
+                            .strength(-1.0F, 3600000.0F)
+                            .dropsNothing()
                             .sounds(BlockSoundGroup.AMETHYST_BLOCK)
-                            .requiresTool()
                             .pistonBehavior(PistonBehavior.DESTROY)
             ));
 
@@ -176,6 +181,7 @@ public class ModBlocks {
                             .strength(1.5F)
                             .luminance(state -> 5)
                             .pistonBehavior(PistonBehavior.DESTROY)
+                            .requiresTool()
             )
     );
 
@@ -184,9 +190,9 @@ public class ModBlocks {
                     AbstractBlock.Settings.create()
                             .mapColor(MapColor.YELLOW)
                             .ticksRandomly()
-                            .strength(1.5F)
+                            .strength(-1.0F, 3600000.0F)
+                            .dropsNothing()
                             .sounds(BlockSoundGroup.AMETHYST_BLOCK)
-                            .requiresTool()
                             .pistonBehavior(PistonBehavior.DESTROY)
             ));
 
@@ -203,6 +209,7 @@ public class ModBlocks {
                             .strength(1.5F)
                             .luminance(state -> 5)
                             .pistonBehavior(PistonBehavior.DESTROY)
+                            .requiresTool()
             )
     );
 
