@@ -1,0 +1,25 @@
+{
+  "display": {
+    "icon": {
+      "id": "cobblemon:exp_share"
+    },
+    "title": {
+      "translate": "cobbletrainers.advancement.root",
+      "fallback": "Cobbled Trainers"
+    },
+    "description": {
+      "translate": "cobbletrainers.advancement.root.desc",
+      "fallback": "Set out on your Cobbled Trainers journey."
+    },
+    "background": "cobblemon:textures/block/sky_tumblestone_bricks.png",
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "tick": {
+      "trigger": "cobblemon:pick_starter"
+    }
+  }
+}

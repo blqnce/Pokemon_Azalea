@@ -1,0 +1,12 @@
+{
+  "values": [
+    "#minecraft:village",
+    "minecraft:swamp_hut",
+    "minecraft:igloo",
+    "#cobblemon:ruin",
+    "minecraft:mineshaft",
+    "#minecraft:ocean_ruin",
+    "minecraft:trail_ruins",
+    "minecraft:pillager_outpost"
+  ]
+}

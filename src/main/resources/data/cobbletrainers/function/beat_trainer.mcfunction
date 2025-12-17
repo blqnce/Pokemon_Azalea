@@ -1,0 +1,1 @@
+advancement grant @s only cobblemon:first_battle_victory

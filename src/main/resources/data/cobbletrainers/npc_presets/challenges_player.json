@@ -1,0 +1,33 @@
+{ 
+  "ai": [
+    {
+      "type": "add_tasks_to_activity",
+      "activity": "core",
+      "condition": "q.in_battle() == false",
+      "tasksByPriority": {
+        "1": [
+          {
+            "type": "run_script",
+            "script": "cobblemon:challenge_trainer"
+          }
+        ]
+      }
+    }
+  ],
+  "config": [
+    {
+      "variableName": "challenge_distance",
+      "displayName": "cobblemon.npc.challenge_distance.name",
+      "description": "cobblemon.npc.challenge_distance.desc",
+      "type": "NUMBER",
+      "defaultValue": "5"
+    },
+    {
+      "variableName": "challenge_message",
+      "displayName": "Challenge Message",
+      "description": "A message sent in chat when this NPC challenges you.",
+      "type": "TEXT",
+      "defaultValue": "Hey, stop right there!"
+    }
+  ]
+}

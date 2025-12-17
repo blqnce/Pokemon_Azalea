@@ -1,0 +1,12 @@
+{
+  "displayName": "Test",
+  "enabled": "true",
+  "components": [
+    {
+      "type": "weight",
+      "spawnSelector": "v.spawn.id == 'test-1'",
+      "contextSelector": "v.context.player.data.gt_rock_defeated >= 4",
+      "weight": "v.weight * 2"
+    }
+  ]
+}

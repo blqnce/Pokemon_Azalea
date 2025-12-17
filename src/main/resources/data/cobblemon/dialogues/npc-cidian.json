@@ -1,0 +1,214 @@
+{
+  "initializationAction": [
+    "(q.npc.is_in_battle_with(q.player) || !q.npc.is_doing_activity('minecraft:idle', 'cobblemon:battling')) ? q.dialogue.close();",
+    "t.leaders_defeated = (q.player.data.brock_defeated + q.player.data.larry_defeated + q.player.data.raihan_defeated + q.player.data.blaine_defeated);",
+    "v.interaction = (q.player.data.cidian_defeated >= 1 && t.leaders_defeated >= 6) ? 'super-reward' : ((q.player.data.cidian_defeated >= 1) ? 'reward' : ((q.player.data.cidian_map_claimed >= 1) ? 'met' : ((q.player.data.cidian_interacted >= 1) ? 'met-mapless' : 'unmet')));",
+    "q.dialogue.set_page(v.interaction)"
+  ],
+  "speakers": {
+    "npc": {
+      "name": {
+        "type": "expression",
+        "expression": "q.npc.name"
+      },
+      "face": "q.npc.face(false);"
+    },
+    "player": {
+      "face": "q.player.face();",
+      "name": {
+        "type": "expression",
+        "expression": "q.player.username"
+      }
+    }
+  },
+  "pages": [
+    {
+      "id": "player-intro",
+      "speaker": "player",
+      "lines": [
+        {
+          "type": "expression",
+          "expression": "'Hello, Cidian. My name is ' + q.player.username + '!'"
+        }
+      ],
+      "input": [
+        "q.dialogue.set_page('offer');"
+      ]
+    },
+    {
+      "id": "unmet",
+      "speaker": "npc",
+      "lines": [
+        {
+          "type": "expression",
+          "expression": "'Hello there! I\\'m on a quest to map out this world, and any key places I may find. My name is Cidian, and you?'"
+        }
+      ],
+      "input": [
+        "q.dialogue.set_page(`player-intro`);",
+        "q.player.data.cidian_interacted = 1;",
+        "q.player.save_data();"
+      ]
+    },
+    {
+      "id": "met-mapless",
+      "speaker": "npc",
+      "lines": [
+        {
+          "type": "expression",
+          "expression": "'Hello again, ' + q.player.username + '! What are the odds that we would cross paths once more? Have you reconsidered that offer for one of my maps?'"
+        }
+      ],
+      "input": {
+        "type": "option",
+        "vertical": false,
+        "options": [
+          {
+            "text": {
+              "type": "expression",
+              "expression": "'Accept'"
+            },
+            "value": "accept",
+            "action": [
+              "q.dialogue.set_page('battle');",
+              "q.player.data.cidian_map_claimed = 1;",
+              "q.player.data.cidian_interacted = 1;",
+              "q.player.save_data();"
+            ]
+          },
+          {
+            "text": "Reject",
+            "value": "reject",
+            "action": [
+              "q.dialogue.set_page('farewell');",
+              "q.player.data.cidian_map_claimed = 0;",
+              "q.player.data.cidian_interacted = 1;",
+              "q.player.save_data();"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "met",
+      "speaker": "npc",
+      "lines": [
+        {
+          "type": "expression",
+          "expression": "'Hello again, ' + q.player.username + '! What are the odds that we would cross paths once more?'"
+        }
+      ],
+      "input": [
+        "q.dialogue.set_page('offer');",
+        "q.player.data.cidian_interacted = 1;",
+        "q.player.save_data();"
+      ]
+    },
+    {
+      "id": "offer",
+      "speaker": "npc",
+      "lines": [
+        {
+          "type": "expression",
+          "expression": "'Well, ' + q.player.username + ', I\\'ve just returned from mapping out a spectacular place, and I\\'d be willing to give you that map if you beat me in battle.'"
+        }
+      ],
+      "input": {
+        "type": "option",
+        "vertical": false,
+        "options": [
+          {
+            "text": {
+              "type": "expression",
+              "expression": "'Accept'"
+            },
+            "value": "accept",
+            "action": [
+              "q.dialogue.set_page('battle');",
+              "q.player.data.cidian_map_claimed = 1;",
+              "q.player.save_data();"
+            ]
+          },
+          {
+            "text": "Reject",
+            "value": "reject",
+            "action": [
+              "q.dialogue.set_page('farewell');",
+              "q.player.data.cidian_map_claimed = 0;",
+              "q.player.save_data();"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "farewell",
+      "speaker": "npc",
+      "lines": ["Oh, what a shame. I was truly looking forward to that battle, especially with how few trainers you find out exploring."],
+      "input": "q.dialogue.close();"
+    },
+    {
+      "id": "battle",
+      "speaker": "npc",
+      "lines": ["Time to put my skills to good use."],
+      "input": [
+        "q.dialogue.close();",
+        "q.npc.start_battle(q.player);"
+      ]
+    },
+    {
+      "id": "reward",
+      "speaker": "npc",
+      "lines": ["I must say, that was a great battle. As promised, here is your map."],
+      "input": [
+        "q.dialogue.close();",
+        "q.run_command('execute as ' + q.npc.uuid + ' run function cobbletrainers:trainer/cidian_reward');",
+        "q.run_command('advancement grant ' + q.player.username + ' only cobbletrainers:beat_cidian');",
+        "q.player.data.cidian_defeated = 0;",
+        "q.player.save_data();"
+      ]
+    },
+    {
+      "id": "super-reward",
+      "speaker": "npc",
+      "lines": [
+        {
+          "type": "expression",
+          "expression": "'I must say, that was a great battle. I actually have two maps for you to choose from, so go ahead.'"
+        }
+      ],
+      "input": {
+        "type": "option",
+        "vertical": false,
+        "options": [
+          {
+            "text": {
+              "type": "expression",
+              "expression": "'Town Map'"
+            },
+            "value": "town-map",
+            "action": [
+              "q.dialogue.close();",
+              "q.run_command('execute as ' + q.npc.uuid + ' run function cobbletrainers:trainer/cidian_reward');",
+              "q.run_command('advancement grant ' + q.player.username + ' only cobbletrainers:beat_cidian');",
+              "q.player.data.cidian_defeated = 0;",
+              "q.player.save_data();"
+            ]
+          },
+          {
+            "text": "Special Map",
+            "value": "special-map",
+            "action": [
+              "q.dialogue.close();",
+              "q.run_command('execute as ' + q.npc.uuid + ' run function cobbletrainers:trainer/cidian_reward_special');",
+              "q.run_command('advancement grant ' + q.player.username + ' only cobbletrainers:beat_cidian');",
+              "q.run_command('advancement grant ' + q.player.username + ' only cobbletrainers:cidian_special_map');",
+              "q.player.data.cidian_defeated = 0;",
+              "q.player.save_data();"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

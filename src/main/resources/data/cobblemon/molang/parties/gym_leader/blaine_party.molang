@@ -1,0 +1,61 @@
+t.leaders_defeated = (q.player.data.brock_defeated + q.player.data.larry_defeated + q.player.data.raihan_defeated + q.player.data.blaine_defeated);
+(t.leaders_defeated >= 7) ? {
+    q.party.add_by_properties('ninetales nature=timid ability=drought uncatchable=true level=66 gender=male speed_ev=252 special_attack_ev=252 defence_ev=4 hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 moves=flamethrower,hypnosis,extrasensory,willowisp held_item=cobblemon:heat_rock');
+    q.party.add_by_properties('arcanine nature=adamant ability=intimidate uncatchable=true level=69 gender=male attack_ev=252 speed_ev=252 hp_ev=4 hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 moves=extremespeed,closecombat,substitute,flareblitz held_item=cobblemon:shell_bell');
+    q.party.add_by_properties('moltres nature=timid ability=pressure uncatchable=true level=67 gender=genderless speed_ev=252 special_attack_ev=252 hp_ev=4 hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 moves=airslash,flamethrower,roost,solarbeam held_item=cobblemon:power_herb');
+    q.party.add_by_properties('marowak alolan nature=careful ability=lightningrod uncatchable=true level=68 gender=male special_defence_ev=252 attack_ev=252 defence_ev=4 hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 moves=shadowbone,bonemerang,firepunch,curse held_item=minecraft:bone');
+    q.party.add_by_properties('chandelure nature=modest ability=flamebody uncatchable=true level=68 gender=female special_attack_ev=252 speed_ev=252 hp_ev=4 hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 moves=willowisp,hex,flamethrower,minimize held_item=cobblemon:choice_specs');
+    q.party.add_by_properties('armarouge nature=modest ability=weakarmor uncatchable=true level=67 gender=male special_attack_ev=252 special_defence_ev=252 defence_ev=4 hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 moves=darkpulse,armorcannon,calmmind,psychic held_item=cobblemon:focus_sash');
+    return 1;
+} : ((t.leaders_defeated == 6) ? {
+    q.party.add_by_properties('ninetales nature=timid ability=drought uncatchable=true level=58 gender=male speed_ev=252 special_attack_ev=252 defence_ev=4 hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 moves=flamethrower,hypnosis,extrasensory,willowisp held_item=cobblemon:heat_rock');
+    q.party.add_by_properties('arcanine nature=adamant ability=intimidate uncatchable=true level=61 gender=male attack_ev=252 speed_ev=252 hp_ev=4 hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 moves=extremespeed,closecombat,substitute,flareblitz held_item=cobblemon:shell_bell');
+    q.party.add_by_properties('moltres nature=timid ability=pressure uncatchable=true level=59 gender=genderless speed_ev=252 special_attack_ev=252 hp_ev=4 hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 moves=airslash,flamethrower,roost,solarbeam held_item=cobblemon:power_herb');
+    q.party.add_by_properties('marowak alolan nature=careful ability=lightningrod uncatchable=true level=60 gender=male special_defence_ev=252 attack_ev=252 defence_ev=4 hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 moves=shadowbone,bonemerang,firepunch,curse held_item=minecraft:bone');
+    q.party.add_by_properties('chandelure nature=modest ability=flamebody uncatchable=true level=60 gender=female special_attack_ev=252 speed_ev=252 hp_ev=4 hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 moves=willowisp,hex,flamethrower,minimize held_item=cobblemon:choice_specs');
+    q.party.add_by_properties('armarouge nature=modest ability=weakarmor uncatchable=true level=59 gender=male special_attack_ev=252 special_defence_ev=252 defence_ev=4 hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 moves=darkpulse,armorcannon,calmmind,psychic held_item=cobblemon:focus_sash');
+    return 1;
+} : ((t.leaders_defeated == 5) ? {
+    q.party.add_by_properties('ninetales nature=timid ability=drought uncatchable=true level=51 gender=male hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 moves=flamethrower,hypnosis,extrasensory,willowisp held_item=cobblemon:heat_rock');
+    q.party.add_by_properties('arcanine nature=adamant ability=intimidate uncatchable=true level=54 gender=male hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 moves=extremespeed,closecombat,substitute,flareblitz held_item=cobblemon:shell_bell');
+    q.party.add_by_properties('moltres nature=timid ability=pressure uncatchable=true level=52 gender=genderless hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 moves=airslash,flamethrower,roost,solarbeam held_item=cobblemon:power_herb');
+    q.party.add_by_properties('marowak alolan nature=careful ability=lightningrod uncatchable=true level=53 gender=male hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 moves=shadowbone,bonemerang,firepunch,curse held_item=minecraft:bone');
+    q.party.add_by_properties('chandelure nature=modest ability=flamebody uncatchable=true level=53 gender=female hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 moves=willowisp,hex,flamethrower,minimize held_item=cobblemon:choice_specs');
+    q.party.add_by_properties('armarouge nature=modest ability=weakarmor uncatchable=true level=52 gender=male hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 moves=darkpulse,flamethrower,calmmind,psychic held_item=cobblemon:focus_sash');
+    return 1;
+} : ((t.leaders_defeated == 4) ? {
+    q.party.add_by_properties('ninetales nature=timid ability=drought uncatchable=true level=43 gender=female hp_iv=25 attack_iv=25 defence_iv=25 special_attack_iv=25 special_defence_iv=25 speed_iv=25 moves=flamethrower,hypnosis,extrasensory,willowisp held_item=cobblemon:heat_rock');
+    q.party.add_by_properties('arcanine nature=adamant ability=intimidate uncatchable=true level=46 gender=male hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 moves=extremespeed,closecombat,substitute,flareblitz held_item=cobblemon:shell_bell');
+    q.party.add_by_properties('rapidash nature=jolly ability=flamebody uncatchable=true level=44 gender=male hp_iv=25 attack_iv=25 defence_iv=25 special_attack_iv=25 special_defence_iv=25 speed_iv=25 moves=flamecharge,bodyslam,agility,highhorsepower held_item=cobblemon:life_orb');
+    q.party.add_by_properties('marowak alolan nature=careful ability=lightningrod uncatchable=true level=45 gender=male hp_iv=25 attack_iv=25 defence_iv=25 special_attack_iv=25 special_defence_iv=25 speed_iv=25 moves=shadowbone,bonemerang,firepunch,curse held_item=minecraft:bone');
+    q.party.add_by_properties('lampent nature=modest ability=flamebody uncatchable=true level=45 gender=female hp_iv=25 attack_iv=25 defence_iv=25 special_attack_iv=25 special_defence_iv=25 speed_iv=25 moves=willowisp,hex,flamethrower,minimize held_item=cobblemon:eviolite');
+    q.party.add_by_properties('armarouge nature=modest ability=weakarmor uncatchable=true level=44 gender=male hp_iv=25 attack_iv=25 defence_iv=25 special_attack_iv=25 special_defence_iv=25 speed_iv=25 moves=willowisp,flamethrower,calmmind,psychic held_item=cobblemon:focus_sash');
+    return 1;
+} : ((t.leaders_defeated == 3) ? {
+    q.party.add_by_properties('ninetales nature=timid ability=drought uncatchable=true level=36 gender=female hp_iv=19 attack_iv=19 defence_iv=19 special_attack_iv=19 special_defence_iv=19 speed_iv=19 moves=flamethrower,hypnosis,extrasensory,willowisp');
+    q.party.add_by_properties('arcanine nature=adamant ability=intimidate uncatchable=true level=39 gender=male hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 moves=extremespeed,crunch,substitute,firefang');
+    q.party.add_by_properties('ponyta nature=jolly ability=flamebody uncatchable=true level=37 gender=male hp_iv=19 attack_iv=19 defence_iv=19 special_attack_iv=19 special_defence_iv=19 speed_iv=19 moves=flamecharge,headbutt,agility,highhorsepower');
+    q.party.add_by_properties('marowak alolan nature=careful ability=lightningrod uncatchable=true level=38 gender=male hp_iv=19 attack_iv=19 defence_iv=19 special_attack_iv=19 special_defence_iv=19 speed_iv=19 moves=shadowbone,bonerush,flamewheel,curse');
+    q.party.add_by_properties('litwick nature=modest ability=flamebody uncatchable=true level=38 gender=female hp_iv=19 attack_iv=19 defence_iv=19 special_attack_iv=19 special_defence_iv=19 speed_iv=19 moves=willowisp,hex,flamethrower,minimize');
+    q.party.add_by_properties('charcadet nature=modest ability=flamebody uncatchable=true level=37 gender=male hp_iv=19 attack_iv=19 defence_iv=19 special_attack_iv=19 special_defence_iv=19 speed_iv=19 moves=willowisp,flamethrower,substitute,protect');
+    return 1;
+} : ((t.leaders_defeated == 2) ? {
+    q.party.add_by_properties('vulpix nature=timid ability=drought uncatchable=true level=28 gender=female hp_iv=13 attack_iv=13 defence_iv=13 special_attack_iv=13 special_defence_iv=13 speed_iv=13 moves=flameburst,confuseray,quickattack,willowisp');
+    q.party.add_by_properties('growlithe nature=adamant ability=intimidate uncatchable=true level=31 gender=male hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 moves=flamewheel,crunch,howl,firefang');
+    q.party.add_by_properties('ponyta nature=jolly ability=flamebody uncatchable=true level=29 gender=male hp_iv=13 attack_iv=13 defence_iv=13 special_attack_iv=13 special_defence_iv=13 speed_iv=13 moves=flamecharge,headbutt,agility,flamewheel');
+    q.party.add_by_properties('marowak alolan nature=careful ability=lightningrod uncatchable=true level=30 gender=male hp_iv=13 attack_iv=13 defence_iv=13 special_attack_iv=13 special_defence_iv=13 speed_iv=13 moves=shadowbone,bonerush,firepunch,curse');
+    q.party.add_by_properties('litwick nature=modest ability=flamebody uncatchable=true level=30 gender=female hp_iv=13 attack_iv=13 defence_iv=13 special_attack_iv=13 special_defence_iv=13 speed_iv=13 moves=willowisp,hex,flameburst,minimize');
+    return 1;
+} : ((t.leaders_defeated == 1) ? {
+    q.party.add_by_properties('vulpix nature=timid ability=drought uncatchable=true level=21 gender=female hp_iv=7 attack_iv=7 defence_iv=7 special_attack_iv=7 special_defence_iv=7 speed_iv=7 moves=ember,disable,quickattack,willowisp');
+    q.party.add_by_properties('growlithe nature=adamant ability=intimidate uncatchable=true level=24 gender=male hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 moves=flamewheel,bite,howl,firefang');
+    q.party.add_by_properties('ponyta nature=jolly ability=flamebody uncatchable=true level=22 gender=male hp_iv=7 attack_iv=7 defence_iv=7 special_attack_iv=7 special_defence_iv=7 speed_iv=7 moves=flamecharge,tackle,agility,flamewheel');
+    q.party.add_by_properties('cubone region_bias=alola nature=careful ability=lightningrod uncatchable=true level=23 gender=male hp_iv=7 attack_iv=7 defence_iv=7 special_attack_iv=7 special_defence_iv=7 speed_iv=7 moves=boneclub,stompingtantrum,retaliate,leer');
+    return 1;
+} : ({
+    q.party.add_by_properties('vulpix nature=serious ability=drought uncatchable=true level=14 gender=female hp_iv=1 attack_iv=1 defence_iv=1 special_attack_iv=1 special_defence_iv=1 speed_iv=1 moves=ember,disable,quickattack');
+    q.party.add_by_properties('growlithe nature=serious ability=intimidate uncatchable=true level=17 gender=male hp_iv=31 attack_iv=31 defence_iv=31 special_attack_iv=31 special_defence_iv=31 speed_iv=31 moves=flamewheel,bite,howl');
+    q.party.add_by_properties('ponyta nature=serious ability=flamebody uncatchable=true level=15 gender=male hp_iv=1 attack_iv=1 defence_iv=1 special_attack_iv=1 special_defence_iv=1 speed_iv=1 moves=flamecharge,tackle,tailwhip');
+    return 1;
+})))))));
+return 0;

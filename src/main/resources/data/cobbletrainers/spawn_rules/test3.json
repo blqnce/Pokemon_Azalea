@@ -1,0 +1,12 @@
+{
+  "displayName": "Test",
+  "enabled": "true",
+  "components": [
+    {
+      "type": "filter",
+      "spawnSelector": "v.spawn.pokemon.species == 'tandemaus'",
+      "contextSelector": "(v.context.player.party.count_by_properties('regirock') < 1) || (v.context.player.party.count_by_properties('regice') < 1) || (v.context.player.party.count_by_properties('registeel') < 1)",
+      "allow": "false"
+    }
+  ]
+}

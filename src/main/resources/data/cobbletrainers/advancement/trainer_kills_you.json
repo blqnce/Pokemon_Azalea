@@ -1,0 +1,30 @@
+{
+  "display": {
+    "icon": {
+      "id": "cobblemon:blunder_policy"
+    },
+    "title": {
+      "translate": "cobbletrainers.advancement.get_killed_trainer",
+      "fallback": "Poetic Justice"
+    },
+    "description": {
+      "translate": "cobbletrainers.advancement.get_killed_trainer.desc",
+      "fallback": "Get defeated by any trainer through means other than battle..."
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "cobbletrainers:kill_a_trainer",
+  "criteria": {
+    "kill": {
+      "trigger": "minecraft:entity_killed_player",
+      "conditions": {
+        "entity": {
+          "type": "cobblemon:npc"
+        }
+      }
+    }
+  }
+}

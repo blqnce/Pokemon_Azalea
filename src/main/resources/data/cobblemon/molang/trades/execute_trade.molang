@@ -1,0 +1,20 @@
+t.requested_mon = q.player.party.find_all_by_properties(q.npc.data.trade_request);
+(q.player.party.count_by_properties(q.npc.data.trade_request) >= 1) ? {
+    for_each(t.trade_request, t.requested_mon, {
+        q.player.party.remove_by_id(t.trade_request.id);
+        q.player.party.add_by_properties(q.npc.data.trade_offer + ' lvl=' + q.npc.data.trade_level +' ottype=NPC originaltrainer="' + q.npc.name + '"');
+        q.npc.data.has_traded = 1;
+        q.npc.save_data();
+        q.npc.data.trade_evolution == 1 ? {
+            q.run_command('title ' + q.player.username + ' actionbar {"text": "' + q.npc.data.trade_offer_name + ' evolved and has been added to your party!", "color": "green"}');
+            q.run_command('playsound cobblemon:evolution.ui player ' + q.player.username + ' ~ ~ ~ 1 1 1');
+            q.run_command('advancement grant ' + q.player.username + ' only cobblemon:first_evolution');
+        } : {
+            q.run_command('title ' + q.player.username + ' actionbar {"text": "' + q.npc.data.trade_offer_name + ' has been added to your party!", "color": "green"}');
+            q.run_command('playsound cobblemon:gui.trade player ' + q.player.username + ' ~ ~ ~ 1 2 1');
+        };
+        q.run_command('advancement grant ' + q.player.username + ' only cobblemon:trade_pokemon');
+        break;
+    });
+};
+return 1;

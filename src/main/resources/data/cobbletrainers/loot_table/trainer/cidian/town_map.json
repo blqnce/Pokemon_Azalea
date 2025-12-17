@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "bonus_rolls": 0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:exploration_map",
+              "destination": "cobbletrainers:towns",
+              "decoration": "red_x",
+              "zoom": 3,
+              "skip_existing_chunks": true
+            },
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "translate": "Town Map"
+              },
+              "target": "item_name"
+            }
+          ],
+          "name": "minecraft:map"
+        }
+      ],
+      "rolls": 1
+    }
+  ],
+  "random_sequence": "cobbletrainers:trainer/cidian/town_map"
+}

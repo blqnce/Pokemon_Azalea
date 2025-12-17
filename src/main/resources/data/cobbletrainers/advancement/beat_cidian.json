@@ -1,0 +1,25 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:map"
+    },
+    "title": {
+      "translate": "cobbletrainers.advancement.cidian",
+      "fallback": "Maps Upon Maps"
+    },
+    "description": {
+      "translate": "cobbletrainers.advancement.cidian.desc",
+      "fallback": "Encounter Cidian the Mapmaker, and claim one of his maps as your own."
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "cobbletrainers:root",
+  "criteria": {
+    "cidian": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

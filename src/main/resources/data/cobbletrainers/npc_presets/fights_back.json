@@ -1,0 +1,18 @@
+{ 
+  "ai": [
+    {
+      "type": "add_tasks_to_activity",
+      "activity": "core",
+      "condition": "q.in_battle() == false",
+      "tasksByPriority": {
+        "1": [
+          "melee_attack",
+          "attack_angry_at",
+          "stop_being_angry_if_attacker_dead",
+          "get_angry_at_attacker",
+          "move_to_attack_target"
+        ]
+      }
+    }
+  ]
+}

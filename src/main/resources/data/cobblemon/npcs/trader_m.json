@@ -1,0 +1,28 @@
+{
+  "hitbox": "player",
+  "presets": [
+    "cobbletrainers:trader_base",
+    "cobbletrainers:wanders",
+    "cobbletrainers:looks_around",
+    "cobbletrainers:fights_back"
+  ],
+  "names": [
+    "Trader Joe",
+    "Trader Rick",
+    "Trader Monty",
+    "Trader Paul",
+    "Trader Eobard",
+    "Trader Vinny",
+    "Trader Don",
+    "Trader Harold",
+    "Trader Alex",
+    "Trader Forrest",
+    "Trader Aimé",
+    "Trader Steve",
+    "Trader Andre"
+  ],
+  "interaction": {
+    "type": "dialogue",
+    "dialogue": "cobblemon:npc-trader"
+  }
+}

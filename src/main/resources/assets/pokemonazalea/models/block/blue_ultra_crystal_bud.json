@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "pokemonazalea:block/blue_ultra_crystal_bud"
+  }
+}

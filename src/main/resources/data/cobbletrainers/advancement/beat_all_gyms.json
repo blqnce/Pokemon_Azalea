@@ -1,0 +1,34 @@
+{
+  "display": {
+    "icon": {
+      "id": "cobblemon:rocky_helmet"
+    },
+    "title": {
+      "translate": "cobbletrainers.advancement.all_gyms",
+      "fallback": "Victory Road"
+    },
+    "description": {
+      "translate": "cobbletrainers.advancement.all_gyms.desc",
+      "fallback": "Best every single gym leader in battle."
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "cobblemon:first_battle_victory",
+  "criteria": {
+    "brock": {
+      "trigger": "minecraft:impossible"
+    },
+    "larry": {
+      "trigger": "minecraft:impossible"
+    },
+    "raihan": {
+      "trigger": "minecraft:impossible"
+    },
+    "blaine": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

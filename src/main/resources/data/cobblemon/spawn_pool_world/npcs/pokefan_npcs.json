@@ -1,0 +1,18 @@
+{
+  "enabled": true,
+  "spawns": [
+    {
+      "id": "",
+      "npc": "pokefan_npcs",
+      "presets": ["natural"],
+      "type": "npc",
+      "context": "grounded",
+      "bucket": "common",
+      "weight": 0.2,
+      "level": "1",
+      "condition": {
+        "biomes": ["#cobblemon:is_grassland", "#cobblemon:is_highlands", "#cobblemon:is_hills", "#cobblemon:is_forest"]
+      }
+    }
+  ]
+}

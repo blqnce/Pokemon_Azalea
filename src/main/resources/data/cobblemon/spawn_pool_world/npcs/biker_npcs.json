@@ -1,0 +1,18 @@
+{
+  "enabled": true,
+  "spawns": [
+    {
+      "id": "",
+      "npc": "biker_npcs",
+      "presets": ["natural"],
+      "type": "npc",
+      "context": "grounded",
+      "bucket": "uncommon",
+      "weight": 0.2,
+      "level": "1",
+      "condition": {
+      "biomes": ["#cobblemon:is_overworld"]
+      }
+    }
+  ]
+}

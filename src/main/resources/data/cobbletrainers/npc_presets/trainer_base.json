@@ -1,0 +1,24 @@
+{
+  "ai": [
+    {
+      "type": "apply_presets",
+      "presets": [
+        "cobblemon:chats",
+        "cobblemon:pauses_in_battle"
+      ]
+    }
+  ],
+  "config": [
+    {
+      "variableName": "on_player_wins",
+      "displayName": "npc.variable.on_player_wins.name",
+      "description": "npc.variable.on_player_wins.desc",
+      "type": "TEXT",
+      "defaultValue": "q.run_command('execute as ' + q.player.username + ' run function cobbletrainers:beat_trainer')"
+    }
+  ],
+  "isLeashable": false,
+  "battleConfiguration": {
+    "canChallenge": true
+  }
+}

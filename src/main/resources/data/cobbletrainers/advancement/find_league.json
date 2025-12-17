@@ -1,0 +1,43 @@
+{
+  "display": {
+    "icon": {
+      "id": "cobblemon:ability_patch"
+    },
+    "title": {
+      "translate": "cobbletrainers.advancement.league",
+      "fallback": "Elite Perseverance"
+    },
+    "description": {
+      "translate": "cobbletrainers.advancement.league.desc",
+      "fallback": "Reach the Pokémon League, the final hurdle in your journey."
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "cobbletrainers:beat_all_gyms",
+  "criteria": {
+    "league": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structures": "#cobbletrainers:towns"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "league"
+    ]
+  ]
+}

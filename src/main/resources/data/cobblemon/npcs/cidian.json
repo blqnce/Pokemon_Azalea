@@ -1,0 +1,31 @@
+{
+  "hitbox": "player",
+  "presets": [
+    "cobbletrainers:trainer_base",
+    "cobbletrainers:wanders",
+    "cobbletrainers:looks_around"
+  ],
+  "variation": {},
+  "config": [
+    {
+      "variableName": "on_player_wins",
+      "displayName": "npc.variable.on_player_wins.name",
+      "description": "npc.variable.on_player_wins.desc",
+      "type": "TEXT",
+      "defaultValue": "q.player.data.cidian_defeated = 1; q.player.save_data(); q.run_command('tellraw ' + q.player.username + ' [\"\",{\"text\":\"[' + q.npc.name + '] That was an amazing battle, ' + q.player.username + '\"}]'); q.run_command('execute as ' + q.player.username + ' run function cobbletrainers:beat_trainer')"
+    }
+  ],
+  "names": [
+    "Mapmaker Cidian"
+  ],
+  "interaction": {
+    "type": "dialogue",
+    "dialogue": "cobblemon:npc-cidian"
+  },
+  "skill": 5,
+  "party": {
+    "type": "script",
+    "script": "cobblemon:cidian_party",
+    "isStatic": false
+  }
+}

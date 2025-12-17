@@ -1,0 +1,72 @@
+{
+  "baseScale": 0.56,
+  "hitbox": "player",
+  "presets": [
+    "cobbletrainers:trainer_base",
+    "cobbletrainers:wanders_fast",
+    "cobbletrainers:looks_around",
+    "cobbletrainers:flees"
+  ],
+  "variation": {},
+  "config": [
+    {
+      "variableName": "challenge_cooldown",
+      "displayName": "Cooldown",
+      "description": "How long in ticks the NPC will be un-challengable from that player's last challenge.",
+      "type": "NUMBER",
+      "defaultValue": "2400"
+    },
+    {
+      "variableName": "can_rechallenge",
+      "displayName": "Rechallenging",
+      "description": "This NPC can be battled multiple times.",
+      "type": "BOOLEAN",
+      "defaultValue": true
+    }
+  ],
+  "names": [
+    "Youngster Timmy",
+    "Youngster Billy",
+    "Youngster Bobby",
+    "Youngster Dave",
+    "Youngster Mikey",
+    "Youngster Barry",
+    "Youngster Paul",
+    "Youngster Joey",
+    "Youngster Ken",
+    "Youngster Ethan",
+    "Youngster Aidan",
+    "Youngster Dan",
+    "Youngster Bartholomew",
+    "Youngster Steven",
+    "Youngster Tommy",
+    "Youngster Kevin",
+    "Youngster Kyle",
+    "Youngster James",
+    "Youngster Jake",
+    "Youngster Finn",
+    "Youngster Edwin",
+    "Youngster Anakin",
+    "Youngster Russel",
+    "Youngster Chris",
+    "Youngster Mack",
+    "Youngster Ben",
+    "Youngster Charlie",
+    "Youngster Ryan",
+    "Youngster Brian",
+    "Youngster Tobias",
+    "Youngster Nathan",
+    "Youngster José"
+  ],
+  "interaction": {
+    "type": "dialogue",
+    "dialogue": "cobblemon:npc-youngster"
+  },
+  "autoHealParty": false,
+  "skill": 3,
+  "party": {
+    "type": "script",
+    "script": "cobblemon:youngster_party",
+    "isStatic": false
+  }
+}

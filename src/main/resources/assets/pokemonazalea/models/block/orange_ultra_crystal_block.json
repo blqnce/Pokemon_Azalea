@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "pokemonazalea:block/orange_ultra_crystal_block"
+  }
+}

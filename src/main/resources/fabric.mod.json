@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "pokemonazalea",
+	"version": "${version}",
+	"name": "PokemonAzalea",
+	"description": "Mod para el servidor de Pokemon Azalea",
+	"authors": [
+		"Blance"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/pokemonazalea/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.falconidos.pokemonazalea.PokemonAzalea"
+		],
+		"fabric-datagen": [
+			"net.falconidos.pokemonazalea.PokemonAzaleaDataGenerator"
+		],
+		"client": [
+			"net.falconidos.pokemonazalea.PokemonAzaleaClient"
+		]
+	},
+	"mixins": [
+		"pokemonazalea.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.4",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}

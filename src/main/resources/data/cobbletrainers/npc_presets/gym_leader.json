@@ -1,0 +1,23 @@
+{
+  "config": [
+    {
+      "variableName": "challenge_cooldown",
+      "displayName": "npc.variable.challenge_cooldown.name",
+      "description": "npc.variable.challenge_cooldown.desc",
+      "type": "NUMBER",
+      "defaultValue": "3600"
+    },
+    {
+      "variableName": "can_rechallenge",
+      "displayName": "Rechallenging",
+      "description": "This NPC can be battled multiple times.",
+      "type": "BOOLEAN",
+      "defaultValue": true
+    }
+  ],
+  "isInvulnerable": true,
+  "isMovable": false,
+  "allowProjectileHits": false,
+  "canDespawn": false,
+  "battleTheme": "minecraft:block.netherite_block.fall"
+}

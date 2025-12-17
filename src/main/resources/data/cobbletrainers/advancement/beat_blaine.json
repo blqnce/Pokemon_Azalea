@@ -1,0 +1,25 @@
+{
+  "display": {
+    "icon": {
+      "id": "cobblemon:fire_gem"
+    },
+    "title": {
+      "translate": "cobbletrainers.advancement.blaine",
+      "fallback": "Reduced To Ash"
+    },
+    "description": {
+      "translate": "cobbletrainers.advancement.blaine.desc",
+      "fallback": "Defeat the Fire-type gym leader, Blaine."
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "cobbletrainers:beat_a_gym",
+  "criteria": {
+    "blaine": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "hitbox": "player",
+  "presets": [
+    "cobbletrainers:gym_leader",
+    "cobbletrainers:looks_around",
+    "cobbletrainers:trainer_base"
+  ],
+  "variation": {},
+  "config": [
+    {
+      "variableName": "on_player_wins",
+      "displayName": "npc.variable.on_player_wins.name",
+      "description": "npc.variable.on_player_wins.desc",
+      "type": "TEXT",
+      "defaultValue": "q.player.data.blaine_defeated = 1; q.player.save_data(); q.run_command('tellraw ' + q.player.username + ' [\"\",{\"text\":\"[' + q.npc.name + '] I\\'ve been extinguished. [' + q.player.data.blaine_defeated + ']\"}]'); q.run_command('execute as ' + q.player.username + ' run function cobbletrainers:gyms/beat_blaine')"
+    }
+  ],
+  "names": [
+    "Blaine"
+  ],
+  "interaction": {
+    "type": "dialogue",
+    "dialogue": "cobblemon:npc-blaine"
+  },
+  "skill": 5,
+  "party": {
+    "type": "script",
+    "script": "cobblemon:blaine_party",
+    "isStatic": false
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "hitbox": "player",
+  "presets": [
+    "cobbletrainers:trainer_base",
+    "cobbletrainers:wanders",
+    "cobbletrainers:looks_around",
+    "cobbletrainers:fights_back"
+  ],
+  "variation": {
+    "net": {
+      "type": "weighted",
+      "options": [
+        {
+          "aspect": "cc",
+          "weight": 1
+        }
+      ]
+    }
+  },
+  "config": [
+    {
+      "variableName": "challenge_cooldown",
+      "displayName": "Cooldown",
+      "description": "How long in ticks the NPC will be un-challengable from that player's last challenge.",
+      "type": "NUMBER",
+      "defaultValue": "2400"
+    },
+    {
+      "variableName": "can_rechallenge",
+      "displayName": "Rechallenging",
+      "description": "This NPC can be battled multiple times.",
+      "type": "BOOLEAN",
+      "defaultValue": true
+    },
+    {
+      "variableName": "on_player_wins",
+      "displayName": "npc.variable.on_player_wins.name",
+      "description": "npc.variable.on_player_wins.desc",
+      "type": "TEXT",
+      "defaultValue": "q.player.data.cc_defeated = q.player.data.cc_defeated + 1; q.player.save_data(); q.run_command('tellraw ' + q.player.username + ' [\"\",{\"text\":\"[' + q.npc.name + '] Wow, you\\'re really strong, ' + q.player.username + '\"}]');"
+    }
+  ],
+  "names": [
+    "Cecilia Immergreen"
+  ],
+  "interaction": {
+    "type": "dialogue",
+    "dialogue": "cobblemon:npc-cc"
+  },
+  "autoHealParty": false,
+  "skill": 4,
+  "party": {
+    "type": "script",
+    "script": "cobblemon:cc_party",
+    "isStatic": false
+  }
+}

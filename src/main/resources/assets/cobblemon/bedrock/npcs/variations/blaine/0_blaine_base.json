@@ -1,0 +1,13 @@
+{
+  "name": "cobblemon:blaine",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:blaine",
+      "model": "cobblemon:blaine.geo",
+      "texture": "cobblemon:textures/npcs/blaine/blaine.png",
+      "layers": []
+    }
+  ]
+}

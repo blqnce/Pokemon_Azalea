@@ -1,0 +1,13 @@
+{
+  "name": "cobblemon:raihan",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:raihan",
+      "model": "cobblemon:raihan.geo",
+      "texture": "cobblemon:textures/npcs/raihan/raihan.png",
+      "layers": []
+    }
+  ]
+}

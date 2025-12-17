@@ -1,0 +1,18 @@
+{
+  "enabled": true,
+  "spawns": [
+    {
+      "id": "",
+      "npc": "pkmn_breeder_npcs",
+      "presets": ["natural"],
+      "type": "npc",
+      "context": "grounded",
+      "bucket": "common",
+      "weight": 0.2,
+      "level": "1",
+      "condition": {
+        "biomes": ["#cobblemon:is_mountain", "#cobblemon:is_grassland", "#cobblemon:is_hills", "#cobblemon:is_plains"]
+      }
+    }
+  ]
+}

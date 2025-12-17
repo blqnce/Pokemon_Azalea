@@ -1,0 +1,3 @@
+t.1 = 'Ciaoraaa';
+
+return q.random(t.1);

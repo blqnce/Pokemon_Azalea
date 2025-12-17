@@ -1,0 +1,121 @@
+{
+  "initializationAction": [
+    "(q.npc.is_in_battle_with(q.player) || !q.npc.is_doing_activity('minecraft:idle', 'cobblemon:battling')) ? q.dialogue.close();",
+    "q.run_script('cobblemon:generate_standard')"
+  ],
+  "speakers": {
+    "npc": {
+      "name": {
+        "type": "expression",
+        "expression": "q.npc.name"
+      },
+      "face": "q.npc.face(false);"
+    },
+    "player": {
+      "face": "q.player.face();",
+      "name": {
+        "type": "expression",
+        "expression": "q.player.username"
+      }
+    }
+  },
+  "pages": [
+    {
+      "id": "player-chat",
+      "speaker": "player",
+      "lines": [
+        {
+          "type": "expression",
+          "expression": "'Hello, I\\'m ' + q.player.username + '!"
+        }
+      ],
+      "input": "q.dialogue.set_page(q.npc.was_hurt_by(q.player) ? 'hurt-1' : 'npc-chat');"
+    },
+    {
+      "id": "hurt-1",
+      "speaker": "npc",
+      "lines": ["Do you seriously think I'd deal with you after you attacked me?! Get out of here!"],
+      "input": "q.dialogue.close();"
+    },
+    {
+      "id": "npc-chat",
+      "speaker": "npc",
+      "lines": [
+        {
+          "type": "expression",
+          "expression": "(q.npc.data.has_traded == 1) ? 'Oh, hi, ' + q.player.username + '. I don\\'t have any more Pokémon I\\'d be willing to trade with you.' : 'Oh, hi, ' + q.player.username + '! I have the deal of a lifetime for you, if you\\'d be interested.'"
+        }
+      ],
+      "input": {
+        "type": "option",
+        "vertical": false,
+        "options": [
+          {
+            "text": {
+              "type": "expression",
+              "expression": "(q.npc.data.has_traded == 1) ? '(Can\\'t Trade)' : 'Trade';"
+            },
+            "value": "battle",
+            "action": [
+              "q.dialogue.set_page('offer');"
+            ],
+            "isSelectable": "(q.npc.data.has_traded < 1);"
+          },
+          {
+            "text": "Cancel",
+            "value": "cancel",
+            "action": [
+              "q.dialogue.close()"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "offer",
+      "speaker": "npc",
+      "lines": [
+        {
+          "type": "expression",
+          "expression": "'Well, if you\\'ll take me up on my offer, I\\'d be willing to part ways with my §4§l' + q.npc.data.trade_offer_name + '§r in exchange for a §1§l' + q.npc.data.trade_request_name + '§r. What do you say, do we have a deal?'"
+        }
+      ],
+      "input": {
+        "type": "option",
+        "vertical": false,
+        "options": [
+          {
+            "text": {
+              "type": "expression",
+              "expression": "(q.player.party.count_by_properties(q.npc.data.trade_request) >= 1) ? 'Confirm' : '(' + q.npc.data.trade_request_name + ' missing)'"
+            },
+            "value": "trade",
+            "action": [
+              "q.dialogue.set_page('farewell');",
+              "q.run_script('cobblemon:execute_trade');"
+            ],
+            "isSelectable": "(q.player.party.count_by_properties(q.npc.data.trade_request) >= 1)"
+          },
+          {
+            "text": "Cancel",
+            "value": "cancel",
+            "action": [
+              "q.dialogue.close()"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "farewell",
+      "speaker": "npc",
+      "lines": [
+        {
+          "type": "expression",
+          "expression": "q.npc.data.trade_evolution >= 1 ? 'Woah, did my ' + q.npc.data.trade_offer_name + ' evolve?! What an interesting sight to behold!' : 'Alright, a deal is a deal. Take care of ' + q.npc.data.trade_offer_name + ' for me.'"
+        }
+      ],
+      "input": "q.dialogue.close();"
+    }
+  ]
+}

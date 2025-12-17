@@ -1,0 +1,15 @@
+{ 
+  "ai": [
+    {
+      "type": "add_tasks_to_activity",
+      "activity": "idle",
+      "condition": "q.in_battle() == false",
+      "tasksByPriority": {
+        "0": [
+          "look_at_entities",
+          "look_at_target"
+        ]
+      }
+    }
+  ]
+}

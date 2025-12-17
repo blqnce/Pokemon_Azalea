@@ -1,0 +1,27 @@
+{ 
+  "ai": [
+    {
+      "type": "add_tasks_to_activity",
+      "activity": "idle",
+      "condition": "q.in_battle() == false",
+      "tasksByPriority": {
+        "1": [
+          "follow_walk_target",
+          {
+            "type": "stay_afloat",
+            "chance": 0.25
+          }
+        ],
+        "2": [
+          {
+            "type": "wander",
+            "condition": "q.in_battle() == false",
+            "speedMultiplier": 0.45,
+            "horizontalRange": 12,
+            "verticalRange": 5
+          }
+        ]
+      }
+    }
+  ]
+}

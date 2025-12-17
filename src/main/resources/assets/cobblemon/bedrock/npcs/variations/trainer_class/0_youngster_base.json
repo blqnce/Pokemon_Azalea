@@ -1,0 +1,13 @@
+{
+  "name": "cobblemon:youngster",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:youngster",
+      "model": "cobblemon:youngster.geo",
+      "texture": "cobblemon:textures/npcs/class/youngster.png",
+      "layers": []
+    }
+  ]
+}

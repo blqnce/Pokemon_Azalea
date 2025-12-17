@@ -1,0 +1,77 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "bonus_rolls": 0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:exploration_map",
+              "destination": "cobbletrainers:special/rare",
+              "decoration": "red_x",
+              "zoom": 4,
+              "skip_existing_chunks": false
+            },
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "translate": "??? Map",
+                "color": "light_purple"
+              },
+              "target": "item_name"
+            }
+          ],
+          "name": "minecraft:map"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 5,
+          "functions": [
+            {
+              "function": "minecraft:exploration_map",
+              "destination": "cobbletrainers:special/uncommon",
+              "decoration": "red_x",
+              "zoom": 3,
+              "skip_existing_chunks": true
+            },
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "translate": "??? Map",
+                "color": "green"
+              },
+              "target": "item_name"
+            }
+          ],
+          "name": "minecraft:map"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 9,
+          "functions": [
+            {
+              "function": "minecraft:exploration_map",
+              "destination": "cobbletrainers:special/common",
+              "decoration": "red_x",
+              "zoom": 2,
+              "skip_existing_chunks": true
+            },
+            {
+              "function": "minecraft:set_name",
+              "name": {
+                "translate": "??? Map"
+              },
+              "target": "item_name"
+            }
+          ],
+          "name": "minecraft:map"
+        }
+      ],
+      "rolls": 1
+    }
+  ],
+  "random_sequence": "cobbletrainers:trainer/cidian/special_map"
+}

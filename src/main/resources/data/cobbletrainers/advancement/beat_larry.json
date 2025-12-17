@@ -1,0 +1,25 @@
+{
+  "display": {
+    "icon": {
+      "id": "cobblemon:normal_gem"
+    },
+    "title": {
+      "translate": "cobbletrainers.advancement.larry",
+      "fallback": "Five-Star Review"
+    },
+    "description": {
+      "translate": "cobbletrainers.advancement.larry.desc",
+      "fallback": "Defeat the Normal-type gym leader, Larry."
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "cobbletrainers:beat_a_gym",
+  "criteria": {
+    "larry": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

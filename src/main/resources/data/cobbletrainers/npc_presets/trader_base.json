@@ -1,0 +1,11 @@
+{
+  "ai": [
+    {
+      "type": "apply_presets",
+      "presets": [
+        "cobblemon:chats"
+      ]
+    }
+  ],
+  "isLeashable": false
+}

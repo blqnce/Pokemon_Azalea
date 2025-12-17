@@ -1,0 +1,7 @@
+(q.player.in_battle() == false) ? {
+    q.npc.start_battle(q.player);
+    q.npc.data.has_battled = 1;
+    q.npc.save_data();
+    q.run_command('tellraw ' + q.player.username + ' "[' + q.npc.name + '] ' + q.npc.config.challenge_message + '"');
+};
+return 1;
