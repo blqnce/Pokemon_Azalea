@@ -1,0 +1,76 @@
+{
+  "initializationAction":[
+    "q.npc.config.toggle_battle_cooldown && q.run_script('cobblemon:cooldown_check') ? q.dialogue.set_page('on_cooldown');"
+  ],
+  "speakers":{
+    "npc":{
+      "name":{
+        "type":"expression",
+        "expression":"q.npc.name"
+      },
+      "face":"q.npc.face();"
+    },
+    "player":{
+      "name":{
+        "type":"expression",
+        "expression":"q.player.username"
+      },
+      "face":"q.player.face();"
+    }
+  },
+  "pages":[
+    {
+      "id":"initial_dialogue",
+      "speaker": "npc",
+      "lines": [
+        {
+          "type": "expression",
+          "expression": "'Ciaoraaa'"
+        }
+      ]
+
+    },
+    {
+      "id":"battle_prompt",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
+          "expression":"'Chattini you are so stupid'"
+        }
+      ],
+      "input":{
+        "type":"option",
+        "vertical":false,
+        "options":[
+          {
+            "text":"Battle",
+            "value":"battle",
+            "action":[
+              "q.dialogue.close();",
+              "v.battle = q.npc.start_battle(q.player);"
+            ]
+          },
+          {
+            "text":"No",
+            "value":"no",
+            "action":[
+              "q.dialogue.close();"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id":"on_cooldown",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
+          "expression":"'§8§o' + q.run_script('cobblemon:cooldown_remaining_time');"
+        }
+      ],
+      "input":"q.dialogue.close();"
+    }
+  ]
+}

@@ -4,6 +4,8 @@ import net.fabricmc.api.ModInitializer;
 
 import net.falconidos.pokemonazalea.block.ModBlocks;
 import net.falconidos.pokemonazalea.item.ModItemGroups;
+import net.falconidos.pokemonazalea.sound.ModMusicType;
+import net.falconidos.pokemonazalea.sound.ModSounds;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -17,6 +19,10 @@ public class PokemonAzalea implements ModInitializer {
 		ModItemGroups.registerItemGroups();
 
 		ModBlocks.registerModBlocks();
+
+		ModSounds.registerSounds();
+
+		ModMusicType.registerMusics();
 
 	}
 }

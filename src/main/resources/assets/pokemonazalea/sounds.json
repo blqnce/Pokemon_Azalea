@@ -1,0 +1,50 @@
+{
+  "theme.gym.leader": {
+    "subtitle": "sounds.pokemonazalea.gym.leader",
+    "sounds": [
+      "pokemonazalea:theme.gym.leader"
+    ]
+  },
+  "theme.legendary": {
+    "subtitle": "sounds.pokemonazalea.legendary",
+    "sounds": [
+      "pokemonazalea:theme.legendary"
+    ]
+  },
+  "theme.ultrabeast": {
+    "subtitle": "sounds.pokemonazalea.ultrabeast",
+    "sounds": [
+      "pokemonazalea:theme.ultrabeast"
+    ]
+  },
+  "theme.gym.fool": {
+    "subtitle": "sounds.pokemonazalea.gym.fool",
+    "sounds": [
+      "pokemonazalea:theme.gym.fool"
+    ]
+  },
+  "theme.elitefour": {
+    "subtitle": "sounds.pokemonazalea.elitefour",
+    "sounds": [
+      "pokemonazalea:theme.elitefour"
+    ]
+  },
+  "theme.evil.team": {
+    "subtitle": "sounds.pokemonazalea.evil.team",
+    "sounds": [
+      "pokemonazalea:theme.evil.team"
+    ]
+  },
+  "theme.evil.leader": {
+    "subtitle": "sounds.pokemonazalea.evil.leader",
+    "sounds": [
+      "pokemonazalea:theme.evil.leader"
+    ]
+  },
+  "theme.gym.trainer": {
+    "subtitle": "sounds.pokemonazalea.theme.gym.trainer",
+    "sounds": [
+      "pokemonazalea:theme.gym.trainer"
+    ]
+  }
+}

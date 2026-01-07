@@ -1,0 +1,17 @@
+{
+  "baseScale" : 1,
+  "resourceIdentifier" : "cobblemon:raora",
+  "names" : [ "Raora Panthera" ],
+  "presets" : [ "cobblemon:base_npc_npcs", "cobblemon:looks_around", "cobblemon:battle_reward_pokedollars_npcs", "cobblemon:battle_reward_npcs", "cobblemon:battle_cooldown_npcs", "cobblemon:wanders" ],
+  "interaction" : {
+    "type" : "dialogue",
+    "dialogue" : "cobblemon:raora_npc_npcs"
+  },
+  "skill" : 5,
+  "party" : {
+    "type" : "script",
+    "script" : "cobblemon:raora_party",
+    "isStatic" : false,
+    "static" : false
+  }
+}
