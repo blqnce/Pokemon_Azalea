@@ -1,20 +1,20 @@
 {
   "baseScale":1.0,
-  "resourceIdentifier":"cobblemon:loco",
+  "resourceIdentifier":"cobblemon:justicia",
   "names":[
-    "El Loco"
+    "La Justicia"
   ],
   "presets":[
-    "cobblemon:base_npc_npcs_gym_fool"
+    "cobblemon:base_npc_npcs_gym_trainer"
   ],
   "interaction":{
     "type":"dialogue",
-    "dialogue":"cobblemon:loco_dialogue"
+    "dialogue":"cobblemon:justicia_dialogue"
   },
   "skill":5,
   "party":{
     "type":"script",
-    "script":"cobblemon:loco_party",
+    "script":"cobblemon:justicia_party",
     "isStatic":false,
     "static":false
   },

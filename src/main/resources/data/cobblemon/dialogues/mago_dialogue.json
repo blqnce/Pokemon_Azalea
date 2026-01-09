@@ -1,8 +1,7 @@
 {
   "initializationAction":[
-    "(q.player.data.tarot_defeated < 3) ? q.dialogue.set_page('req-unmet');",
-    "(q.player.data.tarot_defeated >= 3) ? q.dialogue.set_page('Dialogo');",
-    "(q.player.data.loco_defeated >= 1) ? q.dialogue.set_page('Ganado');"
+    "(q.player.data.mago_defeated < 1) ? q.dialogue.set_page('Dialogo');",
+    "(q.player.data.mago_defeated >= 1) ? q.dialogue.set_page('Ganado');"
   ],
   "speakers":{
     "npc":{
@@ -24,18 +23,7 @@
     {
       "id": "Ganado",
       "speaker": "npc",
-      "lines": ["Te felicito por esta hazaña, pero veo que tu destino te depara cosas aún más increíbles."]
-    },
-    {
-      "id": "Ganado2",
-      "speaker": "npc",
-      "lines": ["Sabías que una vez fui el campeón de la liga? Debo decirte que es más interesante ser un líder de gimnasio. Lo entenderás más tarde."],
-      "input": "q.dialogue.close();"
-    },
-    {
-      "id": "req-unmet",
-      "speaker": "npc",
-      "lines": ["Primero demuestra tu valía para poder enfrentarte conmigo."],
+      "lines": ["Felicidades por la victoria, continúa con tu aventura."],
       "input": "q.dialogue.close();"
     },
     {
@@ -44,7 +32,17 @@
       "lines":[
         {
           "type":"expression",
-          "expression":"'Tuve una revelación de que este combate será memorable.'"
+          "expression":"'Vienes a medirte al gimnasio? '"
+        }
+      ]
+    },
+    {
+      "id":"Dialogo",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
+          "expression":"'No tengo muchas ganas de pelear ahora, pero se supone que debo aceptar el combate... '"
         }
       ]
     },
@@ -54,7 +52,7 @@
       "lines":[
         {
           "type":"expression",
-          "expression":"'¿Listo para participar en esta obra?'"
+          "expression":"'Terminemos esto de una vez. '"
         }
       ],
       "input":{
@@ -62,7 +60,7 @@
         "vertical":false,
         "options":[
           {
-            "text":"Estoy listo",
+            "text":"Estoy listo ",
             "value":"battle",
             "action":[
               "q.dialogue.close();",
@@ -70,7 +68,7 @@
             ]
           },
           {
-            "text":"Un momento",
+            "text":"Más tarde ",
             "value":"no",
             "action":[
               "q.dialogue.set_page('despedida')"
@@ -85,7 +83,7 @@
       "lines":[
         {
           "type":"expression",
-          "expression":"'Estás destinado a participar.'"
+          "expression":"'No creas que te voy a estar esperando, si me duermo no me despiertes. '"
         }
       ],
       "input":"q.dialogue.close();"
@@ -96,7 +94,7 @@
       "lines":[
         {
           "type":"expression",
-          "expression":"'Este npc le quedan ' + q.run_script('cobblemon:cooldown_remaining_time') + 'horas de cooldown'"
+          "expression":"'Este npc le quedan ' + q.run_script('cobblemon:cooldown_remaining_time') + ' de cooldown'"
         }
       ]
     }

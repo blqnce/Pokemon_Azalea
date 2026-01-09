@@ -1,0 +1,172 @@
+{
+  "initializationAction" : [
+
+    "(q.player.data.peruneta_hablado < 1) ? q.dialogue.set_page('Dialogo');",
+    "(q.player.data.victor_spawn_hablado >= 1) ? q.dialogue.set_page('Dialogo2');",
+    "(q.player.data.peruneta_hablado_2 >= 1) ? q.dialogue.set_page('Dialogo7');"
+
+  ],
+  "speakers" : {
+    "npc" : {
+      "name" : {
+        "type" : "expression",
+        "expression" : "q.npc.name"
+      },
+      "face" : "q.npc.face()"
+    },
+    "player" : {
+      "name" : {
+        "type" : "expression",
+        "expression" : "q.player.username"
+      },
+      "face" : "q.player.face()"
+    }
+  },
+  "pages" : [ {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Amigo, ¿ya te toca salir?'"
+    } ]
+    
+  }, {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'La otra vuelta me encontré unos championes tirados por ahí... Están enteros, eh.'"
+    } ]
+    
+  }, {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Tomá, te los regalo para festejar que te aceptaron en la academia. ¡Tremendo logro, pa!'"
+    } ]
+    
+  }, {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Avisame cuando tengas la Pokédex, así vemos qué onda.'"
+    } ],
+    "input" : "q.player.data.peruneta_hablado = q.player.data.peruneta_hablado + 1; q.player.save_data(); q.dialogue.close();"
+    
+  }, {
+    "id" : "Dialogo7",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Mientras laves los platos, la ropa y cocines de vez en cuando, te podés quedar acá tranquilo.'"
+    } ]
+    
+  }, {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Pero por favor, te lo pido de corazón...'"
+    } ],
+    "input" : "q.dialogue.set_page('Hermana');"
+    
+  }, {
+    "id" : "Dialogo2",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'¿Y? ¿Cómo te fue?'"
+    } ]
+    
+  }, {
+    "id" : "Dialogo",
+    "speaker" : "player",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Bien, ya tengo la pokédex.'"
+    } ]
+    
+  }, {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'¡Me alegro, loco! Mirá que mucha gente arranca así, laburando pa’ la academia.'"
+    } ]
+    
+  }, {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Yo arranqué igual, hasta que me pude comprar esta casa medio de rebote.'"
+    } ]
+    
+  }, {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Tomá, me sobran unas Poké Balls.'"
+    } ],
+    "input" : "q.run_command('give ' + q.player.username + ' cobblemon:poke_ball' + ' 5'); q.dialogue.set_page('Dialogo9');"
+    
+  }, {
+    "id" : "Dialogo9",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Te van a servir para empezar a atrapar algo... si no le errás como en el valorant, claro.'"
+    } ],
+    "input" : "q.player.data.peruneta_hablado_2 = q.player.data.peruneta_hablado_2 + 1; q.player.save_data(); q.dialogue.close();"
+    
+  },
+    {
+      "id": "Hermana",
+      "speaker": "npc",
+      "lines": ["No te me acerques a mi hermana, que te conozco."],
+      "escapeAction": "0",
+      "input": {
+        "type": "option",
+        "vertical": false,
+        "timeout": {
+          "delay": 6,
+          "action": "q.dialogue.input('negar');"
+        },
+        "options": [
+          {
+            "text": "Asentir",
+            "value": "asentir",
+            "action": [
+              "v.reaction = 'asentir';",
+              "q.dialogue.set_page('resultado');"
+            ]
+          },
+          {
+            "text": "Negar",
+            "value": "negar",
+            "action": [
+              "v.reaction = 'negar';",
+              "q.dialogue.set_page('resultado');"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "resultado",
+      "speaker": "npc",
+      "lines": [
+        {
+          "type": "expression",
+          "expression": "v.reaction == 'asentir' ? 'Bueno... mira que confío eh? Acordate que si perdés, que al menos sea con estilo, viste.' : v.reaction == 'negar' ? 'Con mi hermana no, ¿tamo? Que te conozco y no me hago el boludo, que sos tremendo caradura... '"
+        }
+      ],
+      "textColor": "FFFFFF",
+      "background": "cobblemon:textures/gui/dialogue/dialogue_box_info.png"
+    }
+
+  ]
+}

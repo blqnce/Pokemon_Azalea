@@ -1,0 +1,19 @@
+{
+  "name": "cobblemon.behaviour.ganador.name",
+  "description": "cobblemon.behaviour.ganador.desc",
+  "entityType": "cobblemon:npc",
+  "configurations": [
+    {
+      "type": "cobblemon:add_variables",
+      "variables": [
+        {
+          "variableName": "ganador_check",
+          "displayName": "ganador_check",
+          "description": "Check de si esta cosa sirve",
+          "type": "BOOLEAN",
+          "defaultValue": "1"
+        }
+      ]
+    }
+  ]
+}

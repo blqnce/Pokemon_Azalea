@@ -24,6 +24,42 @@ for_each(t.loser, c.npc_losers, {
     });
   };
 
+  t.loser.npc.config.ganador_check ? {
+
+  for_each(t.player_winner, c.player_winners, {
+          v.player = t.player_winner.player;
+          v.npc = t.loser.npc;
+          q.set_query('player', t.player_winner.player);
+          q.set_query('npc', t.loser.npc);
+
+q.npc.name == 'La Justicia' ? {
+q.player.data.justicia_defeated = q.player.data.justicia_defeated + 1;
+        q.player.data.tarot_defeated = q.player.data.tarot_defeated + 1;
+q.player.save_data();
+};
+q.npc.name == 'El Loco' ? {
+q.player.data.loco_defeated = q.player.data.loco_defeated + 1;
+q.player.save_data();
+q.run_command('give ' + q.player.username + ' mapkit:psychic_badge');
+};
+q.npc.name == 'El Mago' ? {
+q.player.data.mago_defeated = q.player.data.mago_defeated + 1;
+q.player.data.tarot_defeated = q.player.data.tarot_defeated + 1;
+q.player.save_data();
+
+};
+
+q.npc.name == 'La Estrella' ? {
+q.player.data.estrella_defeated = q.player.data.estrella_defeated + 1;
+q.player.data.tarot_defeated = q.player.data.tarot_defeated + 1;
+q.player.save_data();
+
+};
+
+  });
+
+  };
+
   t.loser.npc.config.toggle_battle_reward ? {
     for_each(t.player_winner, c.player_winners, {
       v.player = t.player_winner.player;

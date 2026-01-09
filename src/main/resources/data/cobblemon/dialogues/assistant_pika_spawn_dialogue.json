@@ -1,0 +1,57 @@
+{
+  "initializationAction" : [
+    "(q.player.data.pika_spawn_hablado < 1) ? q.dialogue.set_page('Dialogo');",
+    "(q.player.data.pika_spawn_hablado >= 1) ? q.dialogue.set_page('Dialogo2');"
+  ],
+  "speakers" : {
+    "npc" : {
+      "name" : {
+        "type" : "expression",
+        "expression" : "q.npc.name"
+      },
+      "face" : "q.npc.face()"
+    },
+    "player" : {
+      "name" : {
+        "type" : "expression",
+        "expression" : "q.player.username"
+      },
+      "face" : "q.player.face()"
+    }
+  },
+  "pages" : [ {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Hola. Soy Pika, un gusto. '"
+    } ]
+    
+  }, {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Ahora mismo estoy ocupado cuidando a los Pokémon, como ves. '"
+    } ]
+    
+  }, {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'No tengo idea de qué se supone que deberías estar haciendo… pero si me das una mano, no me voy a quejar.'"
+    } ],
+    "input": "q.player.data.pika_spawn_hablado = q.player.data.pika_spawn_hablado + 1; q.player.save_data(); q.dialogue.close();"
+
+
+  }, {
+    "id" : "Dialogo2",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Veo que tenés tus propias tareas… Te recomiendo destacarte como entrenador desde el principio, porque si no, el trabajo se te va a hacer bastante tedioso.'"
+    } ]
+    
+  } ]
+}

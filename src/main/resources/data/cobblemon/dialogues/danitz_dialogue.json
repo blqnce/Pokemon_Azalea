@@ -1,0 +1,86 @@
+{
+  "initializationAction" : [
+
+    "(q.player.data.tarot_defeated < 3) ? q.dialogue.set_page('Dialogo');",
+    "(q.player.data.tarot_defeated >= 3) ? q.dialogue.set_page('Dialogo2');"
+
+  ],
+  "speakers" : {
+    "npc" : {
+      "name" : {
+        "type" : "expression",
+        "expression" : "q.npc.name"
+      },
+      "face" : "q.npc.face()"
+    },
+    "player" : {
+      "name" : {
+        "type" : "expression",
+        "expression" : "q.player.username"
+      },
+      "face" : "q.player.face()"
+    }
+  },
+  "pages" : [
+    {
+      "id" : "Dialogo2",
+      "speaker" : "npc",
+      "lines" : [ {
+        "type" : "expression",
+        "expression" : "'No creo que con tu fuerza los hayas derrotado.\nSeguro dejaron que así fuera.'"
+      } ]
+
+    },
+    {
+      "id" : "Dialogo3",
+      "speaker" : "npc",
+      "lines" : [ {
+        "type" : "expression",
+        "expression" : "'Aun así, debo hacer mi trabajo…\nTe enviaré con él.'"
+      } ]
+
+    },
+    {
+      "id" : "Dialogo4",
+      "speaker" : "npc",
+      "lines" : [ {
+        "type" : "expression",
+        "expression" : "'El Rey de Amarillo y Negro…'"
+      } ],
+      "input" : "q.dialogue.close(); q.run_command('tp ' + q.player.username +' 671 39 202 -90 0');"
+
+    },
+    {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'¡Bienvenido a este circo! Mírate… tienes toda la pinta de encajar aquí.'"
+    } ]
+    
+  }, {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Te lo explico despacito, a ver si así te entra: este... es... el... Gimnasio... del... Loco...'"
+    } ]
+    
+  }, {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'¿Quieres enfrentarte a Él? Primero… con esa cara, lo veo complicado. Segundo, deberás derrotar a tres entrenadores, aquellos que portan el nombre de una carta del tarot.'"
+    } ]
+    
+  }, {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Regresa cuando el destino te haya dado la razón. Entonces te enviaré con el Señor… Pero insisto, con esa cara esta dificil...'"
+    } ]
+    
+  } ]
+}

@@ -9,9 +9,6 @@ import static net.minecraft.sound.MusicType.createIngameMusic;
 
 public class ModMusicType {
 
-    public static final MusicSound GYM_LEADER = createIngameMusic(ModSounds.THEME_GYM_LEADER);
-
-
     public static void registerMusics() {
         PokemonAzalea.LOGGER.info("Registering Mod Musics for " + PokemonAzalea.MOD_ID);
     }
