@@ -1,20 +1,20 @@
 {
   "baseScale":1.0,
-  "resourceIdentifier":"cobblemon:loco",
+  "resourceIdentifier":"cobblemon:raora",
   "names":[
-    "§c§lEl Loco"
+    "peruneta"
   ],
   "presets":[
-    "cobblemon:base_npc_npcs_gym_fool"
+    "cobblemon:base_npc_npcs"
   ],
   "interaction":{
     "type":"dialogue",
-    "dialogue":"cobblemon:loco_dialogue"
+    "dialogue":"cobblemon:peruneta23_dialogue"
   },
   "skill":5,
   "party":{
     "type":"script",
-    "script":"cobblemon:loco_party",
+    "script":"cobblemon:peruneta23_party",
     "isStatic":false,
     "static":false
   },
@@ -25,8 +25,7 @@
         "cobblemon:looks_around",
         "cobblemon:battle_reward_npcs",
         "cobblemon:battle_reward_pokedollars5_npcs",
-        "cobblemon:battle_cooldown_npcs",
-        "cobblemon:ganador"
+        "cobblemon:battle_cooldown_npcs"
       ]
     }
   ]

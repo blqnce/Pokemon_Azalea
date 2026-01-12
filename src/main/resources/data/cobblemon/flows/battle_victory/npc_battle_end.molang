@@ -66,7 +66,7 @@ q.player.save_data();
       v.npc = t.loser.npc;
       q.set_query('player', t.player_winner.player);
       q.set_query('npc', t.loser.npc);
-      q.run_command('loot give ' + q.player.username + ' loot 201:rewards');
+      q.run_command('loot give ' + q.player.username + ' loot pokemonazalea:rewards');
     });
   };
 
@@ -135,14 +135,4 @@ q.player.save_data();
     });
   };
 
-  t.loser.npc.config.toggle_battle_reward_b ? {
-    for_each(t.player_winner, c.player_winners, {
-      v.player = t.player_winner.player;
-      v.npc = t.loser.npc;
-      q.set_query('player', t.player_winner.player);
-      q.set_query('npc', t.loser.npc);
-      q.run_command('deposit ' + q.npc.config.battle_reward_amount_b + ' impactor:battlepoints ' + q.player.username);
-      q.player.tell('§b§lYou have received ' + t.loser.npc.config.battle_reward_amount_b + ' BP for winning!§r');
-    });
-  };
 });

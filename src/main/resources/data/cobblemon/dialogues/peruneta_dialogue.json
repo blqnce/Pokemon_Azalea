@@ -2,6 +2,7 @@
   "initializationAction" : [
 
     "(q.player.data.peruneta_hablado < 1) ? q.dialogue.set_page('Dialogo');",
+    "(q.player.data.peruneta_hablado >= 1) ? q.dialogue.set_page('Dialogo23');",
     "(q.player.data.victor_spawn_hablado >= 1) ? q.dialogue.set_page('Dialogo2');",
     "(q.player.data.peruneta_hablado_2 >= 1) ? q.dialogue.set_page('Dialogo7');"
 
@@ -44,10 +45,11 @@
     "lines" : [ {
       "type" : "expression",
       "expression" : "'Tomá, te los regalo para festejar que te aceptaron en la academia. ¡Tremendo logro, pa!'"
-    } ]
+    } ],
+    "input": "q.run_command('give ' + q.player.username + ' mapkit:running_shoes'); q.dialogue.set_page('Dialogo23');"
     
   }, {
-    "id" : "Dialogo",
+    "id" : "Dialogo23",
     "speaker" : "npc",
     "lines" : [ {
       "type" : "expression",
@@ -161,11 +163,10 @@
       "lines": [
         {
           "type": "expression",
-          "expression": "v.reaction == 'asentir' ? 'Bueno... mira que confío eh? Acordate que si perdés, que al menos sea con estilo, viste.' : v.reaction == 'negar' ? 'Con mi hermana no, ¿tamo? Que te conozco y no me hago el boludo, que sos tremendo caradura... '"
+          "expression": "v.reaction == 'asentir' ? 'Bueno... mira que confío eh? Acordate que si perdés, que al menos sea con estilo, viste.' : (v.reaction == 'negar' ? 'Con mi hermana no, ¿tamo? Que te conozco y no me hago el boludo, que sos tremendo caradura... ')"
         }
-      ],
-      "textColor": "FFFFFF",
-      "background": "cobblemon:textures/gui/dialogue/dialogue_box_info.png"
+      ]
+
     }
 
   ]

@@ -42,7 +42,7 @@
       "type" : "expression",
       "expression" : "'Aunque esto sea una academia, no seguimos una estructura rígida de estudios. De hecho, con tener esta Pokédex es suficiente para empezar.'"
     } ],
-    "input": "q.run_command('give ' + q.player.username + ' cobblemon:pokedex_red'); q.dialogue.set_page('Dialogo3');"
+    "input": "q.run_command('give ' + q.player.username + ' cobblemon:pokedex_red'); q.run_command('give ' + q.player.username + ' mapkit:badge_case'); q.run_command('give ' + q.player.username + ' simpletms:case_tm'); q.run_command('give ' + q.player.username + ' simpletms:case_tr'); q.dialogue.set_page('Dialogo3');"
     
   }, {
     "id" : "Dialogo3",

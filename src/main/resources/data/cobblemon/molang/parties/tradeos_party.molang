@@ -1,0 +1,6 @@
+
+q.party.add_by_properties('cobblemon:weavile');
+q.party.add_by_properties('cobblemon:weavile')
+
+
+return true;

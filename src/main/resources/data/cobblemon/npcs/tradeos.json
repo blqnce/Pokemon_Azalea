@@ -1,16 +1,16 @@
 {
   "baseScale" : 1.0,
-  "resourceIdentifier" : "cobblemon:victor",
-  "names" : [ "§bProfesor Victor" ],
+  "resourceIdentifier" : "cobblemon:tradeos",
+  "names" : [ "Hombre Sospechoso" ],
   "presets" : [ "cobblemon:base_npc_npcs" ],
   "interaction" : {
     "type" : "dialogue",
-    "dialogue" : "cobblemon:profesor_victor_spawn_dialogue"
+    "dialogue" : "cobblemon:tradeos_dialogue"
   },
   "skill" : 1,
   "party" : {
     "type" : "script",
-    "script" : "cobblemon:talk_party",
+    "script" : "cobblemon:tradeos_party",
     "isStatic" : false,
     "static" : false
   },

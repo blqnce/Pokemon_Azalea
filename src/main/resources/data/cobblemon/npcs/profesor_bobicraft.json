@@ -1,11 +1,11 @@
 {
   "baseScale" : 1.0,
-  "resourceIdentifier" : "cobblemon:victor",
-  "names" : [ "§bProfesor Victor" ],
+  "resourceIdentifier" : "cobblemon:bobi",
+  "names" : [ "§bProfesor Bobicraft" ],
   "presets" : [ "cobblemon:base_npc_npcs" ],
   "interaction" : {
     "type" : "dialogue",
-    "dialogue" : "cobblemon:profesor_victor_spawn_dialogue"
+    "dialogue" : "cobblemon:profesor_bobicraft_dialogue"
   },
   "skill" : 1,
   "party" : {

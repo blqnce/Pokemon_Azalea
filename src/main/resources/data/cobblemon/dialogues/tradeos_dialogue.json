@@ -1,0 +1,95 @@
+{
+  "initializationAction" : [
+
+    "q.run_script('cobblemon:generate_standard')",
+    "(q.player.data.trade_trader1 < 1) ? q.dialogue.set_page('Dialogo');",
+    "(q.player.data.trade_trader1 >= 1) ? q.dialogue.set_page('Bloqueado');"
+
+  ],
+  "speakers" : {
+    "npc" : {
+      "name" : {
+        "type" : "expression",
+        "expression" : "q.npc.name"
+      },
+      "face" : "q.npc.face()"
+    },
+    "player" : {
+      "name" : {
+        "type" : "expression",
+        "expression" : "q.player.username"
+      },
+      "face" : "q.player.face()"
+    }
+  },
+  "pages" : [
+    {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Hola! Acaso deseas intercambiar pokémon? '"
+    } ]
+    
+  },
+    {
+      "id" : "Dialogo",
+      "speaker" : "npc",
+      "lines" : [ {
+        "type" : "expression",
+        "expression" : "'Te puedo ofrecer mi §4§l' + q.npc.data.trade_offer_name + '§r a cambio de un §1§l' + q.npc.data.trade_request_name + '§r. Que dices, tenemos un trato?'"
+      } ],
+      "input": {
+        "type": "option",
+        "vertical": false,
+        "options": [
+          {
+            "text": {
+              "type": "expression",
+              "expression": "'Sis'"
+            },
+            "value": "trade",
+            "action": [
+              "q.run_script('cobblemon:execute_trade');",
+              "q.dialogue.set_page('farewell');"
+            ],
+            "isSelectable": "(q.player.party.count_by_properties(q.npc.data.trade_request) >= 1)"
+          },
+          {
+            "text": "Non",
+            "value": "cancel",
+            "action": [
+              "q.dialogue.close()"
+            ]
+          }
+        ]
+      }
+
+
+    },
+    {
+      "id": "farewell",
+      "speaker": "npc",
+      "lines": [
+        {
+          "type": "expression",
+          "expression": "'Muchas gracias por tu patrocinio'"
+        }
+      ],
+      "input": "q.dialogue.close();"
+    },
+    {
+      "id": "Bloqueado",
+      "speaker": "npc",
+      "lines": [
+        {
+          "type": "expression",
+          "expression": "'Ya no me quedan pokemons en este cuerpo'"
+        }
+      ],
+      "input": "q.dialogue.close();"
+    }
+
+
+  ]
+}

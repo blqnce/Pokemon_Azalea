@@ -1,0 +1,15 @@
+
+
+
+q.npc.data.trade_offer_name =  'Geodude';
+q.npc.data.trade_offer = 'geodude';
+
+q.npc.data.trade_request_name = 'Bulbasaur';
+q.npc.data.trade_request = 'bulbasaur';
+
+
+q.npc.data.trade_level = 10;
+
+q.npc.save_data();
+
+return 1;
