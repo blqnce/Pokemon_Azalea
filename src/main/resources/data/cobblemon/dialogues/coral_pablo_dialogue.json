@@ -1,0 +1,72 @@
+{
+  "initializationAction" : [
+    "(q.player.data.coral_pablo < 1) ? q.dialogue.set_page('Dialogo');",
+    "(q.player.data.coral_pablo >= 1) ? q.dialogue.set_page('Dialogo3');"
+  ],
+  "speakers" : {
+    "npc" : {
+      "name" : {
+        "type" : "expression",
+        "expression" : "q.npc.name"
+      },
+      "face" : "q.npc.face()"
+    },
+    "player" : {
+      "name" : {
+        "type" : "expression",
+        "expression" : "q.player.username"
+      },
+      "face" : "q.player.face()"
+    }
+  },
+  "pages" : [ {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Hey, nos mudamos hace poco con mis amigos para buscar inspiración'"
+    } ]
+    
+  }, {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'¡Tenemos una banda!'"
+    } ]
+    
+  }, {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Somos Los Scythles...'"
+    } ]
+    
+  }, {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Todavía estamos trabajando en el nombre'"
+    } ]
+    
+  }, {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Ten, te daré un disco para que nos recuerdes.'"
+    } ],
+    "input": "q.run_command('give ' + q.player.username + ' simpletms:tr_bellydrum'); q.player.data.coral_pablo = 1; q.player.save_data(); q.dialogue.set_page('Dialogo3');"
+    
+  }, {
+    "id" : "Dialogo3",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Vive y deja morir.'"
+    } ]
+    
+  } ]
+}

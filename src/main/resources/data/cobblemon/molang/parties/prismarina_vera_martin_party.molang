@@ -1,0 +1,4 @@
+q.party.add_by_properties('cobblemon:psyduck normal nature=serious ability=damp uncatchable=true level=6 gender= hp_ev=0 attack_ev=0 defense_ev=0 special_attack_ev=0 special_defense_ev=0 speed_ev=0 hp_iv=31 attack_iv=0 defense_iv=31 special_attack_iv=31 special_defense_iv=31 speed_iv=31 moves=amnesia,confuseray,confusion,whirlpool held_item= shiny=no happiness=255 tera_type=water mega_evolution=Sin nickname=""');
+q.party.add_by_properties('cobblemon:mareanie normal nature=serious ability=merciless uncatchable=true level=7 gender= hp_ev=0 attack_ev=0 defense_ev=0 special_attack_ev=0 special_defense_ev=0 speed_ev=0 hp_iv=31 attack_iv=31 defense_iv=31 special_attack_iv=31 special_defense_iv=31 speed_iv=31 moves=chillingwater,gunkshot,recover,toxic held_item=cobblemon:eviolite shiny=no happiness=255 tera_type=normal mega_evolution=Sin nickname=""');
+
+return true;

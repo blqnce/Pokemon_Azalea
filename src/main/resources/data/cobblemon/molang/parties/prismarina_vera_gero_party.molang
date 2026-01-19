@@ -1,0 +1,4 @@
+q.party.add_by_properties('cobblemon:poliwag normal nature=serious ability=waterabsorb uncatchable=true level=5 gender=male hp_ev=0 attack_ev=0 defense_ev=0 special_attack_ev=0 special_defense_ev=0 speed_ev=0 hp_iv=31 attack_iv=31 defense_iv=31 special_attack_iv=31 special_defense_iv=31 speed_iv=31 moves=bellydrum,doubleedge,encore,liquidation held_item=cobblemon:sitrus_berry shiny=no happiness=255 tera_type=dark mega_evolution=Sin nickname=""');
+q.party.add_by_properties('cobblemon:poochyena normal nature=serious ability=runaway uncatchable=true level=5 gender=male hp_ev=0 attack_ev=0 defense_ev=0 special_attack_ev=0 special_defense_ev=0 speed_ev=0 hp_iv=31 attack_iv=31 defense_iv=31 special_attack_iv=31 special_defense_iv=31 speed_iv=31 moves=bite,roar,suckerpunch,taunt held_item= shiny=no happiness=255 tera_type=ground mega_evolution=Sin nickname=""');
+
+return true;

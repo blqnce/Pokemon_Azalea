@@ -1,0 +1,4 @@
+q.party.add_by_properties('cobblemon:totodile normal nature=cobblemon:adamant ability=sheerforce uncatchable=true level=10 gender= hp_ev=0 attack_ev=0 defense_ev=0 special_attack_ev=0 special_defense_ev=0 speed_ev=0 hp_iv=31 attack_iv=31 defense_iv=31 special_attack_iv=31 special_defense_iv=31 speed_iv=31 moves=aquatail,bite,icefang,screech held_item=cobblemon:eviolite shiny=no happiness=255 tera_type=dark mega_evolution=Sin nickname=""');
+q.party.add_by_properties('cobblemon:wiglett normal nature=serious ability=gooey uncatchable=true level=10 gender=male hp_ev=0 attack_ev=0 defense_ev=0 special_attack_ev=0 special_defense_ev=0 speed_ev=0 hp_iv=31 attack_iv=31 defense_iv=31 special_attack_iv=31 special_defense_iv=31 speed_iv=31 moves=agility,aquajet,dig,stompingtantrum held_item=cobblemon:oran_berry shiny=no happiness=255 tera_type=ground mega_evolution=Sin nickname=""');
+
+return true;

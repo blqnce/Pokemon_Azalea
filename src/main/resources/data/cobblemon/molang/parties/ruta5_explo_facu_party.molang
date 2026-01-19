@@ -1,0 +1,4 @@
+q.party.add_by_properties('cobblemon:charmeleon normal nature=cobblemon:timid ability=solarpower uncatchable=true level=28 gender= hp_ev=0 attack_ev=0 defense_ev=0 special_attack_ev=252 special_defense_ev=4 speed_ev=252 hp_iv=31 attack_iv=0 defense_iv=31 special_attack_iv=31 special_defense_iv=31 speed_iv=31 moves=flamethrower,focusblast,overheat,weatherball held_item=cobblemon:choice_scarf shiny=no happiness=255 tera_type=bug mega_evolution=Sin nickname=""');
+q.party.add_by_properties('cobblemon:jumpluff normal nature=cobblemon:timid ability=chlorophyll uncatchable=true level=28 gender= hp_ev=220 attack_ev=0 defense_ev=0 special_attack_ev=0 special_defense_ev=68 speed_ev=220 hp_iv=31 attack_iv=0 defense_iv=31 special_attack_iv=31 special_defense_iv=31 speed_iv=31 moves=leechseed,ragepowder,sleeppowder,solarbeam held_item=cobblemon:covert_cloak shiny=no happiness=255 tera_type=electric mega_evolution=Sin nickname=""');
+
+return true;

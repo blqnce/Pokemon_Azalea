@@ -1,0 +1,4 @@
+q.party.add_by_properties('cobblemon:torkoal normal nature=cobblemon:bold ability=drought uncatchable=true level=37 gender=male hp_ev=248 attack_ev=0 defense_ev=252 special_attack_ev=0 special_defense_ev=8 speed_ev=0 hp_iv=31 attack_iv=31 defense_iv=31 special_attack_iv=31 special_defense_iv=31 speed_iv=31 moves=lavaplume,rapidspin,stealthrock,willowisp held_item=cobblemon:heat_rock shiny=no happiness=255 tera_type=fire mega_evolution=Sin nickname=""');
+q.party.add_by_properties('cobblemon:skeledirge normal nature=cobblemon:bold ability=unaware uncatchable=true level=37 gender= hp_ev=252 attack_ev=0 defense_ev=16 special_attack_ev=0 special_defense_ev=240 speed_ev=0 hp_iv=31 attack_iv=0 defense_iv=31 special_attack_iv=31 special_defense_iv=31 speed_iv=31 moves=hex,slackoff,torchsong,willowisp held_item=cobblemon:heavy_duty_boots shiny=no happiness=255 tera_type=fire mega_evolution=Sin nickname=""');
+
+return true;

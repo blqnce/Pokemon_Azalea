@@ -56,6 +56,22 @@ q.player.save_data();
 
 };
 
+q.npc.name == 'Truchas' ? {
+
+q.run_command('give ' + q.player.username + ' minecraft:cooked_salmon 32');
+
+};
+
+q.npc.name == 'Minera Eva' ? {
+
+q.run_command('give ' + q.player.username + ' simpletms:tr_earthquake');
+
+};
+
+
+
+
+
   });
 
   };

@@ -1,0 +1,64 @@
+{
+  "initializationAction" : [
+    "(q.player.data.ciudad.ianjo < 1) ? q.dialogue.set_page('Dialogo');",
+    "(q.player.data.ciudad.ianjo >= 1) ? q.dialogue.set_page('Dialogo3');"
+  ],
+  "speakers" : {
+    "npc" : {
+      "name" : {
+        "type" : "expression",
+        "expression" : "q.npc.name"
+      },
+      "face" : "q.npc.face()"
+    },
+    "player" : {
+      "name" : {
+        "type" : "expression",
+        "expression" : "q.player.username"
+      },
+      "face" : "q.player.face()"
+    }
+  },
+  "pages" : [ {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Anoche jugué un partido y le dediqué un gol a Néstor'"
+    } ]
+    
+  }, {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Jojojo'"
+    } ]
+    
+  }, {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'No es casualidad que me llamen \"el crack\"'"
+    } ]
+    
+  }, {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Te compartiré un poco de mi magia'"
+    } ],
+    "input": "q.run_command('give ' + q.player.username + ' cobblemon:bright_powder'); q.player.data.ciudad.ianjo = 1; q.player.save_data(); q.dialogue.set_page('Dialogo3');"
+    
+  }, {
+    "id" : "Dialogo3",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Eso necesitas para ser un \"maestro pokémon\".'"
+    } ]
+    
+  } ]
+}

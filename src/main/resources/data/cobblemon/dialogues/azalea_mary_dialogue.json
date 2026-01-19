@@ -1,0 +1,48 @@
+{
+  "initializationAction" : [
+    "(q.player.data.azalea_mary < 1) ? q.dialogue.set_page('Dialogo');",
+    "(q.player.data.azalea_mary >= 1) ? q.dialogue.set_page('Dialogo3');"
+  ],
+  "speakers" : {
+    "npc" : {
+      "name" : {
+        "type" : "expression",
+        "expression" : "q.npc.name"
+      },
+      "face" : "q.npc.face()"
+    },
+    "player" : {
+      "name" : {
+        "type" : "expression",
+        "expression" : "q.player.username"
+      },
+      "face" : "q.player.face()"
+    }
+  },
+  "pages" : [ {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Estuve plantando algunas bayas'"
+    } ]
+    
+  }, {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Ten, te van a servir para curar a tus pokémones.'"
+    } ],
+    "input": "q.run_command('give ' + q.player.username + ' cobblemon:oran_berry 5'); q.player.data.azalea_mary = 1; q.player.save_data(); q.dialogue.set_page('Dialogo3');"
+    
+  }, {
+    "id" : "Dialogo3",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Seguro encuentras más por el mundo.'"
+    } ]
+    
+  } ]
+}
