@@ -34,6 +34,8 @@ public class UltraCrystalBud extends UltraCrystalBlock implements Waterloggable 
     protected final VoxelShape upShape;
     protected final VoxelShape downShape;
 
+
+
     public UltraCrystalBud(float height, float xzOffset, AbstractBlock.Settings settings) {
         super(settings);
         this.setDefaultState(this.getDefaultState().with(WATERLOGGED, false).with(FACING, Direction.UP));

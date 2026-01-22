@@ -20,7 +20,9 @@
   "block.pokemonazalea.yellow_ultra_crystal_block": "Bloque de Ultra Cristal Amarillo",
   "block.pokemonazalea.yellow_ultra_crystal_bud": "Cumulo de Ultra Cristal Amarillo",
 
-  "itemgroup.pokemonazalea.pokemon_azalea_items": "Ultra Cristales"
+  "itemgroup.pokemonazalea.pokemon_azalea_items": "Ultra Cristales",
+
+  "block.pokemonazalea.pokeball": "Pokeball"
 
 
 }

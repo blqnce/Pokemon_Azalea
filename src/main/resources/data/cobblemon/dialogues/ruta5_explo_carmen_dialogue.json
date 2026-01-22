@@ -1,1 +1,64 @@
-{"initializationAction":["q.npc.config.toggle_battle_cooldown && q.run_script('cobblemon:cooldown_check') ? q.dialogue.set_page('on_cooldown');"],"speakers":{"npc":{"name":{"type":"expression","expression":"q.npc.name"},"face":"q.npc.face()"},"player":{"name":{"type":"expression","expression":"q.player.username"},"face":"q.player.face()"}},"pages":[{"id":"Dialogo","speaker":"npc","lines":[{"type":"expression","expression":"'¡No por eso voy a dejarte pasar sin tener una batallita!'"}]},{"id":"Dialogo","speaker":"npc","lines":[{"type":"expression","expression":"'Jejeje'"}]},{"id":"despedida","speaker":"npc","lines":[{"type":"expression","expression":"'La academia facilitó el traslado por la isla con las rutas'"}],"input":"q.dialogue.close(); v.battle = q.npc.start_battle(q.player);"},{"id":"on_cooldown","speaker":"npc","lines":[{"type":"expression","expression":"'Este npc le quedan ' + q.run_script('cobblemon:cooldown_remaining_time') + ' de cooldown'"}]}]}
+{
+  "initializationAction":[
+    "q.npc.config.toggle_battle_cooldown && q.run_script('cobblemon:cooldown_check') ? q.dialogue.set_page('on_cooldown');"
+  ],
+  "speakers":{
+    "npc":{
+      "name":{
+        "type":"expression",
+        "expression":"q.npc.name"
+      },
+      "face":"q.npc.face()"
+    },
+    "player":{
+      "name":{
+        "type":"expression",
+        "expression":"q.player.username"
+      },
+      "face":"q.player.face()"
+    }
+  },
+  "pages":[
+    {
+      "id":"Dialogo",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
+          "expression":"'La academia facilitó el traslado por la isla con las rutas'"
+        }
+      ]
+    },
+    {
+      "id":"Dialogo",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
+          "expression":"'¡No por eso voy a dejarte pasar sin tener una batallita!'"
+        }
+      ]
+    },
+    {
+      "id":"despedida",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
+          "expression":"'Jejeje'"
+        }
+      ],
+      "input":"q.dialogue.close(); v.battle = q.npc.start_battle(q.player);"
+    },
+    {
+      "id":"on_cooldown",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
+          "expression":"'Este npc le quedan ' + q.run_script('cobblemon:cooldown_remaining_time') + ' de cooldown'"
+        }
+      ]
+    }
+  ]
+}

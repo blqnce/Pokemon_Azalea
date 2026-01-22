@@ -25,6 +25,16 @@
       "lines":[
         {
           "type":"expression",
+          "expression":"'Mis colegas me dijeron que los estudiantes de la academia estaban en la cueva'"
+        }
+      ]
+    },
+    {
+      "id":"Dialogo",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
           "expression":"'No me malinterpretes, nos llevamos bien con la institución'"
         }
       ]
@@ -40,32 +50,12 @@
       ]
     },
     {
-      "id":"Dialogo",
-      "speaker":"npc",
-      "lines":[
-        {
-          "type":"expression",
-          "expression":"'Vamos a ver que tal'"
-        }
-      ]
-    },
-    {
-      "id":"Dialogo",
-      "speaker":"npc",
-      "lines":[
-        {
-          "type":"expression",
-          "expression":"'¡Sigue así!'"
-        }
-      ]
-    },
-    {
       "id":"despedida",
       "speaker":"npc",
       "lines":[
         {
           "type":"expression",
-          "expression":"'Mis colegas me dijeron que los estudiantes de la academia estaban en la cueva'"
+          "expression":"'Vamos a ver que tal'"
         }
       ],
       "input":"q.dialogue.close(); v.battle = q.npc.start_battle(q.player);"

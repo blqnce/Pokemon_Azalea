@@ -3,17 +3,19 @@ package net.falconidos.pokemonazalea.block;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.falconidos.pokemonazalea.PokemonAzalea;
 import net.falconidos.pokemonazalea.block.custom.BuddingUltraCrystalBlock;
+import net.falconidos.pokemonazalea.block.custom.PokeballBlock;
 import net.falconidos.pokemonazalea.block.custom.UltraCrystalBud;
 import net.minecraft.block.*;
 import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemGroups;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
+
+import javax.naming.Context;
 
 public class ModBlocks {
 
@@ -212,6 +214,8 @@ public class ModBlocks {
                             .requiresTool()
             )
     );
+
+    public static final Block POKEBALL = registerBlock("pokeball", new PokeballBlock(AbstractBlock.Settings.create().nonOpaque()));
 
     private static Block registerBlock(String name, Block block){
         registerBlockItem(name,block);

@@ -27,7 +27,7 @@
       "lines":[
         {
           "type":"expression",
-          "expression":"'Veo que tienes agallas'"
+          "expression":"'Un verdadero guerrero no se quita el casco ni para descansar. Siempre estoy alerta'"
         }
       ]
     },
@@ -43,22 +43,12 @@
       "input": "q.run_command('give ' + q.player.username + ' cobblemon:rocky_helmet'); q.player.data.guerrero_eustaquio = 1; q.player.save_data(); q.dialogue.set_page('Dialogo3');"
     },
     {
-      "id":"Dialogo3",
-      "speaker":"npc",
-      "lines":[
-        {
-          "type":"expression",
-          "expression":"'Cuida siempre tus espaldas...'"
-        }
-      ]
-    },
-    {
       "id":"Pelea",
       "speaker":"npc",
       "lines":[
         {
           "type":"expression",
-          "expression":"'Un verdadero guerrero no se quita el casco ni para descansar. Siempre estoy alerta'"
+          "expression":"'Cuida siempre tus espaldas...'"
         }
       ],
       "input":{

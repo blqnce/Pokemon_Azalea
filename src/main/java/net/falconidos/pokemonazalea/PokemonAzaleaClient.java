@@ -24,6 +24,6 @@ public class PokemonAzaleaClient implements ClientModInitializer {
 
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.YELLOW_ULTRA_CRYSTAL_BUD, RenderLayer.getCutout());
 
-
     }
+
 }

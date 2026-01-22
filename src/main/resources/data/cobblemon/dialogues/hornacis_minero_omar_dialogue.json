@@ -1,1 +1,94 @@
-{"initializationAction":["q.npc.config.toggle_battle_cooldown && q.run_script('cobblemon:cooldown_check') ? q.dialogue.set_page('on_cooldown');"],"speakers":{"npc":{"name":{"type":"expression","expression":"q.npc.name"},"face":"q.npc.face()"},"player":{"name":{"type":"expression","expression":"q.player.username"},"face":"q.player.face()"}},"pages":[{"id":"Dialogo","speaker":"npc","lines":[{"type":"expression","expression":"'Pero nadie se pregunta'"}]},{"id":"Dialogo","speaker":"npc","lines":[{"type":"expression","expression":"'Omar, ¿algo anda mal?'"}]},{"id":"Dialogo","speaker":"npc","lines":[{"type":"expression","expression":"'...'"}]},{"id":"Dialogo","speaker":"npc","lines":[{"type":"expression","expression":"'Yo respondería que sí, algo anda mal...'"}]},{"id":"Dialogo","speaker":"npc","lines":[{"type":"expression","expression":"'Mis riñones.'"}]},{"id":"despedida","speaker":"npc","lines":[{"type":"expression","expression":"'Todo el mundo dice \"Omar, algo anda mal\"'"}],"input":"q.dialogue.close(); v.battle = q.npc.start_battle(q.player);"},{"id":"on_cooldown","speaker":"npc","lines":[{"type":"expression","expression":"'Este npc le quedan ' + q.run_script('cobblemon:cooldown_remaining_time') + ' de cooldown'"}]}]}
+{
+  "initializationAction":[
+    "q.npc.config.toggle_battle_cooldown && q.run_script('cobblemon:cooldown_check') ? q.dialogue.set_page('on_cooldown');"
+  ],
+  "speakers":{
+    "npc":{
+      "name":{
+        "type":"expression",
+        "expression":"q.npc.name"
+      },
+      "face":"q.npc.face()"
+    },
+    "player":{
+      "name":{
+        "type":"expression",
+        "expression":"q.player.username"
+      },
+      "face":"q.player.face()"
+    }
+  },
+  "pages":[
+    {
+      "id":"Dialogo",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
+          "expression":"'Todo el mundo dice \"Omar, algo anda mal\"'"
+        }
+      ]
+    },
+    {
+      "id":"Dialogo",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
+          "expression":"'Pero nadie se pregunta'"
+        }
+      ]
+    },
+    {
+      "id":"Dialogo",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
+          "expression":"'Omar, ¿algo anda mal?'"
+        }
+      ]
+    },
+    {
+      "id":"Dialogo",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
+          "expression":"'...'"
+        }
+      ]
+    },
+    {
+      "id":"Dialogo",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
+          "expression":"'Yo responderia que si, algo anda mal...'"
+        }
+      ]
+    },
+    {
+      "id":"despedida",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
+          "expression":"'Mis riñones'"
+        }
+      ],
+      "input":"q.dialogue.close(); v.battle = q.npc.start_battle(q.player);"
+    },
+    {
+      "id":"on_cooldown",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
+          "expression":"'Este npc le quedan ' + q.run_script('cobblemon:cooldown_remaining_time') + ' de cooldown'"
+        }
+      ]
+    }
+  ]
+}

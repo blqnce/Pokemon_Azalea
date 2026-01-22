@@ -3,7 +3,7 @@ package net.falconidos.pokemonazalea;
 import net.fabricmc.api.ModInitializer;
 
 import net.falconidos.pokemonazalea.block.ModBlocks;
-import net.falconidos.pokemonazalea.datagen.ModWorldGenerator;
+
 import net.falconidos.pokemonazalea.item.ModItemGroups;
 import net.falconidos.pokemonazalea.sound.ModMusicType;
 import net.falconidos.pokemonazalea.sound.ModSounds;
