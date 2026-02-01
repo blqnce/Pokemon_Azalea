@@ -2,9 +2,7 @@ package net.falconidos.pokemonazalea.block;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.falconidos.pokemonazalea.PokemonAzalea;
-import net.falconidos.pokemonazalea.block.custom.BuddingUltraCrystalBlock;
-import net.falconidos.pokemonazalea.block.custom.PokeballBlock;
-import net.falconidos.pokemonazalea.block.custom.UltraCrystalBud;
+import net.falconidos.pokemonazalea.block.custom.*;
 import net.minecraft.block.*;
 import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.item.BlockItem;
@@ -14,8 +12,6 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
-
-import javax.naming.Context;
 
 public class ModBlocks {
 
@@ -215,7 +211,167 @@ public class ModBlocks {
             )
     );
 
-    public static final Block POKEBALL = registerBlock("pokeball", new PokeballBlock(AbstractBlock.Settings.create().nonOpaque()));
+    public static final Block APPLIN_POKEBALL = registerBlock("applin_pokeball",
+            new ApplinPokeballBlock(AbstractBlock.Settings.create()
+                    .strength(-1.0F, 3600000.0F)
+                    .dropsNothing()
+                    .allowsSpawning(Blocks::never)
+                    .nonOpaque()
+            )
+    );
+
+    public static final Block VULPIX_POKEBALL = registerBlock("vulpix_pokeball",
+            new VulpixPokeballBlock(AbstractBlock.Settings.create()
+                    .strength(-1.0F, 3600000.0F)
+                    .dropsNothing()
+                    .allowsSpawning(Blocks::never)
+                    .nonOpaque()
+            )
+    );
+
+    public static final Block ABRA_POKEBALL = registerBlock("abra_pokeball",
+            new AbraPokeballBlock(AbstractBlock.Settings.create()
+                    .strength(-1.0F, 3600000.0F)
+                    .dropsNothing()
+                    .allowsSpawning(Blocks::never)
+                    .nonOpaque()
+            )
+    );
+
+    public static final Block HONEDGE_POKEBALL = registerBlock("honedge_pokeball",
+            new HonedgePokeballBlock(AbstractBlock.Settings.create()
+                    .strength(-1.0F, 3600000.0F)
+                    .dropsNothing()
+                    .allowsSpawning(Blocks::never)
+                    .nonOpaque()
+            )
+    );
+
+    public static final Block SNEASEL_POKEBALL = registerBlock("sneasel_pokeball",
+            new SneaselPokeballBlock(AbstractBlock.Settings.create()
+                    .strength(-1.0F, 3600000.0F)
+                    .dropsNothing()
+                    .allowsSpawning(Blocks::never)
+                    .nonOpaque()
+            )
+    );
+
+    public static final Block SCYTHER_POKEBALL = registerBlock("scyther_pokeball",
+            new ScytherPokeballBlock(AbstractBlock.Settings.create()
+                    .strength(-1.0F, 3600000.0F)
+                    .dropsNothing()
+                    .allowsSpawning(Blocks::never)
+                    .nonOpaque()
+            )
+    );
+
+    public static final Block SPRIGATITTO_POKEBALL = registerBlock("sprigatitto_pokeball",
+            new SprigatittoPokeballBlock(AbstractBlock.Settings.create()
+                    .strength(-1.0F, 3600000.0F)
+                    .dropsNothing()
+                    .allowsSpawning(Blocks::never)
+                    .nonOpaque()
+            )
+    );
+
+    public static final Block MUDKIP_POKEBALL = registerBlock("mudkip_pokeball",
+            new MudkipPokeballBlock(AbstractBlock.Settings.create()
+                    .strength(-1.0F, 3600000.0F)
+                    .dropsNothing()
+                    .allowsSpawning(Blocks::never)
+                    .nonOpaque()
+            )
+    );
+
+    public static final Block LITTEN_POKEBALL = registerBlock("litten_pokeball",
+            new LittenPokeballBlock(AbstractBlock.Settings.create()
+                    .strength(-1.0F, 3600000.0F)
+                    .dropsNothing()
+                    .allowsSpawning(Blocks::never)
+                    .nonOpaque()
+            )
+    );
+
+    public static final Block GLIGAR_POKEBALL = registerBlock("gligar_pokeball",
+            new GligarPokeballBlock(AbstractBlock.Settings.create()
+                    .strength(-1.0F, 3600000.0F)
+                    .dropsNothing()
+                    .allowsSpawning(Blocks::never)
+                    .nonOpaque()
+            )
+    );
+
+    public static final Block ELEKID_POKEBALL = registerBlock("elekid_pokeball",
+            new ElekidPokeballBlock(AbstractBlock.Settings.create()
+                    .strength(-1.0F, 3600000.0F)
+                    .dropsNothing()
+                    .allowsSpawning(Blocks::never)
+                    .nonOpaque()
+            )
+    );
+
+    public static final Block ROOKIDEE_POKEBALL = registerBlock("rookidee_pokeball",
+            new RookideePokeballBlock(AbstractBlock.Settings.create()
+                    .strength(-1.0F, 3600000.0F)
+                    .dropsNothing()
+                    .allowsSpawning(Blocks::never)
+                    .nonOpaque()
+            )
+    );
+
+    public static final Block TINKATINK_POKEBALL = registerBlock("tinkatink_pokeball",
+            new TinkatinkPokeballBlock(AbstractBlock.Settings.create()
+                    .strength(-1.0F, 3600000.0F)
+                    .dropsNothing()
+                    .allowsSpawning(Blocks::never)
+                    .nonOpaque()
+            )
+    );
+
+    public static final Block RIOLU_POKEBALL = registerBlock("riolu_pokeball",
+            new RioluPokeballBlock(AbstractBlock.Settings.create()
+                    .strength(-1.0F, 3600000.0F)
+                    .dropsNothing()
+                    .allowsSpawning(Blocks::never)
+                    .nonOpaque()
+            )
+    );
+
+    public static final Block PAWNIARD_POKEBALL = registerBlock("pawniard_pokeball",
+            new PawniardPokeballBlock(AbstractBlock.Settings.create()
+                    .strength(-1.0F, 3600000.0F)
+                    .dropsNothing()
+                    .allowsSpawning(Blocks::never)
+                    .nonOpaque()
+            )
+    );
+
+    public static final Block MUNCHLAX_POKEBALL = registerBlock("munchlax_pokeball",
+            new MunchlaxPokeballBlock(AbstractBlock.Settings.create()
+                    .strength(-1.0F, 3600000.0F)
+                    .dropsNothing()
+                    .allowsSpawning(Blocks::never)
+                    .nonOpaque()
+            )
+    );
+
+    public static final Block NACLI_POKEBALL = registerBlock("nacli_pokeball",
+            new NacliPokeballBlock(AbstractBlock.Settings.create()
+                    .strength(-1.0F, 3600000.0F)
+                    .dropsNothing()
+                    .allowsSpawning(Blocks::never)
+                    .nonOpaque()
+            )
+    );
+
+    public static final Block GASTLY_POKEBALL = registerBlock("gastly_pokeball",
+            new GastlyPokeballBlock(AbstractBlock.Settings.create()
+                    .strength(-1.0F, 3600000.0F)
+                    .dropsNothing()
+                    .allowsSpawning(Blocks::never)
+                    .nonOpaque()
+            )
+    );
 
     private static Block registerBlock(String name, Block block){
         registerBlockItem(name,block);

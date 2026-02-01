@@ -18,6 +18,7 @@ public class ModSounds {
     public static final SoundEvent EVIL_TEAM = registerSoundEvent("theme.evil.team");
     public static final SoundEvent EVIL_LEADER = registerSoundEvent("theme.evil.leader");
     public static final SoundEvent GYM_TRAINER = registerSoundEvent("theme.gym.trainer");
+    public static final SoundEvent STARTER_GET = registerSoundEvent("starter.get");
 
     private static SoundEvent registerSoundEvent(String name) {
         Identifier id = Identifier.of(PokemonAzalea.MOD_ID, name);

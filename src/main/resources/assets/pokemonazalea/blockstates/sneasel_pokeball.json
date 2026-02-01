@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "pokemonazalea:block/sneasel_pokeball",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "pokemonazalea:block/sneasel_pokeball"
+    },
+    "facing=south": {
+      "model": "pokemonazalea:block/sneasel_pokeball",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "pokemonazalea:block/sneasel_pokeball",
+      "y": 270
+    }
+  }
+}

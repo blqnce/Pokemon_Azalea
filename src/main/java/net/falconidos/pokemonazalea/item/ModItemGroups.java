@@ -31,7 +31,6 @@ public class ModItemGroups {
                         entries.add(ModBlocks.PINK_ULTRA_CRYSTAL_BLOCK);
                         entries.add(ModBlocks.WHITE_ULTRA_CRYSTAL_BUD);
                         entries.add(ModBlocks.WHITE_ULTRA_CRYSTAL_BLOCK);
-                        entries.add(ModBlocks.POKEBALL);
 
                     })
                     .build());
