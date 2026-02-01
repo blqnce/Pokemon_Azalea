@@ -7,6 +7,8 @@ import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemPlacementContext;
+import net.minecraft.server.MinecraftServer;
+import net.minecraft.server.command.CommandManager;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.DirectionProperty;
 import net.minecraft.state.property.Properties;
@@ -57,8 +59,11 @@ public class ApplinPokeballBlock extends BlockWithEntity implements BlockEntityP
             BlockEntity be = world.getBlockEntity(pos);
             if (be instanceof ApplinEntity applin) {
 
+                MinecraftServer server = world.getServer();
+                CommandManager commandManager = server.getCommandManager();
+                commandManager.executeWithPrefix(player.getCommandSource().withLevel(4).withSilent(), "playsound pokemonazalea:applin_cry player " + player.getName().getString());
+
                 player.openHandledScreen(applin);
-                System.out.println(player.getServer().toString());
                 return ActionResult.CONSUME;
             }
 

@@ -52,5 +52,113 @@
     "sounds": [
       "pokemonazalea:starter.get"
     ]
+  },
+  "abra_cry": {
+    "subtitle": "sounds.pokemonazalea.abra_cry",
+    "sounds": [
+      "pokemonazalea:abra_cry"
+    ]
+  },
+  "applin_cry": {
+    "subtitle": "sounds.pokemonazalea.applin_cry",
+    "sounds": [
+      "pokemonazalea:applin_cry"
+    ]
+  },
+  "vulpix_cry": {
+    "subtitle": "sounds.pokemonazalea.vulpix_cry",
+    "sounds": [
+      "pokemonazalea:vulpix_cry"
+    ]
+  },
+  "honedge_cry": {
+    "subtitle": "sounds.pokemonazalea.honedge_cry",
+    "sounds": [
+      "pokemonazalea:honedge_cry"
+    ]
+  },
+  "sneasel_cry": {
+    "subtitle": "sounds.pokemonazalea.sneasel_cry",
+    "sounds": [
+      "pokemonazalea:sneasel_cry"
+    ]
+  },
+  "scyther_cry": {
+    "subtitle": "sounds.pokemonazalea.scyther_cry",
+    "sounds": [
+      "pokemonazalea:scyther_cry"
+    ]
+  },
+  "sprigatitto_cry": {
+    "subtitle": "sounds.pokemonazalea.sprigatitto_cry",
+    "sounds": [
+      "pokemonazalea:sprigatitto_cry"
+    ]
+  },
+  "mudkip_cry": {
+    "subtitle": "sounds.pokemonazalea.mudkip_cry",
+    "sounds": [
+      "pokemonazalea:mudkip_cry"
+    ]
+  },
+  "litten_cry": {
+    "subtitle": "sounds.pokemonazalea.litten_cry",
+    "sounds": [
+      "pokemonazalea:litten_cry"
+    ]
+  },
+  "gligar_cry": {
+    "subtitle": "sounds.pokemonazalea.gligar_cry",
+    "sounds": [
+      "pokemonazalea:gligar_cry"
+    ]
+  },
+  "elekid_cry": {
+    "subtitle": "sounds.pokemonazalea.elekid_cry",
+    "sounds": [
+      "pokemonazalea:elekid_cry"
+    ]
+  },
+  "rookidee_cry": {
+    "subtitle": "sounds.pokemonazalea.rookidee_cry",
+    "sounds": [
+      "pokemonazalea:rookidee_cry"
+    ]
+  },
+  "tinkatink_cry": {
+    "subtitle": "sounds.pokemonazalea.tinkatink_cry",
+    "sounds": [
+      "pokemonazalea:tinkatink_cry"
+    ]
+  },
+  "riolu_cry": {
+    "subtitle": "sounds.pokemonazalea.riolu_cry",
+    "sounds": [
+      "pokemonazalea:riolu"
+    ]
+  },
+  "pawniard_cry": {
+    "subtitle": "sounds.pokemonazalea.pawniard_cry",
+    "sounds": [
+      "pokemonazalea:pawniard_cry"
+    ]
+  },
+  "munchlax_cry": {
+    "subtitle": "sounds.pokemonazalea.munchlax_cry",
+    "sounds": [
+      "pokemonazalea:munchlax_cry"
+    ]
+  },
+  "nacli_cry": {
+    "subtitle": "sounds.pokemonazalea.nacli_cry",
+    "sounds": [
+      "pokemonazalea:nacli_cry"
+    ]
+  },
+  "gastly_cry": {
+    "subtitle": "sounds.pokemonazalea.gastly_cry",
+    "sounds": [
+      "pokemonazalea:gastly_cry"
+    ]
   }
 }

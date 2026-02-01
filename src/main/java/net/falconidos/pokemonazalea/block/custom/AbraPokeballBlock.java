@@ -2,10 +2,13 @@ package net.falconidos.pokemonazalea.block.custom;
 
 import com.mojang.serialization.MapCodec;
 import net.falconidos.pokemonazalea.block.entity.custom.AbraEntity;
+import net.falconidos.pokemonazalea.sound.ModSounds;
 import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemPlacementContext;
+import net.minecraft.server.MinecraftServer;
+import net.minecraft.server.command.CommandManager;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.DirectionProperty;
 import net.minecraft.state.property.Properties;
@@ -55,8 +58,11 @@ public class AbraPokeballBlock extends BlockWithEntity implements BlockEntityPro
             BlockEntity be = world.getBlockEntity(pos);
             if (be instanceof AbraEntity abra) {
 
+                MinecraftServer server = world.getServer();
+                CommandManager commandManager = server.getCommandManager();
+                commandManager.executeWithPrefix(player.getCommandSource().withLevel(4).withSilent(), "playsound pokemonazalea:abra_cry player " + player.getName().getString());
+
                 player.openHandledScreen(abra);
-                System.out.println(player.getServer().toString());
                 return ActionResult.CONSUME;
             }
 
