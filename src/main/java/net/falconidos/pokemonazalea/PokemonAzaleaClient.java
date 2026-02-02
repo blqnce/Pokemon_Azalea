@@ -44,8 +44,6 @@ public class PokemonAzaleaClient implements ClientModInitializer {
 
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.WHITE_ULTRA_CRYSTAL_BUD, RenderLayer.getCutout());
 
-        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.YELLOW_ULTRA_CRYSTAL_BUD, RenderLayer.getCutout());
-
         HandledScreens.register(ModScreenHandlers.APPLIN_SCREEN_HANDLER, ApplinScreen::new);
         HandledScreens.register(ModScreenHandlers.VULPIX_SCREEN_HANDLER, VulpixScreen::new);
         HandledScreens.register(ModScreenHandlers.ABRA_SCREEN_HANDLER, AbraScreen::new);

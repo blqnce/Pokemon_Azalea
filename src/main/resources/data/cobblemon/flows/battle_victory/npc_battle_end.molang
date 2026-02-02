@@ -70,6 +70,16 @@ q.run_command('give ' + q.player.username + ' simpletms:tr_earthquake');
 
 
 
+q.npc.name == 'Team Prisma Brayan' ? {
+
+q.run_command('give ' + q.player.username + ' pokemonazalea:billetera');
+q.player.data.barco_prisma_brayan = q.player.data.barco_prisma_brayan + 1;
+q.player.save_data();
+
+};
+
+
+
 
 
   });

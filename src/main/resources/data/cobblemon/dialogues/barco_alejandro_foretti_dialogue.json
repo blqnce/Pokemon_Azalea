@@ -1,0 +1,216 @@
+{
+  "initializationAction":[
+    "(q.player.data.masterball_marc < 1) ? q.dialogue.set_page('Dialogo');",
+    "(q.player.data.masterball_marc >= 1) ? q.dialogue.set_page('Dialogo3');",
+    "(q.player.data.barco_alejandro_foretti >= 1) ? q.dialogue.close();"
+  ],
+  "speakers":{
+    "npc":{
+      "name":{
+        "type":"expression",
+        "expression":"q.npc.name"
+      },
+      "face":"q.npc.face()"
+    },
+    "player":{
+      "name":{
+        "type":"expression",
+        "expression":"q.player.username"
+      },
+      "face":"q.player.face()"
+    }
+  },
+  "pages":[
+    {
+      "id":"Dialogo",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
+          "expression":"'El resto es irrelevante'"
+        }
+      ]
+    },
+    {
+      "id":"Dialogo",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
+          "expression":"'Soy quien maneja el timón, es decir, el control es mío'"
+        }
+      ]
+    },
+    {
+      "id":"Dialogo",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
+          "expression":"'Mientras estoy aquí, me da igual lo que pase en la tierra'"
+        }
+      ]
+    },
+    {
+      "id":"Dialogo",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
+          "expression":"'No interfiere con mi recorrido en el mar'"
+        }
+      ]
+    },
+    {
+      "id":"Dialogo",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
+          "expression":"'¿En que le afecta una manifestación en Ciudad Minera a mi navegación?'"
+        }
+      ]
+    },
+    {
+      "id":"Dialogo",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
+          "expression":"'Así es, en nada. Lo mismo pienso de la gente'"
+        }
+      ]
+    },
+    {
+      "id":"Dialogo",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
+          "expression":"'No importa que cosas hayan hecho las personas en sus vidas personales'"
+        }
+      ]
+    },
+    {
+      "id":"Dialogo",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
+          "expression":"'Que decisiones hayan tomado'"
+        }
+      ]
+    },
+    {
+      "id":"Dialogo",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
+          "expression":"'Que cosas hayan priorizado y cuales hayan sacrificado'"
+        }
+      ]
+    },
+    {
+      "id":"Dialogo",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
+          "expression":"'Me importa el presente, lo tangible'"
+        }
+      ]
+    },
+    {
+      "id":"Dialogo",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
+          "expression":"'Las acciones que hagan ahora'"
+        }
+      ]
+    },
+    {
+      "id":"Dialogo",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
+          "expression":"'Y, más precisamente, en este crucero'"
+        }
+      ]
+    },
+    {
+      "id":"Dialogo",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
+          "expression":"'El resto es irrelevante'"
+        }
+      ]
+    },
+    {
+      "id":"Dialogo3",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
+          "expression":"'No me sorprende'"
+        }
+      ]
+    },
+    {
+      "id":"Dialogo",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
+          "expression":"'¿Eres estudiante de la academia?'"
+        }
+      ]
+    },
+    {
+      "id":"Dialogo",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
+          "expression":"'Eso será abajo'"
+        }
+      ]
+    },
+    {
+      "id":"Dialogo",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
+          "expression":"'Aquí arriba, solo eres un díscolo que irrumpió en una zona para personal autorizado'"
+        }
+      ]
+    },
+    {
+      "id":"Dialogo",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
+          "expression":"'Tendré que tomar cartas en el asunto'"
+        }
+      ]
+    },
+    {
+      "id":"despedida",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
+          "expression":"'Mi opinión no cambiará.'"
+        }
+      ],
+      "input":"q.dialogue.close(); v.battle = q.npc.start_battle(q.player);"
+    }
+  ]
+}

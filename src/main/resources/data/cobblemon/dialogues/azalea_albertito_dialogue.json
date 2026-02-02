@@ -1,0 +1,44 @@
+{
+  "initializationAction" : [ ],
+  "speakers" : {
+    "npc" : {
+      "name" : {
+        "type" : "expression",
+        "expression" : "q.npc.name"
+      },
+      "face" : "q.npc.face()"
+    },
+    "player" : {
+      "name" : {
+        "type" : "expression",
+        "expression" : "q.player.username"
+      },
+      "face" : "q.player.face()"
+    }
+  },
+  "pages" : [ {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Yo intenté darle un hachita afilado V a mi rattata, pero...'"
+    } ]
+    
+  }, {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'¡Lo partí a la mitad sin querer!'"
+    } ]
+    
+  }, {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Aunque sea ese día no tuvimos que comprar la cena..'"
+    } ]
+    
+  } ]
+}

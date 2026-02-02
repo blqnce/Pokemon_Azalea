@@ -1,0 +1,52 @@
+{
+  "initializationAction" : [ ],
+  "speakers" : {
+    "npc" : {
+      "name" : {
+        "type" : "expression",
+        "expression" : "q.npc.name"
+      },
+      "face" : "q.npc.face()"
+    },
+    "player" : {
+      "name" : {
+        "type" : "expression",
+        "expression" : "q.player.username"
+      },
+      "face" : "q.player.face()"
+    }
+  },
+  "pages" : [ {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Si ves a un pokémon de distinto color, no te asustes'"
+    } ]
+    
+  }, {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'De hecho, sientete con suerte'"
+    } ]
+    
+  }, {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Se denominan shinys, y son muy extraños'"
+    } ]
+    
+  }, {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'¡Más te vale capturarlos, aunque sea un plusle!'"
+    } ]
+    
+  } ]
+}

@@ -6,6 +6,7 @@ import net.falconidos.pokemonazalea.block.ModBlocks;
 
 import net.falconidos.pokemonazalea.block.entity.ModBlockEntities;
 import net.falconidos.pokemonazalea.item.ModItemGroups;
+import net.falconidos.pokemonazalea.item.ModItems;
 import net.falconidos.pokemonazalea.network.PokemonAzaleaPackets;
 import net.falconidos.pokemonazalea.screen.ModGuiTextures;
 import net.falconidos.pokemonazalea.screen.ModScreenHandlers;
@@ -27,6 +28,8 @@ public class PokemonAzalea implements ModInitializer {
 
 
 		ModItemGroups.registerItemGroups();
+
+		ModItems.registerModItems();
 
 		ModBlocks.registerModBlocks();
 

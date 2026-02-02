@@ -1,0 +1,57 @@
+{
+  "initializationAction" : [
+    "(q.player.data.ciudad_m_robin < 1) ? q.dialogue.set_page('Dialogo');",
+    "(q.player.data.ciudad_m_robin >= 1) ? q.dialogue.set_page('Dialogo3');"
+  ],
+  "speakers" : {
+    "npc" : {
+      "name" : {
+        "type" : "expression",
+        "expression" : "q.npc.name"
+      },
+      "face" : "q.npc.face()"
+    },
+    "player" : {
+      "name" : {
+        "type" : "expression",
+        "expression" : "q.player.username"
+      },
+      "face" : "q.player.face()"
+    }
+  },
+  "pages" : [ {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'El futuro puede dar miedo'"
+    } ]
+    
+  }, {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Pero no puedes volver al pasado solo porque te es familiar'"
+    } ]
+    
+  }, {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Espero que esta MT te lo recuerde'"
+    } ],
+    "input": "q.run_command('give ' + q.player.username + ' simpletms:tr_futuresight'); q.player.data.ciudad_m_robin = 1; q.player.save_data(); q.dialogue.set_page('Dialogo3');"
+
+
+  }, {
+    "id" : "Dialogo3",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'¿Me pregunto donde fueron Lily y Marshall?'"
+    } ]
+    
+  } ]
+}

@@ -1,0 +1,21 @@
+{
+  "baseScale" : 1.0,
+  "resourceIdentifier" : "cobblemon:coral_erwin",
+  "names" : [ "Erwin" ],
+  "presets" : [ "cobblemon:base_npc_npcs" ],
+  "interaction" : {
+    "type" : "dialogue",
+    "dialogue" : "cobblemon:coral_erwin_dialogue"
+  },
+  "skill" : 1,
+  "party" : {
+    "type" : "script",
+    "script" : "cobblemon:talk_party",
+    "isStatic" : false,
+    "static" : false
+  },
+  "ai" : [ {
+    "type" : "cobblemon:apply_behaviours",
+    "behaviours" : [ "cobblemon:looks_around" ]
+  } ]
+}

@@ -1,0 +1,57 @@
+{
+  "initializationAction" : [
+    "(q.player.data.ciudad_m_puerro < 1) ? q.dialogue.set_page('Dialogo');",
+    "(q.player.data.ciudad_m_puerro >= 1) ? q.dialogue.set_page('Dialogo3');"
+  ],
+  "speakers" : {
+    "npc" : {
+      "name" : {
+        "type" : "expression",
+        "expression" : "q.npc.name"
+      },
+      "face" : "q.npc.face()"
+    },
+    "player" : {
+      "name" : {
+        "type" : "expression",
+        "expression" : "q.player.username"
+      },
+      "face" : "q.player.face()"
+    }
+  },
+  "pages" : [ {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Daa chicos'"
+    } ]
+    
+  }, {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Ya les dije que yo no soy ese'"
+    } ]
+    
+  }, {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Mmm bueno bueno, está bien, lo admito'"
+    } ],
+    "input": "q.run_command('give ' + q.player.username + ' cobblemon:medicinal_leek'); q.player.data.ciudad_m_puerro = 1; q.player.save_data(); q.dialogue.set_page('Dialogo3');"
+
+
+  }, {
+    "id" : "Dialogo3",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Me pregunto donde estará el nine...'"
+    } ]
+    
+  } ]
+}

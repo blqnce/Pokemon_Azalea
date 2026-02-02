@@ -22,7 +22,8 @@
 
   "itemgroup.pokemonazalea.pokemon_azalea_items": "Ultra Cristales",
 
-  "block.pokemonazalea.pokeball": "Pokeball"
-
+  "block.pokemonazalea.pokeball": "Pokeball",
+  "item.pokemonazalea.billetera": "Billetera de Marc",
+  "item.pokemonazalea.carta": "Carta para Marc"
 
 }

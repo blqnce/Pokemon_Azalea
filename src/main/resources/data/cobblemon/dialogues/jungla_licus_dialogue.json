@@ -1,0 +1,65 @@
+{
+  "initializationAction" : [
+    "(q.player.data.jungla_licus < 1) ? q.dialogue.set_page('Dialogo');",
+    "(q.player.data.jungla_licus >= 1) ? q.dialogue.set_page('Dialogo3');"
+  ],
+  "speakers" : {
+    "npc" : {
+      "name" : {
+        "type" : "expression",
+        "expression" : "q.npc.name"
+      },
+      "face" : "q.npc.face()"
+    },
+    "player" : {
+      "name" : {
+        "type" : "expression",
+        "expression" : "q.player.username"
+      },
+      "face" : "q.player.face()"
+    }
+  },
+  "pages" : [ {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Los monos nos caracterizamos por ser una raza superior'"
+    } ]
+    
+  }, {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'No por nuestra fuerza, pero sí por nuestra inteligencia'"
+    } ]
+    
+  }, {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Para aguantar más en los combates aprendí un pequeño truco'"
+    } ]
+    
+  }, {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Te compartiré mi conocimiento'"
+    } ],
+    "input": "q.run_command('give ' + q.player.username + ' cobblemon:focus_sash'); q.player.data.jungla_licus = 1; q.player.save_data(); q.dialogue.set_page('Dialogo3');"
+
+
+  }, {
+    "id" : "Dialogo3",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Así podrás evitar dropear en turno 1'"
+    } ]
+    
+  } ]
+}

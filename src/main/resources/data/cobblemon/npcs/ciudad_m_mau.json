@@ -1,0 +1,21 @@
+{
+  "baseScale" : 1.0,
+  "resourceIdentifier" : "cobblemon:ciudad_m_mau",
+  "names" : [ "La enfermerita Mau..." ],
+  "presets" : [ "cobblemon:base_npc_npcs" ],
+  "interaction" : {
+    "type" : "dialogue",
+    "dialogue" : "cobblemon:ciudad_m_mau_dialogue"
+  },
+  "skill" : 1,
+  "party" : {
+    "type" : "script",
+    "script" : "cobblemon:talk_party",
+    "isStatic" : false,
+    "static" : false
+  },
+  "ai" : [ {
+    "type" : "cobblemon:apply_behaviours",
+    "behaviours" : [ "cobblemon:looks_around" ]
+  } ]
+}

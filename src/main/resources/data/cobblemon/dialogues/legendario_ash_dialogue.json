@@ -1,0 +1,75 @@
+{
+  "initializationAction":[
+    "(q.player.data.ash_defeated < 1) ? q.dialogue.set_page('Dialogo');",
+    "(q.player.data.ash_defeated >= 1) ? q.dialogue.close();"
+  ],
+  "speakers":{
+    "npc":{
+      "name":{
+        "type":"expression",
+        "expression":"q.npc.name"
+      },
+      "face":"q.npc.face()"
+    },
+    "player":{
+      "name":{
+        "type":"expression",
+        "expression":"q.player.username"
+      },
+      "face":"q.player.face()"
+    }
+  },
+  "pages":[
+    {
+      "id":"Dialogo",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
+          "expression":"'Hola, mi nombre es Ash y vengo de Pueblo Paleta'"
+        }
+      ]
+    },
+    {
+      "id":"Dialogo",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
+          "expression":"'Aunque eso seguro ya lo sabes'"
+        }
+      ]
+    },
+    {
+      "id":"Dialogo",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
+          "expression":"'Luego de salir campeón del mundo y visitar a Serena, me dieron ganas de explorar nuevos lugares otra vez'"
+        }
+      ]
+    },
+    {
+      "id":"Dialogo",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
+          "expression":"'Al menos hasta que me llamen otra vez para protagonizar el anime...'"
+        }
+      ]
+    },
+    {
+      "id":"despedida",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
+          "expression":"'¡Como sea, muestrame que tan fuerte eres!'"
+        }
+      ],
+      "input":"q.dialogue.close(); v.battle = q.npc.start_battle(q.player);"
+    }
+  ]
+}

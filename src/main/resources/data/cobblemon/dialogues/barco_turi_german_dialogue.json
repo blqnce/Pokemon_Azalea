@@ -1,0 +1,57 @@
+{
+  "initializationAction" : [
+    "(q.player.data.barco_turi_german < 1) ? q.dialogue.set_page('Dialogo');",
+    "(q.player.data.barco_turi_german >= 1) ? q.dialogue.set_page('Dialogo3');"
+  ],
+  "speakers" : {
+    "npc" : {
+      "name" : {
+        "type" : "expression",
+        "expression" : "q.npc.name"
+      },
+      "face" : "q.npc.face()"
+    },
+    "player" : {
+      "name" : {
+        "type" : "expression",
+        "expression" : "q.player.username"
+      },
+      "face" : "q.player.face()"
+    }
+  },
+  "pages" : [ {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Nada más lindo como unas buenas vacaciones luego de un duro año'"
+    } ]
+    
+  }, {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Encima este sol pega como un slaking con potencia'"
+    } ]
+    
+  }, {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Ten, seguro te sirve'"
+    } ],
+    "input": "q.run_command('give ' + q.player.username + ' cobblemon:choice_specs'); q.player.data.barco_turi_german = 1; q.player.save_data(); q.dialogue.set_page('Dialogo3');"
+
+
+  }, {
+    "id" : "Dialogo3",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Así también te sientes de vacaciones jeje'"
+    } ]
+    
+  } ]
+}

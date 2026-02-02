@@ -1,0 +1,21 @@
+{
+  "baseScale" : 1.0,
+  "resourceIdentifier" : "cobblemon:rebelde_antony",
+  "names" : [ "Rebelde Antony" ],
+  "presets" : [ "cobblemon:base_npc_npcs" ],
+  "interaction" : {
+    "type" : "dialogue",
+    "dialogue" : "cobblemon:rebelde_antony_dialogue"
+  },
+  "skill" : 1,
+  "party" : {
+    "type" : "script",
+    "script" : "cobblemon:talk_party",
+    "isStatic" : false,
+    "static" : false
+  },
+  "ai" : [ {
+    "type" : "cobblemon:apply_behaviours",
+    "behaviours" : [ "cobblemon:looks_around" ]
+  } ]
+}

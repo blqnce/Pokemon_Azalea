@@ -1,0 +1,166 @@
+{
+  "initializationAction" : [
+    "(q.player.data.barco_prisma_brayan < 1) ? q.dialogue.set_page('Dialogo');",
+    "(q.player.data.barco_prisma_brayan >= 1) ? q.dialogue.set_page('Dialogo3');",
+    "(q.player.data.masterball_marc >= 1) ? q.dialogue.set_page('Dialogo4');"
+  ],
+  "speakers" : {
+    "npc" : {
+      "name" : {
+        "type" : "expression",
+        "expression" : "q.npc.name"
+      },
+      "face" : "q.npc.face()"
+    },
+    "player" : {
+      "name" : {
+        "type" : "expression",
+        "expression" : "q.player.username"
+      },
+      "face" : "q.player.face()"
+    }
+  },
+  "pages" : [ {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Estas maquinas son un vicio'"
+    } ]
+
+    
+  }, {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'¿Vienes de parte de Paco?'"
+    } ],
+    "input" : "q.run_command('clear ' + q.player.username + ' pokemonazalea:carta'); q.dialogue.set_page('Dialogo49');"
+    
+  }, {
+    "id" : "Dialogo49",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Cada día me manda a alguien nuevo a que me traiga los sobres...'"
+    } ]
+    
+  }, {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'¿Por qué te me quedas viendo?'"
+    } ]
+    
+  }, {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'¿Te dijo que te daría una Master Ball por esto?'"
+    } ]
+    
+  }, {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Ay, joven, te vendieron la piel del ursaring antes de cazarlo'"
+    } ]
+    
+  }, {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Mira, estás de suerte'"
+    } ]
+    
+  }, {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Unos subditos del Team Prisma me robaron la billetera mientras estaba apostando en esta maquina'"
+    } ]
+    
+  }, {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Quise detenerlos pero estaba en buena racha de ganancias...'"
+    } ]
+    
+  }, {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Si me la devuelves, te daré la Master Ball que te prometieron, pero ten cuidado'"
+    } ]
+    
+  }, {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Escuché que el Team Prisma controla este crucero, así que vas a tener que encontrar la manera de infiltrarte'"
+    } ]
+    
+  }, {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'No me interesa mucho lo que hagas con ellos, solo trae de nuevo mi billetera y te salvaré de la estafa'"
+    } ],
+    "input" : "q.dialogue.close();"
+    
+  }, {
+    "id" : "Dialogo3",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'¿Y que tal?'"
+    } ],
+    "input" : "q.run_command('clear ' + q.player.username + ' pokemonazalea:billetera'); q.dialogue.set_page('Dialogo39');"
+    
+  }, {
+    "id" : "Dialogo39",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'¡Wow, de verdad la recuperaste!'"
+    } ]
+    
+  }, {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Bueno, cumpliré con mi parte del trato, toma'"
+    } ],
+    "input": "q.run_command('give ' + q.player.username + ' cobblemon:master_ball'); q.player.data.masterball_marc = 1; q.player.save_data(); q.dialogue.set_page('Dialogo4');"
+
+
+  }, {
+    "id" : "Dialogo4",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Mientras estuviste allí dentro, se corrió la voz de que alguien se infiltró'"
+    } ]
+    
+  }, {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'El capitán del barco no parece muy contento con eso, deberías ir a confrontarlo.'"
+    } ]
+    
+  } ]
+}

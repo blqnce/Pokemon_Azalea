@@ -1,0 +1,80 @@
+{
+  "initializationAction" : [
+    "(q.player.data.coral_eleanor < 1) ? q.dialogue.set_page('Dialogo');",
+    "(q.player.data.coral_eleanor >= 1) ? q.dialogue.set_page('Dialogo3');"
+  ],
+  "speakers" : {
+    "npc" : {
+      "name" : {
+        "type" : "expression",
+        "expression" : "q.npc.name"
+      },
+      "face" : "q.npc.face()"
+    },
+    "player" : {
+      "name" : {
+        "type" : "expression",
+        "expression" : "q.player.username"
+      },
+      "face" : "q.player.face()"
+    }
+  },
+  "pages" : [ {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Oh, lo siento'"
+    } ]
+    
+  }, {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Cada vez que alguien ingresa por esa puerta pienso que es ella'"
+    } ]
+    
+  }, {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Mi pequeña Lucy desapareció hace cuatro años'"
+    } ]
+    
+  }, {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Dejó una nota y, también, un hueco imposible de llenar'"
+    } ]
+    
+  }, {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Llevo guardando esto desde que se fue'"
+    } ],
+    "input": "q.run_command('give ' + q.player.username + ' cobblemon:choice_scarf'); q.player.data.coral_eleanor = 1; q.player.save_data(); q.dialogue.set_page('Dialogo3');"
+    
+  }, {
+    "id" : "Dialogo3",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Yo no soy entrenadora, pero parece que tú sí'"
+    } ]
+    
+  }, {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Quizás puedas darle uso'"
+    } ]
+    
+  } ]
+}

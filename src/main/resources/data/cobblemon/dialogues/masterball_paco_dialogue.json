@@ -1,0 +1,88 @@
+{
+  "initializationAction" : [
+    "(q.player.data.masterball_paco < 1) ? q.dialogue.set_page('Dialogo');",
+    "(q.player.data.masterball_paco >= 1) ? q.dialogue.set_page('Dialogo3');"
+  ],
+  "speakers" : {
+    "npc" : {
+      "name" : {
+        "type" : "expression",
+        "expression" : "q.npc.name"
+      },
+      "face" : "q.npc.face()"
+    },
+    "player" : {
+      "name" : {
+        "type" : "expression",
+        "expression" : "q.player.username"
+      },
+      "face" : "q.player.face()"
+    }
+  },
+  "pages" : [ {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Ey, compañero'"
+    } ]
+    
+  }, {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Tienes cara de que te gusta atrapar pokémones'"
+    } ]
+    
+  }, {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Te topaste con la persona indicada'"
+    } ]
+    
+  }, {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Te daré una Master Ball si me haces un pequeño favor'"
+    } ]
+    
+  }, {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Tentador, ¿eh?'"
+    } ]
+    
+  }, {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Solo tienes que llevarle esta carta a un colega mío que fue de vacaciones a un crucero'"
+    } ],
+    "input": "q.run_command('give ' + q.player.username + ' pokemonazalea:carta'); q.player.data.masterball_paco = 1; q.player.save_data(); q.dialogue.set_page('Dialogo3');"
+
+  }, {
+    "id" : "Dialogo3",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Una vez lo hagas, te daré la recompensa'"
+    } ]
+    
+  }, {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'La embarcación está al noreste de la isla, ve rápido.'"
+    } ]
+    
+  } ]
+}

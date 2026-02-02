@@ -1,0 +1,21 @@
+{
+  "baseScale" : 1.0,
+  "resourceIdentifier" : "cobblemon:azalea_rebelde_chester",
+  "names" : [ "Rebelde Chester" ],
+  "presets" : [ "cobblemon:base_npc_npcs" ],
+  "interaction" : {
+    "type" : "dialogue",
+    "dialogue" : "cobblemon:azalea_rebelde_chester_dialogue"
+  },
+  "skill" : 1,
+  "party" : {
+    "type" : "script",
+    "script" : "cobblemon:talk_party",
+    "isStatic" : false,
+    "static" : false
+  },
+  "ai" : [ {
+    "type" : "cobblemon:apply_behaviours",
+    "behaviours" : [ "cobblemon:looks_around" ]
+  } ]
+}

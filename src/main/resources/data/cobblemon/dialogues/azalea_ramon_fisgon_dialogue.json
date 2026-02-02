@@ -1,0 +1,83 @@
+{
+  "initializationAction" : [
+    "(q.player.data.loco_defeated < 1) ? q.dialogue.set_page('Dialogo');",
+    "(q.player.data.loco_defeated >= 1) ? q.dialogue.set_page('Dialogo3');"
+  ],
+  "speakers" : {
+    "npc" : {
+      "name" : {
+        "type" : "expression",
+        "expression" : "q.npc.name"
+      },
+      "face" : "q.npc.face()"
+    },
+    "player" : {
+      "name" : {
+        "type" : "expression",
+        "expression" : "q.player.username"
+      },
+      "face" : "q.player.face()"
+    }
+  },
+  "pages" : [ {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Que susto, pensé que eras Peruneta'"
+    } ]
+    
+  }, {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Suelo venir aquí a observar a su hermana'"
+    } ]
+    
+  }, {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Jeje'"
+    } ]
+    
+  }, {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Mira, si guardas mi secreto, te puedo llevar a su habitación para que la conozcas'"
+    } ]
+    
+  }, {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Pero para eso, necesito asegurarme que seas fuerte para aguantar su poder'"
+    } ]
+    
+  }, {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Ven a hablarme de nuevo cuando consigas 8 medallas de gimnasio'"
+    } ],
+    "input" : "q.dialogue.close();"
+    
+  },{
+    "id" : "Dialogo3",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Veo que conseguiste las 8 medallas. Bueno, suerte con Jenny'"
+    } ],
+    "input" : "q.dialogue.close(); q.run_command('tp ' + q.player.username +' 148 53 66 -90 0');"
+
+  }
+  ]
+}
+
