@@ -1,0 +1,19 @@
+{
+  "hitbox": "player",
+  "canDespawn": false,
+  "isMovable": false,
+  "isInvulnerable": true,
+  "isLeashable": false,
+  "allowProjectileHits": false,
+  "battleTheme": "pokemonazalea:theme.elitefour",
+  "ai": [
+    {
+      "type": "cobblemon:apply_behaviours",
+      "behaviours": [
+        "cobblemon:core",
+        "cobblemon:chats",
+        "cobblemon:battler"
+      ]
+    }
+  ]
+}

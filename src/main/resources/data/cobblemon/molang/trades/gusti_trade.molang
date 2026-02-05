@@ -1,0 +1,6 @@
+q.npc.data.trade_request_name = 'Sylveon';
+q.npc.data.trade_request = 'sylveon';
+
+q.npc.save_data();
+
+return 1;

@@ -1,7 +1,8 @@
 {
   "initializationAction" : [
     "(q.player.data.victor_spawn_hablado < 1) ? q.dialogue.set_page('Dialogo');",
-    "(q.player.data.victor_spawn_hablado >= 1) ? q.dialogue.set_page('Dialogo2');"
+    "(q.player.data.victor_spawn_hablado >= 1) ? q.dialogue.set_page('Dialogo2');",
+    "(q.player.data.loco_defeated >= 1) ? q.dialogue.set_page('Dialogo99');"
   ],
   "speakers" : {
     "npc" : {
@@ -103,5 +104,101 @@
       "expression" : "'¡Asegúrate de conseguir algunas cuando tengas la oportunidad!'"
     } ]
     
-  } ]
+  },
+    {
+      "id" : "Dialogo99",
+      "speaker" : "npc",
+      "lines" : [ {
+        "type" : "expression",
+        "expression" : "'¡Enhorabuena! Has conseguido las ocho medallas.'"
+      } ]
+
+    },
+    {
+      "id" : "Dialogo",
+      "speaker" : "npc",
+      "lines" : [ {
+        "type" : "expression",
+        "expression" : "'No es algo que cualquiera logre, así que puedes sentirte orgulloso.'"
+      } ]
+
+    },
+    {
+      "id" : "Dialogo",
+      "speaker" : "npc",
+      "lines" : [ {
+        "type" : "expression",
+        "expression" : "'A partir de ahora, estás listo para dar el siguiente paso.'"
+      } ]
+
+    },
+    {
+      "id" : "Dialogo",
+      "speaker" : "npc",
+      "lines" : [ {
+        "type" : "expression",
+        "expression" : "'Usaré la máquina del profesor Bobicraft para enviarte a la dimensión donde se encuentra la Liga Pokémon de la Academia.'"
+      } ]
+
+    },
+    {
+      "id" : "Dialogo",
+      "speaker" : "npc",
+      "lines" : [ {
+        "type" : "expression",
+        "expression" : "'Es una tierra peligrosa… pero también fascinante.'"
+      } ]
+
+    },
+    {
+      "id" : "Dialogo",
+      "speaker" : "npc",
+      "lines" : [ {
+        "type" : "expression",
+        "expression" : "'Allí pondrás a prueba todo lo que has aprendido.'"
+      } ]
+
+    },
+    {
+      "id" : "Dialogo",
+      "speaker" : "npc",
+      "lines" : [ {
+        "type" : "expression",
+        "expression" : "'Recuerda: deberás dirigirte aproximadamente a las coordenadas 150, -100.'"
+      } ],
+      "input":{
+        "type":"option",
+        "vertical":false,
+        "options":[
+          {
+            "text":"Estoy listo",
+            "value":"si",
+            "action":[
+              "q.dialogue.set_page('Dialogo123');"
+            ]
+          },
+          {
+            "text":"Espera",
+            "value":"no",
+            "action":[
+
+              "q.dialogue.close();"
+
+            ]
+          }
+        ]
+      }
+
+    },
+    {
+      "id" : "Dialogo123",
+      "speaker" : "npc",
+      "lines" : [ {
+        "type" : "expression",
+        "expression" : "'Ten cuidado, y mucha suerte en lo que viene.'"
+      } ],
+      "input" : "q.dialogue.close(); q.run_command('execute in azalea:forsaken_land_of_the_gods run tp '+ q.player.username + ' 909 124 -273 90 0');"
+    }
+
+  ]
 }

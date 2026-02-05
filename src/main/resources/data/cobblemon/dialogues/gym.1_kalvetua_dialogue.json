@@ -1,0 +1,109 @@
+{
+  "initializationAction":[
+    "(q.player.data.gym1_defeated < 3) ? q.dialogue.set_page('req-unmet');",
+    "(q.player.data.gym1_defeated >= 3) ? q.dialogue.set_page('Dialogo');",
+    "(q.player.data.kalvetua_defeated >= 1) ? q.dialogue.set_page('Dialogo27');"
+  ],
+  "speakers":{
+    "npc":{
+      "name":{
+        "type":"expression",
+        "expression":"q.npc.name"
+      },
+      "face":"q.npc.face()"
+    },
+    "player":{
+      "name":{
+        "type":"expression",
+        "expression":"q.player.username"
+      },
+      "face":"q.player.face()"
+    }
+  },
+  "pages":[
+    {
+      "id":"req-unmet",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
+          "expression":"'Debes luchar contra los entrenadores del gimnasio antes de luchar contra mi, te espero.'"
+        }
+      ],
+      "input" : "q.dialogue.close();"
+    },
+    {
+      "id":"Dialogo",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
+          "expression":"'Bienvenido al Gimnasio de Agua. Debe de ser tu primer enfrentamiento contra un líder.'"
+        }
+      ]
+    },
+    {
+      "id":"Dialogo",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
+          "expression":"'Por protocolo, debo utilizar un equipo específico para que el duelo sea justo. Quizás, si nos encontramos fuera del gimnasio, pueda desatar mi verdadera fuerza contra ti.'"
+        }
+      ]
+    },
+    {
+      "id":"Pelea",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
+          "expression":"'Si has llegado hasta aquí, espero que estés preparado para un combate digno.  ¡Comencemos!'"
+        }
+      ],
+      "input":{
+        "type":"option",
+        "vertical":false,
+        "options":[
+          {
+            "text":"¡Vamos!",
+            "value":"battle",
+            "action":[
+              "q.dialogue.close();",
+              "v.battle = q.npc.start_battle(q.player);"
+            ]
+          },
+          {
+            "text":"Más tarde",
+            "value":"no",
+            "action":[
+              "q.dialogue.set_page('despedida')"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id":"despedida",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
+          "expression":"'Comprendo. Un verdadero combate no debe librarse sin preparación.  Regresa cuando estés listo. Te estaré esperando.'"
+        }
+      ],
+      "input":"q.dialogue.close();"
+    },
+    {
+      "id":"Dialogo27",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
+          "expression":"'No me arrepiento de haber luchado contigo. Fue un combate digno.'"
+        }
+      ],
+      "input":"q.dialogue.close();"
+    }
+  ]
+}

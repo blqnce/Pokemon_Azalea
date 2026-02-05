@@ -1,0 +1,33 @@
+{
+  "baseScale":1.0,
+  "resourceIdentifier":"cobblemon:kalvetua",
+  "names":[
+    "Kalvetua"
+  ],
+  "presets":[
+    "cobblemon:base_npc_npcs_gym_leader"
+  ],
+  "interaction":{
+    "type":"dialogue",
+    "dialogue":"cobblemon:gym.1_kalvetua_dialogue"
+  },
+  "skill":5,
+  "party":{
+    "type":"script",
+    "script":"cobblemon:gym.1_kalvetua_party",
+    "isStatic":false,
+    "static":false
+  },
+  "ai":[
+    {
+      "type":"cobblemon:apply_behaviours",
+      "behaviours":[
+        "cobblemon:looks_around",
+        "cobblemon:battle_reward_npcs",
+        "cobblemon:battle_reward_pokedollars3_npcs",
+        "cobblemon:battle_cooldown_npcs",
+        "cobblemon:ganador"
+      ]
+    }
+  ]
+}

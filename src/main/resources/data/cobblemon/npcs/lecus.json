@@ -1,11 +1,11 @@
 {
   "baseScale" : 1.0,
   "resourceIdentifier" : "cobblemon:mono_default",
-  "names" : [ "jungla_lecus" ],
+  "names" : [ "Lecus" ],
   "presets" : [ "cobblemon:base_npc_npcs" ],
   "interaction" : {
     "type" : "dialogue",
-    "dialogue" : "cobblemon:Lecus_dialogue"
+    "dialogue" : "cobblemon:lecus_dialogue"
   },
   "skill" : 1,
   "party" : {

@@ -1,0 +1,107 @@
+{
+  "initializationAction":[
+    "(q.player.data.omabella_defeated < 1) ? q.dialogue.set_page('Dialogo');",
+    "(q.player.data.omabella_defeated >= 1) ? q.dialogue.set_page('Dialogo27');"
+  ],
+  "speakers":{
+    "npc":{
+      "name":{
+        "type":"expression",
+        "expression":"q.npc.name"
+      },
+      "face":"q.npc.face()"
+    },
+    "player":{
+      "name":{
+        "type":"expression",
+        "expression":"q.player.username"
+      },
+      "face":"q.player.face()"
+    }
+  },
+  "pages":[
+    {
+      "id":"Dialogo",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
+          "expression":"'Bienvenido a mi bosque… Un rincón donde la naturaleza susurra calma y armonía.'"
+        }
+      ]
+    },
+    {
+      "id":"Dialogo",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
+          "expression":"'Soy Omabella, sexta líder de esta isla. Espero que disfrutes de tu estadía y de nuestro combate.'"
+        }
+      ]
+    },
+    {
+      "id":"Dialogo",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
+          "expression":"'Daré lo mejor de mí para que este duelo sea maravilloso. Confío en que tú harás lo mismo.'"
+        }
+      ]
+    },
+    {
+      "id":"Pelea",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
+          "expression":"'Es hora del desafío, comencemos.'"
+        }
+      ],
+      "input":{
+        "type":"option",
+        "vertical":false,
+        "options":[
+          {
+            "text":"¡Vamos!",
+            "value":"battle",
+            "action":[
+              "q.dialogue.close();",
+              "v.battle = q.npc.start_battle(q.player);"
+            ]
+          },
+          {
+            "text":"Más tarde",
+            "value":"no",
+            "action":[
+              "q.dialogue.set_page('despedida')"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id":"despedida",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
+          "expression":"'Tómate tu tiempo. Respira, relájate… y escucha al bosque que un corazón tranquilo siempre lucha mejor. Aquí estaré.'"
+        }
+      ],
+      "input":"q.dialogue.close();"
+    },
+    {
+      "id":"Dialogo27",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
+          "expression":"'Tu camino es hermoso de observar, sigue así. Siempre serás bienvenido en este bosque.'"
+        }
+      ],
+      "input":"q.dialogue.close();"
+    }
+  ]
+}

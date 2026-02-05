@@ -48,7 +48,7 @@ public final class StarterActionReceiver {
             } else
 
             if(payload.pokemon().equals("abra")){
-                command = "pokegiveother " + player.getName().getString() + " " + "abra level=5";
+                command = "pokegiveother " + player.getName().getString() + " " + "abra level=5 moves=storedpower";
             } else
 
             if(payload.pokemon().equals("honedge")){

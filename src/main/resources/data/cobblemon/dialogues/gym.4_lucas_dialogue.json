@@ -1,0 +1,137 @@
+{
+  "initializationAction":[
+    "(q.player.data.lucas_defeated < 1) ? q.dialogue.set_page('Dialogo');",
+    "(q.player.data.lucas_defeated >= 1) ? q.dialogue.set_page('Dialogo27');"
+  ],
+  "speakers":{
+    "npc":{
+      "name":{
+        "type":"expression",
+        "expression":"q.npc.name"
+      },
+      "face":"q.npc.face()"
+    },
+    "player":{
+      "name":{
+        "type":"expression",
+        "expression":"q.player.username"
+      },
+      "face":"q.player.face()"
+    }
+  },
+  "pages":[
+    {
+      "id":"Dialogo",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
+          "expression":"'Hola… eh… soy el cuadto líder de gimnasio. El mono más fuegte de esta tibu.'"
+        }
+      ]
+    },
+    {
+      "id":"Dialogo",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
+          "expression":"'Se supone que tú me tienes que degotag y yo te doy una banana.'"
+        }
+      ]
+    },
+    {
+      "id":"Dialogo",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
+          "expression":"'Espera… no. No ega banana…'"
+        }
+      ]
+    },
+    {
+      "id":"Dialogo",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
+          "expression":"'¡La medalla! Sí, eso. Pegdón.'"
+        }
+      ]
+    },
+    {
+      "id":"Dialogo",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
+          "expression":"'Bueno… eh… tenemos que pelear, ¿no?'"
+        }
+      ]
+    },
+    {
+      "id":"Dialogo",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
+          "expression":"'Pelear… pero no hablando, eh. Pelear de combate Pokémon.'"
+        }
+      ]
+    },
+    {
+      "id":"Pelea",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
+          "expression":"'Vamos.'"
+        }
+      ],
+      "input":{
+        "type":"option",
+        "vertical":false,
+        "options":[
+          {
+            "text":"¡Vamos!",
+            "value":"battle",
+            "action":[
+              "q.dialogue.close();",
+              "v.battle = q.npc.start_battle(q.player, 'double');"
+            ]
+          },
+          {
+            "text":"Más tarde",
+            "value":"no",
+            "action":[
+              "q.dialogue.set_page('despedida')"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id":"despedida",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
+          "expression":"'¿Acaso tienes miedo?  Porque yo no…  Bueno… Un poquito sí… Pero igual vuelves, ¿no?'"
+        }
+      ],
+      "input":"q.dialogue.close();"
+    },
+    {
+      "id":"Dialogo27",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
+          "expression":"'Je… todavía no puedo creegd que me ganaste. Bueno… igual estuvo divegtido, ¿no?'"
+        }
+      ],
+      "input":"q.dialogue.close();"
+    }
+  ]
+}

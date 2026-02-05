@@ -1,0 +1,129 @@
+{
+  "initializationAction":[
+    "(q.player.data.gym3_defeated < 3) ? q.dialogue.set_page('req-unmet');",
+    "(q.player.data.gym3_defeated >= 3) ? q.dialogue.set_page('Dialogo');",
+    "(q.player.data.stiano_defeated >= 1) ? q.dialogue.set_page('Dialogo27');"
+  ],
+  "speakers":{
+    "npc":{
+      "name":{
+        "type":"expression",
+        "expression":"q.npc.name"
+      },
+      "face":"q.npc.face()"
+    },
+    "player":{
+      "name":{
+        "type":"expression",
+        "expression":"q.player.username"
+      },
+      "face":"q.player.face()"
+    }
+  },
+  "pages":[
+    {
+      "id":"req-unmet",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
+          "expression":"'Debes luchar contra los entrenadores del gimnasio antes de luchar contra mi, te espero.'"
+        }
+      ],
+      "input" : "q.dialogue.close();"
+    },
+    {
+      "id":"Dialogo",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
+          "expression":"'Felicidades por resolver el laberinto. Mi nombre es Stiano. Soy profesor… y también líder de este gimnasio.'"
+        }
+      ]
+    },
+    {
+      "id":"Dialogo",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
+          "expression":"'Tal vez no me conozcas en persona, pero seguramente utilizas mis invenciones.'"
+        }
+      ]
+    },
+    {
+      "id":"Dialogo",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
+          "expression":"'Tiempo atrás, antes de que la Academia llegara a esta isla, desarrollé una serie de vitaminas capaces de aumentar los puntos de entrenamiento de los Pokémon, con el objetivo de fortalecer tanto a entrenadores como a sus compañeros.'"
+        }
+      ]
+    },
+    {
+      "id":"Dialogo",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
+          "expression":"'Más adelante, también trabajé para la Universidad de Smogon. Pero basta de hablar de mi pasado.'"
+        }
+      ]
+    },
+    {
+      "id":"Pelea",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
+          "expression":"'Veo que tienes potencial, y espero grandes cosas de ti.  Es hora de nuestro duelo. Adelante.'"
+        }
+      ],
+      "input":{
+        "type":"option",
+        "vertical":false,
+        "options":[
+          {
+            "text":"¡Vamos!",
+            "value":"battle",
+            "action":[
+              "q.dialogue.close();",
+              "v.battle = q.npc.start_battle(q.player);"
+            ]
+          },
+          {
+            "text":"Más tarde",
+            "value":"no",
+            "action":[
+              "q.dialogue.set_page('despedida')"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id":"despedida",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
+          "expression":"'La preparación es parte del aprendizaje.  Haz los ajustes necesarios… y vuelve cuando estés listo.'"
+        }
+      ],
+      "input":"q.dialogue.close();"
+    },
+    {
+      "id":"Dialogo27",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
+          "expression":"'Sigue aprendiendo. Ese es el verdadero camino.'"
+        }
+      ],
+      "input":"q.dialogue.close();"
+    }
+  ]
+}

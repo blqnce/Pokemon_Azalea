@@ -1,0 +1,6 @@
+q.npc.data.trade_request_name = 'Klefki';
+q.npc.data.trade_request = 'klefki';
+
+q.npc.save_data();
+
+return 1;

@@ -1,0 +1,4 @@
+q.party.add_by_properties('cobblemon:plusle normal nature=cobblemon:timid ability=plus uncatchable=true level=19 gender= hp_ev=4 attack_ev=0 defense_ev=0 special_attack_ev=252 special_defense_ev=0 speed_ev=252 hp_iv=31 attack_iv=31 defense_iv=31 special_attack_iv=31 special_defense_iv=31 speed_iv=31 moves=batonpass,substitute,thunderbolt,null held_item=cobblemon:leftovers shiny=no happiness=255 tera_type= mega_evolution=Sin nickname=""');
+q.party.add_by_properties('cobblemon:minun normal nature=cobblemon:timid ability=minus uncatchable=true level=19 gender=male hp_ev=252 attack_ev=0 defense_ev=0 special_attack_ev=4 special_defense_ev=0 speed_ev=252 hp_iv=31 attack_iv=0 defense_iv=31 special_attack_iv=30 special_defense_iv=31 speed_iv=31 moves=helpinghand,thunderbolt,wish,null held_item=cobblemon:leftovers shiny=no happiness=255 tera_type= mega_evolution=Sin nickname=""');
+
+return true;

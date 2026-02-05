@@ -1,0 +1,20 @@
+{
+  "initializationAction": [],
+  "speakers": {
+    "npc": {
+      "name": {
+        "type": "expression",
+        "expression": "q.npc.name"
+      },
+      "face": "q.npc.face();"
+    }
+  },
+  "pages": [
+    {
+      "id": "greeting",
+      "speaker": "npc",
+      "lines": ["Te veo despues!"],
+      "input": "q.dialogue.close();"
+    }
+  ]
+}

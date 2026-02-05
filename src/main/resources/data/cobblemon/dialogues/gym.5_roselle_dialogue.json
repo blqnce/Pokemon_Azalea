@@ -1,0 +1,129 @@
+{
+  "initializationAction":[
+    "(q.player.data.gym5_defeated < 5) ? q.dialogue.set_page('req-unmet');",
+    "(q.player.data.gym5_defeated >= 5) ? q.dialogue.set_page('Dialogo');",
+    "(q.player.data.roselle_defeated >= 1) ? q.dialogue.set_page('Dialogo27');"
+  ],
+  "speakers":{
+    "npc":{
+      "name":{
+        "type":"expression",
+        "expression":"q.npc.name"
+      },
+      "face":"q.npc.face()"
+    },
+    "player":{
+      "name":{
+        "type":"expression",
+        "expression":"q.player.username"
+      },
+      "face":"q.player.face()"
+    }
+  },
+  "pages":[
+    {
+      "id":"req-unmet",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
+          "expression":"'Debes luchar contra los entrenadores del gimnasio antes de luchar contra mi, te espero.'"
+        }
+      ],
+      "input" : "q.dialogue.close();"
+    },
+    {
+      "id":"Dialogo",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
+          "expression":"'¡Bienvenido, bienvenido a mi dominio!'"
+        }
+      ]
+    },
+    {
+      "id":"Dialogo",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
+          "expression":"'Pocos son capaces de llegar hasta aquí… Veo una determinación ardiente en tu mirada. ¡Ja, ja, ja! Me recuerdas a mí cuando era más joven.'"
+        }
+      ]
+    },
+    {
+      "id":"Dialogo",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
+          "expression":"'Soy el quinto líder de gimnasio, señor del tipo Acero.'"
+        }
+      ]
+    },
+    {
+      "id":"Dialogo",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
+          "expression":"'Espero que estés preparado para ofrecerme un reto digno… Demuéstrame que mereces estar aquí.'"
+        }
+      ]
+    },
+    {
+      "id":"Pelea",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
+          "expression":"'Vamos, sorpréndeme.  ¡Hora de bailar!'"
+        }
+      ],
+      "input":{
+        "type":"option",
+        "vertical":false,
+        "options":[
+          {
+            "text":"¡Vamos!",
+            "value":"battle",
+            "action":[
+              "q.dialogue.close();",
+              "v.battle = q.npc.start_battle(q.player);"
+            ]
+          },
+          {
+            "text":"Más tarde",
+            "value":"no",
+            "action":[
+              "q.dialogue.set_page('despedida')"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id":"despedida",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
+          "expression":"'Los combates tienen su encanto… Pero brillan aún más cuando ambos están preparados.  Tómate tu tiempo, regresa cuando estés listo para darlo todo.'"
+        }
+      ],
+      "input":"q.dialogue.close();"
+    },
+    {
+      "id":"Dialogo27",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
+          "expression":"'No cualquiera deja una impresión en mí. Tú lo lograste querido compañero.'"
+        }
+      ],
+      "input":"q.dialogue.close();"
+    }
+  ]
+}

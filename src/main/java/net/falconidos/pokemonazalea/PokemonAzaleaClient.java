@@ -44,6 +44,28 @@ public class PokemonAzaleaClient implements ClientModInitializer {
 
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.WHITE_ULTRA_CRYSTAL_BUD, RenderLayer.getCutout());
 
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.YELLOW_ULTRA_CRYSTAL_BUD, RenderLayer.getCutout());
+
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.ABRA_POKEBALL, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.APPLIN_POKEBALL, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.ELEKID_POKEBALL, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.GASTLY_POKEBALL, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.GLIGAR_POKEBALL, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.HONEDGE_POKEBALL, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.LITTEN_POKEBALL, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MUDKIP_POKEBALL, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MUNCHLAX_POKEBALL, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.NACLI_POKEBALL, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.PAWNIARD_POKEBALL, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.RIOLU_POKEBALL, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.ROOKIDEE_POKEBALL, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SCYTHER_POKEBALL, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SNEASEL_POKEBALL, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SPRIGATITTO_POKEBALL, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.TINKATINK_POKEBALL, RenderLayer.getTranslucent());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.VULPIX_POKEBALL, RenderLayer.getTranslucent());
+
+
         HandledScreens.register(ModScreenHandlers.APPLIN_SCREEN_HANDLER, ApplinScreen::new);
         HandledScreens.register(ModScreenHandlers.VULPIX_SCREEN_HANDLER, VulpixScreen::new);
         HandledScreens.register(ModScreenHandlers.ABRA_SCREEN_HANDLER, AbraScreen::new);

@@ -1,0 +1,6 @@
+q.npc.data.trade_request_name = 'Slurpuff';
+q.npc.data.trade_request = 'slurpuff';
+
+q.npc.save_data();
+
+return 1;

@@ -5,7 +5,7 @@
   "presets" : [ "cobblemon:base_npc_npcs" ],
   "interaction" : {
     "type" : "dialogue",
-    "dialogue" : "cobblemon:tribu_olvidada_Luko_dialogue"
+    "dialogue" : "cobblemon:tribu_olvidada_luko_dialogue"
   },
   "skill" : 1,
   "party" : {

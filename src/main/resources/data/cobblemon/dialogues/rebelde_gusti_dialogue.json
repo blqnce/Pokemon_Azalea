@@ -1,5 +1,9 @@
 {
-  "initializationAction" : [ ],
+  "initializationAction" : [
+    "(q.player.data.rebelde_gusti < 1) ? q.dialogue.set_page('Dialogo');",
+    "(q.player.data.rebelde_gusti >= 1) ? q.dialogue.set_page('Bloqueado');",
+    "q.run_script('cobblemon:gusti_trade')"
+  ],
   "speakers" : {
     "npc" : {
       "name" : {
@@ -32,5 +36,62 @@
       "expression" : "'Necesito un Sylveon para... Hacer cosas personales...'"
     } ]
     
-  } ]
+  },
+    {
+      "id" : "Dialogo",
+      "speaker" : "npc",
+      "lines" : [ {
+        "type" : "expression",
+        "expression" : "'En caso de que tengas uno y le tengas mucho aprecio... de verdad que te aconsejo traer otro'"
+      } ],
+      "input": {
+        "type": "option",
+        "vertical": false,
+        "options": [
+          {
+            "text": {
+              "type": "expression",
+              "expression": "'Toma'"
+            },
+            "value": "trade",
+            "action": [
+              "q.run_script('cobblemon:execute_gusti');",
+              "q.dialogue.set_page('farewell');"
+            ],
+            "isSelectable": "(q.player.party.count_by_properties(q.npc.data.trade_request) >= 1)"
+          },
+          {
+            "text": "Espera",
+            "value": "cancel",
+            "action": [
+              "q.dialogue.close()"
+            ]
+          }
+        ]
+      }
+
+
+    },
+    {
+      "id": "farewell",
+      "speaker": "npc",
+      "lines": [
+        {
+          "type": "expression",
+          "expression": "'Muchas gracias por tu patrocinio'"
+        }
+      ],
+      "input": "q.dialogue.close(); q.run_command('execute in pokemonazalea:island run tp ' + q.player.username +' -43 46 476');"
+    },
+    {
+      "id": "Bloqueado",
+      "speaker": "npc",
+      "lines": [
+        {
+          "type": "expression",
+          "expression": "'Me atrapaste con las manos en la masa... Bueno sigue adelante y no le cuentes a nadie'"
+        }
+      ],
+      "input": "q.dialogue.close(); q.run_command('execute in pokemonazalea:island run tp ' + q.player.username +' -43 46 476');"
+    }]
 }

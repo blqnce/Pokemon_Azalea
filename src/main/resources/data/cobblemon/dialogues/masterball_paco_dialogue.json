@@ -84,5 +84,15 @@
       "expression" : "'La embarcación está al noreste de la isla, ve rápido.'"
     } ]
     
-  } ]
+  },
+    {
+      "id" : "Dialogo",
+      "speaker" : "npc",
+      "lines" : [ {
+        "type" : "expression",
+        "expression" : "'Tengo un amigo al final de la Ruta 6 que puede ayudarte a ir al crucero'"
+      } ]
+
+    }
+  ]
 }

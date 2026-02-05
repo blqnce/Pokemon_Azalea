@@ -2,7 +2,7 @@
   "initializationAction":[
     "(q.player.data.masterball_marc < 1) ? q.dialogue.set_page('Dialogo');",
     "(q.player.data.masterball_marc >= 1) ? q.dialogue.set_page('Dialogo3');",
-    "(q.player.data.barco_alejandro_foretti >= 1) ? q.dialogue.close();"
+    "(q.player.data.barco_alejandro_foretti >= 1) ? q.dialogue.set_page('Dialogo27');"
   ],
   "speakers":{
     "npc":{
@@ -149,7 +149,8 @@
           "type":"expression",
           "expression":"'El resto es irrelevante'"
         }
-      ]
+      ],
+      "input" : "q.dialogue.close();"
     },
     {
       "id":"Dialogo3",
@@ -199,18 +200,18 @@
           "type":"expression",
           "expression":"'Tendré que tomar cartas en el asunto'"
         }
-      ]
+      ],
+      "input":"q.dialogue.close(); v.battle = q.npc.start_battle(q.player);"
     },
     {
-      "id":"despedida",
+      "id":"despedida27",
       "speaker":"npc",
       "lines":[
         {
           "type":"expression",
           "expression":"'Mi opinión no cambiará.'"
         }
-      ],
-      "input":"q.dialogue.close(); v.battle = q.npc.start_battle(q.player);"
+      ]
     }
   ]
 }

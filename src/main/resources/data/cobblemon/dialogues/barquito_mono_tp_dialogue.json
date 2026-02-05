@@ -1,0 +1,137 @@
+{
+  "initializationAction" : [
+    "(q.player.data.masterball_marc2 < 1) ? q.dialogue.set_page('Dialogo');",
+    "(q.player.data.masterball_marc2 >= 1) ? q.dialogue.set_page('Dialogo4');",
+    "(q.player.data.barquito_pagado >= 1) ? q.dialogue.set_page('Dialogo7');"
+
+  ],
+  "speakers" : {
+    "npc" : {
+      "name" : {
+        "type" : "expression",
+        "expression" : "q.npc.name"
+      },
+      "face" : "q.npc.face()"
+    },
+    "player" : {
+      "name" : {
+        "type" : "expression",
+        "expression" : "q.player.username"
+      },
+      "face" : "q.player.face()"
+    }
+  },
+  "pages" : [ {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'El Team Prisma me mintió'"
+    } ]
+    
+  }, {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Me prometieron bananas a cambio de trabajar para ellos'"
+    } ]
+    
+  }, {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Pero no me dieron nada'"
+    } ],
+    "input" : "q.dialogue.close();"
+    
+  }, {
+    "id" : "Dialogo4",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'¿Qué? ¿Necesitas pasar?'"
+    } ]
+    
+  }, {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Mmm'"
+    } ]
+    
+  }, {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Puedo dejarte pasar si me das bananas'"
+    } ]
+    
+  }, {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'¿Me ofrecés dinero?'"
+    } ]
+    
+  }, {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'No quiero dinero'"
+    } ]
+    
+  }, {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'¿Con dinero puedo conseguir bananas? '"
+    } ]
+    
+  }, {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Ok, me gusta tu lógica, dame 5000 papeles para cambiar por bananas y te dejo pasar'"
+    } ],
+    "input":{
+      "type":"option",
+      "vertical":false,
+      "options":[
+        {
+          "text":"Si",
+          "value":"si",
+          "action":[
+            "q.player.data.barquito_pagado = 1; q.player.save_data(); q.dialogue.set_page('Dialogo7'); q.run_command('cobbledollars remove '+ q.player.username + ' 5000');"
+          ]
+        },
+        {
+          "text":"No",
+          "value":"no",
+          "action":[
+
+            "q.dialogue.close();"
+
+          ]
+        }
+      ]
+    }
+    
+  }, {
+    "id" : "Dialogo7",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Ya estoy buscando bananas en línea para comprar'"
+    } ],
+    "input": "q.dialogue.close(); q.run_command('execute in pokemonazalea:island run tp '+ q.player.username + ' 501 23 -710');"
+    
+  } ]
+}

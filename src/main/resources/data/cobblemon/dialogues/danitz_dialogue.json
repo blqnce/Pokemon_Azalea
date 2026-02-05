@@ -47,8 +47,7 @@
         "type" : "expression",
         "expression" : "'El Rey de Amarillo y Negro…'"
       } ],
-      "input" : "q.dialogue.close(); q.run_command('tp ' + q.player.username +' 671 39 202 -90 0');"
-
+      "input" : "q.dialogue.close(); q.run_command('execute in pokemonazalea:island run tp '+ q.player.username + ' 671 39 202 -90 0');"
     },
     {
     "id" : "Dialogo",
@@ -57,7 +56,7 @@
       "type" : "expression",
       "expression" : "'¡Bienvenido a este circo! Mírate… tienes toda la pinta de encajar aquí.'"
     } ]
-    
+
   }, {
     "id" : "Dialogo",
     "speaker" : "npc",

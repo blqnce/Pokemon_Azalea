@@ -1,0 +1,25 @@
+{
+  "initializationAction": [],
+  "speakers": {
+    "npc": {
+      "name": {
+        "type": "expression",
+        "expression": "q.npc.name"
+      },
+      "face": "q.npc.face();"
+    }
+  },
+  "pages": [
+    {
+      "id": "greeting",
+      "speaker": "npc",
+      "lines": ["Ya están completamente recuperados."]
+    },
+    {
+      "id": "greeting",
+      "speaker": "npc",
+      "lines": ["¡Cuídalos mucho y buena suerte en tu aventura!"],
+      "input": "q.dialogue.close();"
+    }
+  ]
+}

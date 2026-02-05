@@ -1,0 +1,75 @@
+{
+  "initializationAction":[
+    "(q.player.data.selene_defeated < 1)  ? q.dialogue.set_page('Dialogo');",
+    "(q.player.data.selene_defeated >= 1)  ? q.dialogue.set_page('Dialogo3');"
+  ],
+  "speakers":{
+    "npc":{
+      "name":{
+        "type":"expression",
+        "expression":"q.npc.name"
+      },
+      "face":"q.npc.face()"
+    },
+    "player":{
+      "name":{
+        "type":"expression",
+        "expression":"q.player.username"
+      },
+      "face":"q.player.face()"
+    }
+  },
+  "pages":[
+    {
+      "id":"Dialogo",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
+          "expression":"'Bienvenido…'"
+        }
+      ]
+    },
+    {
+      "id":"Dialogo",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
+          "expression":"'Soy Selene, soberana del hielo eterno.'"
+        }
+      ]
+    },
+    {
+      "id":"Dialogo",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
+          "expression":"'Aquí, la calidez no existe.'"
+        }
+      ]
+    },
+    {
+      "id":"despedida",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
+          "expression":"'Mantén la calma… ¿Soportarás el frío?'"
+        }
+      ],
+      "input":"q.dialogue.close(); v.battle = q.npc.start_battle(q.player);"
+    },
+    {
+      "id":"Dialogo3",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
+          "expression":"'Incluso el invierno… debe ceder ante la primavera.'"
+        }
+      ]
+    }
+  ]
+}

@@ -42,7 +42,7 @@
             "text":"Si",
             "value":"si",
             "action":[
-              "q.dialogue.close();"
+              "q.dialogue.close(); q.run_command('execute in minecraft:overworld run tp '+ q.player.username + ' 42 69 14 180 0');"
             ]
           },
           {

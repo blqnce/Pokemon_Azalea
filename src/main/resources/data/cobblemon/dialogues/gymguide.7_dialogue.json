@@ -1,0 +1,104 @@
+{
+  "initializationAction" : [
+    "(q.player.data.gym7_falar < 1) ? q.dialogue.set_page('Dialogo');",
+    "(q.player.data.gym7_falar >= 1) ? q.dialogue.set_page('Dialogo7');"
+  ],
+  "speakers" : {
+    "npc" : {
+      "name" : {
+        "type" : "expression",
+        "expression" : "q.npc.name"
+      },
+      "face" : "q.npc.face()"
+    },
+    "player" : {
+      "name" : {
+        "type" : "expression",
+        "expression" : "q.player.username"
+      },
+      "face" : "q.player.face()"
+    }
+  },
+  "pages" : [ {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Hola… me alegra verte una vez más. Has llegado muy lejos, ¿lo sabías?'"
+    } ],
+    "input" : "q.player.data.gym7_falar = 1; q.player.save_data(); q.run_command('give ' + q.player.username + ' cobblemon:super_potion'); q.dialogue.set_page('Dialogo3')"
+
+  }, {
+    "id" : "Dialogo3",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Bienvenido al séptimo gimnasio de la isla: el Gimnasio de tipo Fuego, liderado por Adam.'"
+    } ]
+    
+  }, {
+    "id" : "Dialogo7",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Este lugar no siempre fue así. Antes, aquí vivía la Tribu del Fuego, que adoraba a Infernape como su guardián. Su antiguo líder era fuerte… muy fuerte.'"
+    } ]
+    
+  }, {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Pero hace tiempo fue derrotado por Adam. Desde entonces, Adam se convirtió en el nuevo líder de la tribu y del gimnasio.'"
+    } ]
+    
+  }, {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'El antiguo jefe no soportó la derrota. Perdió la razón… y empezó a decir que era el último mono de su raza.'"
+    } ]
+    
+  }, {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Un día, simplemente desapareció. Nadie sabe dónde está ahora.'"
+    } ]
+    
+  }, {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Desde entonces, la tribu decidió crear esta prueba. No es un laberinto ni un puzzle… es parkour.'"
+    } ]
+    
+  }, {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Es su forma de comprobar si eres digno de enfrentar a Adam.'"
+    } ]
+    
+  }, {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Confía en tus reflejos, mantén la calma… y no te rindas.'"
+    } ]
+    
+  }, {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Pase lo que pase ahí dentro, recuerda todo lo que has superado.  Buena suerte… de verdad.'"
+    } ]
+    
+  } ]
+}

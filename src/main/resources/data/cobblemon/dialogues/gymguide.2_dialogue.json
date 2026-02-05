@@ -1,0 +1,65 @@
+{
+  "initializationAction" : [
+    "(q.player.data.gym2_falar < 1) ? q.dialogue.set_page('Dialogo');",
+    "(q.player.data.gym2_falar >= 1) ? q.dialogue.set_page('Dialogo7');"
+  ],
+  "speakers" : {
+    "npc" : {
+      "name" : {
+        "type" : "expression",
+        "expression" : "q.npc.name"
+      },
+      "face" : "q.npc.face()"
+    },
+    "player" : {
+      "name" : {
+        "type" : "expression",
+        "expression" : "q.player.username"
+      },
+      "face" : "q.player.face()"
+    }
+  },
+  "pages" : [ {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'¡Hey! ¡Me alegra volver a verte por aquí! Veo que superaste el primer gimnasio, ¡bien hecho!'"
+    } ],
+    "input" : "q.player.data.gym2_falar = 1; q.player.save_data(); q.run_command('give ' + q.player.username + ' cobblemon:super_potion'); q.dialogue.set_page('Dialogo3')"
+
+
+  }, {
+    "id" : "Dialogo3",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Bienvenido al Gimnasio de tipo Eléctrico. Esta vez no hay laberintos… aquí tendrás que resolver un puzzle.'"
+    } ]
+    
+  }, {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Mi recomendación es que traigas Pokémon de tipo Tierra, te serán de gran ayuda.'"
+    } ]
+
+  }, {
+    "id" : "Dialogo7",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Observa bien tu entorno, ve atentamente y no te apresures. A veces, la solución está justo frente a ti.'"
+    } ]
+    
+  }, {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Cuando lo consigas, Leodoro te estará esperando. ¡Confío en ti, dale con todo!'"
+    } ]
+    
+  } ]
+}

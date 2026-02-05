@@ -1,0 +1,4 @@
+q.party.add_by_properties('cobblemon:popplio normal nature=cobblemon:quiet ability=torrent uncatchable=true level=14 gender= hp_ev=0 attack_ev=44 defense_ev=0 special_attack_ev=236 special_defense_ev=228 speed_ev=0 hp_iv=31 attack_iv=31 defense_iv=31 special_attack_iv=31 special_defense_iv=31 speed_iv=31 moves=aquajet,babydolleyes,disarmingvoice,icywind held_item= shiny=no happiness=255 tera_type= mega_evolution=Sin nickname=""');
+q.party.add_by_properties('cobblemon:chewtle normal nature=cobblemon:lax ability=strongjaw uncatchable=true level=14 gender= hp_ev=0 attack_ev=24 defense_ev=248 special_attack_ev=4 special_defense_ev=232 speed_ev=0 hp_iv=31 attack_iv=31 defense_iv=31 special_attack_iv=31 special_defense_iv=31 speed_iv=31 moves=bite,headbutt,protect,watergun held_item=cobblemon:leftovers shiny=no happiness=255 tera_type= mega_evolution=Sin nickname=""');
+
+return true;

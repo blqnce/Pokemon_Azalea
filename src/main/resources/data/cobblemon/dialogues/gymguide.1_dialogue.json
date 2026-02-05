@@ -1,0 +1,56 @@
+{
+  "initializationAction" : [
+    "(q.player.data.gym1_falar < 1) ? q.dialogue.set_page('Dialogo');",
+    "(q.player.data.gym1_falar >= 1) ? q.dialogue.set_page('Dialogo7');"
+  ],
+  "speakers" : {
+    "npc" : {
+      "name" : {
+        "type" : "expression",
+        "expression" : "q.npc.name"
+      },
+      "face" : "q.npc.face()"
+    },
+    "player" : {
+      "name" : {
+        "type" : "expression",
+        "expression" : "q.player.username"
+      },
+      "face" : "q.player.face()"
+    }
+  },
+  "pages" : [ {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'¡Hola! ¡Bienvenido al Gimnasio de tipo Agua! Es el primer gimnasio del desafío según la Academia.'"
+    } ],
+    "input" : "q.player.data.gym1_falar = 1; q.player.save_data(); q.run_command('give ' + q.player.username + ' cobblemon:super_potion'); q.dialogue.set_page('Dialogo3')"
+    
+  }, {
+    "id" : "Dialogo3",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Mi nombre es Esteban, y estoy aquí para explicarte cómo funciona todo. Para empezar, te recomiendo usar Pokémon de tipo Planta.'"
+    } ]
+    
+  }, {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Para llegar hasta el líder, tendrás que bucear y resolver este laberinto. Recuerda que tienes un minimapa: úsalo como guía.'"
+    } ]
+  }, {
+    "id" : "Dialogo7",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'El gimnasio se encuentra en el centro del laberinto, aunque hay varias entradas. ¡Tómate tu tiempo y buena suerte!'"
+    } ],
+    "input": "q.run_command('effect give '+ q.player.username + ' minecraft:water_breathing 1000 0 true'); q.dialogue.close();"
+    
+  } ]
+}

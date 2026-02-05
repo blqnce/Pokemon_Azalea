@@ -36,7 +36,7 @@
       "type" : "expression",
       "expression" : "'¿Vienes de parte de Paco?'"
     } ],
-    "input" : "q.run_command('clear ' + q.player.username + ' pokemonazalea:carta'); q.dialogue.set_page('Dialogo49');"
+    "input" : "q.player.data.masterball_marc2 = 1; q.player.save_data(); q.run_command('clear ' + q.player.username + ' pokemonazalea:carta'); q.dialogue.set_page('Dialogo49');"
     
   }, {
     "id" : "Dialogo49",

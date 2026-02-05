@@ -1,0 +1,75 @@
+{
+  "initializationAction":[
+    "(q.player.data.lucien_defeated < 1)  ? q.dialogue.set_page('Dialogo');",
+    "(q.player.data.lucien_defeated >= 1)  ? q.dialogue.set_page('Dialogo3');"
+  ],
+  "speakers":{
+    "npc":{
+      "name":{
+        "type":"expression",
+        "expression":"q.npc.name"
+      },
+      "face":"q.npc.face()"
+    },
+    "player":{
+      "name":{
+        "type":"expression",
+        "expression":"q.player.username"
+      },
+      "face":"q.player.face()"
+    }
+  },
+  "pages":[
+    {
+      "id":"Dialogo",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
+          "expression":"'Oh… oh… oh…  ¡Un nuevo protagonista ha llegado a mi escenario!'"
+        }
+      ]
+    },
+    {
+      "id":"Dialogo",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
+          "expression":"'Soy Lucien, maestro del tipo Fantasma… y director de esta pequeña tragedia.'"
+        }
+      ]
+    },
+    {
+      "id":"Dialogo",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
+          "expression":"'Cada combate es una obra. Cada derrota… un final.'"
+        }
+      ]
+    },
+    {
+      "id":"despedida",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
+          "expression":"'¿Estás listo para interpretar tu papel?'"
+        }
+      ],
+      "input":"q.dialogue.close(); q.npc.start_battle(q.player, 'double');"
+    },
+    {
+      "id":"Dialogo3",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
+          "expression":"'¡Bravo! ¡Bravo! Tu actuación fue impecable… Esta obra te pertenece ahora.'"
+        }
+      ]
+    }
+  ]
+}

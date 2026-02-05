@@ -1,0 +1,129 @@
+{
+  "initializationAction":[
+    "(q.player.data.gym7_defeated < 3) ? q.dialogue.set_page('req-unmet');",
+    "(q.player.data.gym7_defeated >= 3) ? q.dialogue.set_page('Dialogo');",
+    "(q.player.data.adam_defeated >= 1) ? q.dialogue.set_page('Dialogo27');"
+  ],
+  "speakers":{
+    "npc":{
+      "name":{
+        "type":"expression",
+        "expression":"q.npc.name"
+      },
+      "face":"q.npc.face()"
+    },
+    "player":{
+      "name":{
+        "type":"expression",
+        "expression":"q.player.username"
+      },
+      "face":"q.player.face()"
+    }
+  },
+  "pages":[
+    {
+      "id":"req-unmet",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
+          "expression":"'Debes luchar contra los entrenadores del gimnasio antes de luchar contra mi, te espero.'"
+        }
+      ],
+      "input" : "q.dialogue.close();"
+    },
+    {
+      "id":"Dialogo",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
+          "expression":"'Seas bienvenido a mi territorio. Mi nombre es Adam. Soy el séptimo líder de la isla, y me especializo en el tipo Fuego.'"
+        }
+      ]
+    },
+    {
+      "id":"Dialogo",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
+          "expression":"'Siempre he deseado que llegaras hasta aquí, para que podamos compartir un combate memorable.'"
+        }
+      ]
+    },
+    {
+      "id":"Dialogo",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
+          "expression":"'Sin embargo, el destino aún tiene su propio camino. ¿Cuál de nosotros prevalecerá?'"
+        }
+      ]
+    },
+    {
+      "id":"Dialogo",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
+          "expression":"'No importa quién resulte vencedor… que ambos salgamos sin rencor.'"
+        }
+      ]
+    },
+    {
+      "id":"Pelea",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
+          "expression":"'Comencemos.'"
+        }
+      ],
+      "input":{
+        "type":"option",
+        "vertical":false,
+        "options":[
+          {
+            "text":"¡Vamos!",
+            "value":"battle",
+            "action":[
+              "q.dialogue.close();",
+              "v.battle = q.npc.start_battle(q.player, 'triple');"
+            ]
+          },
+          {
+            "text":"Más tarde",
+            "value":"no",
+            "action":[
+              "q.dialogue.set_page('despedida')"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id":"despedida",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
+          "expression":"'No te preocupes.  Cada batalla tiene su momento, prepárate con calma…  Cuando estés listo, regresa. Aquí te estaré esperando.'"
+        }
+      ],
+      "input":"q.dialogue.close();"
+    },
+    {
+      "id":"Dialogo27",
+      "speaker":"npc",
+      "lines":[
+        {
+          "type":"expression",
+          "expression":"'Has cargado con tus batallas… y las has superado. Digno de alguien que aspira a ser campeón. Te deseo mucha suerte.'"
+        }
+      ],
+      "input":"q.dialogue.close();"
+    }
+  ]
+}

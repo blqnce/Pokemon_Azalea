@@ -1,5 +1,7 @@
 {
-  "initializationAction" : [ ],
+  "initializationAction" : [
+    "v.healer = c.npc.find_nearby_block('cobblemon:healing_machine');"
+  ],
   "speakers" : {
     "npc" : {
       "name" : {
@@ -54,7 +56,9 @@
     "lines" : [ {
       "type" : "expression",
       "expression" : "'Me gusta como me queda el rosita igual jeje'"
-    } ]
-    
+    } ],
+    "input": " v.callback_dialogue = 'curado'; c.npc.run_action_effect('npc_heal_player_pokemon'); q.dialogue.close();"
+
+
   } ]
 }

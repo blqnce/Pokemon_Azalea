@@ -37,7 +37,7 @@ q.player.data.justicia_defeated = q.player.data.justicia_defeated + 1;
         q.player.data.tarot_defeated = q.player.data.tarot_defeated + 1;
 q.player.save_data();
 };
-q.npc.name == 'El Loco' ? {
+q.npc.name == '§c§lEl Loco' ? {
 q.player.data.loco_defeated = q.player.data.loco_defeated + 1;
 q.player.save_data();
 q.run_command('give ' + q.player.username + ' mapkit:psychic_badge');
@@ -78,7 +78,328 @@ q.player.save_data();
 
 };
 
+q.npc.name == '§6§lAsh' ? {
 
+q.run_command('give ' + q.player.username + ' gymbadges:tesla_badge');
+q.player.data.ash_defeated = 1;
+q.player.save_data();
+
+};
+
+q.npc.name == '§6§lBill el coleccionista' ? {
+
+q.run_command('give ' + q.player.username + ' badgebox:normal_badge');
+q.player.data.bill_defeated = 1;
+q.player.save_data();
+
+};
+
+q.npc.name == '§6§lBobi del futuro' ? {
+
+q.run_command('give ' + q.player.username + ' gymbadges:esper_badge');
+q.player.data.bobi_defeated = 1;
+q.player.save_data();
+
+};
+
+q.npc.name == '§6§lBrooke' ? {
+
+q.run_command('give ' + q.player.username + ' gymbadges:blight_badge');
+q.player.data.brooke_defeated = 1;
+q.player.save_data();
+
+};
+
+q.npc.name == '§6§lCazabichos Chano' ? {
+
+q.run_command('give ' + q.player.username + ' gymbadges:aphid_badge');
+q.player.data.chano_defeated = 1;
+q.player.save_data();
+
+};
+
+q.npc.name == '§6§lLa Cobra' ? {
+
+q.run_command('give ' + q.player.username + ' gymbadges:harmony_badge');
+q.player.data.cobra_defeated = 1;
+q.player.save_data();
+
+};
+
+q.npc.name == '§6§lDave' ? {
+
+q.run_command('give ' + q.player.username + ' gymbadges:glacier_badge');
+q.player.data.dave_defeated = 1;
+q.player.save_data();
+
+};
+
+q.npc.name == '§6§lProyecto Doble T' ? {
+
+q.run_command('give ' + q.player.username + ' gymbadges:dusk_badge');
+q.player.data.doblet_defeated = 1;
+q.player.save_data();
+
+};
+
+q.npc.name == '§6§lFiddleford Dárgelos' ? {
+
+q.run_command('give ' + q.player.username + ' gymbadges:aegis_badge');
+q.player.data.fiddleford_defeated = 1;
+q.player.save_data();
+
+};
+
+q.npc.name == '§6§lHolandés Errante' ? {
+
+q.run_command('give ' + q.player.username + ' gymbadges:dewdrop_badge');
+q.player.data.holandes_defeated = 1;
+q.player.save_data();
+
+};
+
+q.npc.name == '§6§lHornacis' ? {
+
+q.run_command('give ' + q.player.username + ' gymbadges:inferno_badge');
+q.player.data.hornacis_defeated = 1;
+q.player.save_data();
+
+};
+
+q.npc.name == '§6§lJack Lumber' ? {
+
+q.run_command('give ' + q.player.username + ' gymbadges:melee_badge');
+q.player.data.jack_defeated = 1;
+q.player.save_data();
+
+};
+
+q.npc.name == '§6§lJenny' ? {
+
+q.run_command('give ' + q.player.username + ' gymbadges:fable_badge');
+q.run_command('unlockpcboxwallpaper ' + q.player.username + ' raora');
+q.player.data.jenny_defeated = 1;
+q.player.save_data();
+
+};
+
+q.npc.name == '§6§lLucas el rey mono' ? {
+
+q.run_command('give ' + q.player.username + ' gymbadges:garden_badge');
+q.player.data.lucas_defeated = 1;
+q.player.save_data();
+
+};
+
+q.npc.name == '§6§lLucy' ? {
+
+q.run_command('give ' + q.player.username + ' gymbadges:crest_badges');
+q.player.data.lucy_defeated = 1;
+q.player.save_data();
+
+};
+
+q.npc.name == '§6§lSteve' ? {
+
+q.run_command('give ' + q.player.username + ' gymbadges:sand_badge');
+q.player.data.steve_defeated = 1;
+q.player.save_data();
+
+};
+
+q.npc.name == '§6§lTeniente Mantequilla' ? {
+
+q.run_command('give ' + q.player.username + ' gymbadges:quarry_badges');
+q.player.data.teniente_defeated = 1;
+q.player.save_data();
+
+};
+
+q.npc.name == '§6§lTito Caldémon' ? {
+
+q.run_command('give ' + q.player.username + ' gymbadges:phantom_badge');
+q.run_command('unlockpcboxwallpaper ' + q.player.username + ' mcburris');
+q.player.data.tito_defeated = 1;
+q.player.save_data();
+
+};
+
+q.npc.name == '§6§lTracy Ulspace' ? {
+
+q.run_command('give ' + q.player.username + ' gymbadges:mythos_badge');
+q.player.data.tracy_defeated = 1;
+q.player.save_data();
+
+};
+
+
+q.npc.name == 'Alger' ? {
+q.player.data.alger_defeated = 1;
+q.player.data.gym1_defeated = q.player.data.gym1_defeated + 1;
+q.player.save_data();
+};
+
+q.npc.name == 'Qilangos' ? {
+q.player.data.qilangos_defeated = 1;
+q.player.data.gym1_defeated = q.player.data.gym1_defeated + 1;
+q.player.save_data();
+};
+
+q.npc.name == 'Blancita' ? {
+q.player.data.blancita_defeated = 1;
+q.player.data.gym1_defeated = q.player.data.gym1_defeated + 1;
+q.player.save_data();
+};
+
+q.npc.name == 'Kalvetua' ? {
+q.player.data.kalvetua_defeated = 1;
+q.player.save_data();
+q.run_command('give ' + q.player.username + ' mapkit:water_badge');
+};
+
+q.npc.name == 'Spark' ? {
+q.player.data.spark_defeated = 1;
+q.player.data.gym2_defeated = q.player.data.gym2_defeated + 1;
+q.player.save_data();
+};
+
+q.npc.name == 'Ampere' ? {
+q.player.data.amperes_defeated = 1;
+q.player.data.gym2_defeated = q.player.data.gym2_defeated + 1;
+q.player.save_data();
+};
+
+q.npc.name == 'Watt' ? {
+q.player.data.watt_defeated = 1;
+q.player.data.gym2_defeated = q.player.data.gym2_defeated + 1;
+q.player.save_data();
+};
+
+q.npc.name == 'Leodoro' ? {
+q.player.data.leodoro_defeated = 1;
+q.player.save_data();
+q.run_command('give ' + q.player.username + ' mapkit:thunder_badge');
+};
+
+q.npc.name == 'Student' ? {
+q.player.data.student_defeated = 1;
+q.player.data.gym3_defeated = q.player.data.gym3_defeated + 1;
+q.player.save_data();
+};
+
+q.npc.name == 'Sofía' ? {
+q.player.data.sofia_defeated = 1;
+q.player.data.gym3_defeated = q.player.data.gym3_defeated + 1;
+q.player.save_data();
+};
+
+q.npc.name == 'Mateo' ? {
+q.player.data.mateo_defeated = 1;
+q.player.data.gym3_defeated = q.player.data.gym3_defeated + 1;
+q.player.save_data();
+};
+
+q.npc.name == 'Stiano' ? {
+q.player.data.stiano_defeated = 1;
+q.player.save_data();
+q.run_command('give ' + q.player.username + ' mapkit:flying_badge');
+};
+
+q.npc.name == 'Lucas_speed' ? {
+q.player.data.lucas_defeated = 1;
+q.player.save_data();
+q.run_command('give ' + q.player.username + ' mapkit:grass_badge');
+};
+
+q.npc.name == 'Ferro' ? {
+q.player.data.ferro_defeated = 1;
+q.player.data.gym5_defeated = q.player.data.gym5_defeated + 1;
+q.player.save_data();
+};
+
+q.npc.name == 'Titan' ? {
+q.player.data.titan_defeated = 1;
+q.player.data.gym5_defeated = q.player.data.gym5_defeated + 1;
+q.player.save_data();
+};
+
+q.npc.name == 'Alloy' ? {
+q.player.data.alloy_defeated = 1;
+q.player.data.gym5_defeated = q.player.data.gym5_defeated + 1;
+q.player.save_data();
+};
+
+q.npc.name == 'Nickel' ? {
+q.player.data.nickel_defeated = 1;
+q.player.data.gym5_defeated = q.player.data.gym5_defeated + 1;
+q.player.save_data();
+};
+
+q.npc.name == 'Smith' ? {
+q.player.data.smith_defeated = 1;
+q.player.data.gym5_defeated = q.player.data.gym5_defeated + 1;
+q.player.save_data();
+};
+
+q.npc.name == 'Roselle' ? {
+q.player.data.roselle_defeated = 1;
+q.player.save_data();
+q.run_command('give ' + q.player.username + ' mapkit:steel_badge');
+};
+
+q.npc.name == 'Omabella' ? {
+q.player.data.omabella_defeated = 1;
+q.player.save_data();
+q.run_command('give ' + q.player.username + ' mapkit:fairy_badge');
+};
+
+q.npc.name == 'Kazul' ? {
+q.player.data.kazul_defeated = 1;
+q.player.data.gym7_defeated = q.player.data.gym7_defeated + 1;
+q.player.save_data();
+};
+
+q.npc.name == 'Lazuk' ? {
+q.player.data.lazuk_defeated = 1;
+q.player.data.gym7_defeated = q.player.data.gym7_defeated + 1;
+q.player.save_data();
+};
+
+q.npc.name == 'Lakuz' ? {
+q.player.data.torkul_defeated = 1;
+q.player.data.gym7_defeated = q.player.data.gym7_defeated + 1;
+q.player.save_data();
+};
+
+q.npc.name == 'Adam' ? {
+q.player.data.adam_defeated = 1;
+q.player.save_data();
+q.run_command('give ' + q.player.username + ' mapkit:fire_badge');
+};
+
+q.npc.name == 'Alto mando Aurelion' ? {
+q.player.data.aurelion_defeated = 1;
+        q.player.data.elite4_defeated = q.player.data.elite4_defeated + 1;
+q.player.save_data();
+};
+
+q.npc.name == 'Alto mando Lucien' ? {
+q.player.data.lucien_defeated = 1;
+q.player.data.elite4_defeated = q.player.data.elite4_defeated + 1;
+q.player.save_data();
+};
+
+q.npc.name == 'Alto mando Raiden' ? {
+q.player.data.raiden_defeated = 1;
+q.player.data.elite4_defeated = q.player.data.elite4_defeated + 1;
+q.player.save_data();
+};
+
+q.npc.name == 'Alto mando Selene' ? {
+q.player.data.selene_defeated = 1;
+q.player.data.elite4_defeated = q.player.data.elite4_defeated + 1;
+q.player.save_data();
+};
 
 
 

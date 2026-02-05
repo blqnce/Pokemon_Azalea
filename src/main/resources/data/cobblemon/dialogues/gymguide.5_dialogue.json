@@ -1,0 +1,65 @@
+{
+  "initializationAction" : [
+    "(q.player.data.gym5_falar < 1) ? q.dialogue.set_page('Dialogo');",
+    "(q.player.data.gym5_falar >= 1) ? q.dialogue.set_page('Dialogo7');"
+  ],
+  "speakers" : {
+    "npc" : {
+      "name" : {
+        "type" : "expression",
+        "expression" : "q.npc.name"
+      },
+      "face" : "q.npc.face()"
+    },
+    "player" : {
+      "name" : {
+        "type" : "expression",
+        "expression" : "q.player.username"
+      },
+      "face" : "q.player.face()"
+    }
+  },
+  "pages" : [ {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'¡Hey! ¡Cuánto tiempo! Me alegra verte otra vez. Ya vas por el quinto gimnasio… eso es impresionante.'"
+    } ],
+    "input" : "q.player.data.gym5_falar = 1; q.player.save_data(); q.run_command('give ' + q.player.username + ' cobblemon:super_potion'); q.dialogue.set_page('Dialogo3')"
+
+
+  }, {
+    "id" : "Dialogo3",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Bienvenido al Gimnasio de tipo Acero, gobernado por Roselle. Aquí no solo pondrán a prueba tu fuerza, sino también tu intuición.'"
+    } ]
+    
+  }, {
+    "id" : "Dialogo7",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'En cada habitación encontrarás dos botones. Uno te llevará de regreso al inicio… y el otro te permitirá avanzar.'"
+    } ]
+    
+  }, {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'No hay pistas claras, así que tendrás que confiar en tu instinto. A veces fallar es parte del camino, no te desanimes.'"
+    } ]
+    
+  }, {
+    "id" : "Dialogo",
+    "speaker" : "npc",
+    "lines" : [ {
+      "type" : "expression",
+      "expression" : "'Si mantienes la calma y sigues intentando, llegarás hasta Roselle. ¡Vamos, ya estás muy cerca!'"
+    } ]
+    
+  } ]
+}
